@@ -1,0 +1,103 @@
+{
+  "name": "元件",
+  "category": "hexcasting:patterns",
+  "icon": "hexcasting:focus",
+  "sortnum": 3,
+  "advancement": "hexcasting:root",
+  "secret": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "回顾一下直至目前我们可用的施法流程：$(br)$(li)一.借助$(action)栈操作/$获取 iota。$(li)二.对 iota 进行处理。$(li)三.对 iota 进行影响。$(br2)这个框架勉强能用，但只算勉强。现场获取的方式低效且狭窄，绘制过程中难以存储调试，重复手绘既无时效性也显得过分繁琐。显然，我需要$(item)元件/$——各具特色的，各种。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "这乍看起来并不容易，无形无质的 iota 又怎能道成肉身？但莫要忘记$(l:items/amethyst)$(item)媒质/$的$(l:basics/media)共鸣/$会影响世界，材质只需承载复杂而易于导引。$(br2)我将存有 iota 的$(thing)法杖/$指向覆有$(l:items/amethyst)$(item)媒质/$的柔韧丝线，不可逆的将它赋为表象的表象。此后每当追溯其穿行的流迹，便会重现当初的 iota 。这便是$(item)数据存储元件/$的基础，我将其命名为$(item)结念绳/$。初始状态下，内部仅含一$(thing)虚指/$，结合$(l:patterns/readwrite)$(action)读写/$部分的图案，则可将 iota 存入其中。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(item)结念绳/$适合存储，但调试起来并不方便。于是我又以$(thing)铜锭/$构造骨架，内作$(item)结念绳/$，并设下用于还原构造的$(thing)空无绘彩/$，这可以随意覆写的原件，我命名为$(item)核心/$。将其放入$(item)核心框架/$，我还可以将 iota 写入方块之中。$(br2)在这两种物品中用$(l:patterns/readwrite)$(action)书吏之策略/$存入$(l:patterns/patterns_as_iotas)$(action)图案 iota /$组成的列表，需要时使用$(l:patterns/readwrite)$(action)书吏之精思/$与$(l:patterns/meta)$(action)赫尔墨斯之策略/$，我就可以轻松施放曾经完成的咒术了。于是，我设计出自我运行的版本——$(item)缀品/$和$(item)造物/$。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(item)缀品/$仿照$(item)核心/$的思路，以一点灵感的火花引线；$(item)造物/$则模仿$(thing)唱片机/$的构造，将 iota 铭刻的痕迹重新放出。$(br2)$(action)造物/$的图案将移除一个指定槽位的数和一个将要被运行的图案列表，同时在副手持有空白的$(item)缀品/$或$(item)造物/$，指定的槽位需要有$(l:items/amethyst)$(item)媒质碎片/$，$(l:items/amethyst)$(item)媒质/$将全部注入构造的$(thing)施法物品/$之中，作为往后运行的能源。制作时存入的$(l:items/amethyst)$(item)媒质/$决定了容量上限，在$(thing)重新充能/$时上限不会提升。"
+    },
+    {
+      "type": "patchouli:text",
+      "anchor": "homo:slot",
+      "text": "数字指定的槽位依照如下的逻辑：快捷栏从左至右对应 0 到 8，背包界面左上角以 9 号槽位起始，由左到右，由上到下依次增加，直至右下角以 35 号结束，足部到头部的盔甲栏对应 36 到 39，副手对应 40。其他指定槽位的图案也依照如此。$(br2)制作完毕后只需右键使用，便会将写入的图案列表$(action)运行/$。初始的能源耗尽后，$(item)缀品/$需要充能，而$(item)造物/$则可以消耗施法者的$(l:items/amethyst)$(item)媒质/$继续施法。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:artifact",
+      "anchor": "homo:artifact",
+      "input": "num, [pattern]",
+      "output": "",
+      "text": "在对应的槽位放上媒质碎片，副手持有缀品或造物，制备当前容量与最大容量等同于 当前媒质值 + 媒质碎片值 的施法物品。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:charge",
+      "anchor": "homo:charge",
+      "input": "mote",
+      "output": "",
+      "text": "接受一个存有媒质碎片的物元，副手持有缀品，造物或媒质瓶，为它们重新充能。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:erase",
+      "anchor": "hexcasting:erase",
+      "input": "",
+      "output": "",
+      "text": "将副手中的缀品，造物，核心等咒术物品重置为初始状态，消耗 10,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:cycle_variant",
+      "anchor": "hexcasting:cycle_variant",
+      "input": "",
+      "output": "",
+      "text": "副手$(item)数据存储元件/$时，可以使用此法术更改它们的外表，消耗 10,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:stack/push",
+      "anchor": "homo:stack/push",
+      "input": "any",
+      "output": "",
+      "text": "将栈顶的元素压入当前法杖的施法栈中。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:kjs/hexcasting_focus",
+      "text": "当副手持有存有图案列表的核心时，将另一个核心作为输入进行合成，便会将图案列表连接至输入的核心。而当核心与缀品或造物相合成，则会将图案列表复制于其中，获得的施法物品媒质量为零。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:kjs/hexcasting_trinket",
+      "recipe2": "hexcasting:artifact"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:kjs/hexdebug_debugger",
+      "recipe2": "minecraft:kjs/hexdebug_evaluator"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexdebug:breakpoint/after",
+      "anchor": "hexdebug:breakpoint/after",
+      "input": "",
+      "output": "",
+      "text": "调试杖可以运行副手元件中的 iota，潜行滚轮以切换运行模式，而运行杖的施法网络则会继承调试杖当前施法环境并在其基础上运行。运行至该法术时，暂停调试杖。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:kjs/hexdebug_focus_holder",
+      "text": "手持核心右击核心框架方块即可将其存入，空手右击即可取出。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "框架中的 iota 可以被史家之纯化等图案读取。当讲台中有一本书时，潜行并手持一个写有内容的核心右击讲台，便会将核心中的图案作为代码，自动换行换页后写入书与笔中。$(br2)每一个非内省反思的 iota 数据自成一行，每 14 行便换页，部分字符串 iota 不能正常工作。而若手持一个未写有内容的核心右键讲台，则会复制出书中的代码写入核心之中。"
+    }
+  ]
+}

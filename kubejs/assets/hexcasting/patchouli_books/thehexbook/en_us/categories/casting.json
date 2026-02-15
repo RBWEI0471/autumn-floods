@@ -1,0 +1,7 @@
+{
+  "name": "改动",
+  "icon": "minecraft:lectern",
+  "description": "一份外在的保证？或许熟悉世界的人比懵懂的探索者更需要他。",
+  "sortnum": 1,
+  "secret": true
+}

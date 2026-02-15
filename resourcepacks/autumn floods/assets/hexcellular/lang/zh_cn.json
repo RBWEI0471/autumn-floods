@@ -1,0 +1,16 @@
+{
+	"hexcasting.action.book.hexcellular:create_property": "质性之精思",
+	"hexcasting.action.book.hexcellular:observe_property": "辩证之纯化",
+	"hexcasting.action.book.hexcellular:set_property": "质性之策略",
+	"hexcasting.mishap.invalid_value.class.property": "一个质性iota",
+	"hexcellular.page.properties.title": "质性 Iota",
+	"hexcellular.page.properties.0": "世界本身和媒质回环有些神似，在零星分布的各个偶然之间似乎总有一种暗含的内在目的将他们统摄。在这个假设下我经过诸多尝试，找到了一种绕过重重混沌向世界本身记录信息的方式。说实话，我不太想思考这次成功代表着什么……",
+	"hexcellular.page.properties.1": "将世界存储信息的部分比作一本法术书，这个法术施放成功后便会给我一个密钥，我将其命名为质性iota。每次获得的密钥相互独立，不同的密钥通向这本法术书中对应的一页，初始状态下书页内容为null，可以随时写入和修改。输入密钥时，即可获取对应书页记录的信息。",
+	"hexcasting.action.hexcellular:create_property": "质性之精思",
+	"hexcellular.page.create_property.summary": "",
+	"hexcellular.page.properties.2": "",
+	"hexcasting.action.hexcellular:observe_property": "辩证之纯化",
+	"hexcellular.page.observe_property.summary": "观测质性 iota 当前的值。",
+	"hexcasting.action.hexcellular:set_property": "质性之策略",
+	"hexcellular.page.set_property.summary": "设置质性 iota 的值。消耗大约 1/10 个紫水晶粉。"
+}

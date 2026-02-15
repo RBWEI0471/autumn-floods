@@ -1,0 +1,217 @@
+{
+  "name": "实体",
+  "category": "hexcasting:patterns/stack",
+  "icon": "minecraft:andesite",
+  "sortnum": 0,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "secret": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:get_caster",
+      "anchor": "hexcasting:get_caster",
+      "input": "",
+      "output": "entity",
+      "text": "返回施法者。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:print",
+      "anchor": "hexcasting:print",
+      "input": "any",
+      "output": "any",
+      "text": "向施法者揭示栈顶的 iota。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:entity_pos/eye",
+      "anchor": "hexcasting:entity_pos/eye",
+      "input": "entity",
+      "output": "vec",
+      "text": "返回指定实体的眼部位置。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:entity_pos/foot",
+      "anchor": "hexcasting:entity_pos/foot",
+      "input": "entity",
+      "output": "vec",
+      "text": "返回指定实体的足部位置。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:raye",
+      "anchor": "homo:raye",
+      "input": "",
+      "output": "entity",
+      "text": "返回施法者视线触及的生物实体。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:rayb",
+      "anchor": "homo:rayb",
+      "input": "",
+      "output": "vec",
+      "text": "返回施法者视线触及的方块的坐标向量。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:get_entity_look",
+      "anchor": "hexcasting:get_entity_look",
+      "input": "entity",
+      "output": "vec",
+      "text": "返回指定实体视线方向上的单位向量。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:head",
+      "anchor": "homo:head",
+      "input": "entity",
+      "output": "vec",
+      "text": "返回垂直于指定实体视线，并指向其头部的单位向量。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:get_hand",
+      "anchor": "homo:get_hand",
+      "output": "bool",
+      "text": "判断此次施法用手是否为主手。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:get_hand_slot",
+      "anchor": "homo:get_hand_slot",
+      "output": "num",
+      "text": "返回施法者主手物品的$(l:patterns/hexcasting#homo:slot)槽位/$。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:slot_name",
+      "anchor": "homo:slot_name",
+      "input": "num",
+      "output": "str",
+      "text": "返回$(l:patterns/hexcasting#homo:slot)指定槽位/$的物品名称。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:slot_count",
+      "anchor": "homo:slot_count",
+      "input": "num",
+      "output": "num",
+      "text": "返回$(l:patterns/hexcasting#homo:slot)指定槽位/$的物品数量。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:slot_nbt",
+      "anchor": "homo:slot_nbt",
+      "input": "num",
+      "output": "[str]",
+      "text": "返回$(l:patterns/hexcasting#homo:slot)指定槽位/$的物品数据。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:health",
+      "anchor": "hexal:health",
+      "input": "entity",
+      "output": "num",
+      "text": "返回指定实体的剩余生命值。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:entity_name",
+      "anchor": "homo:entity_name",
+      "input": "entity",
+      "output": "str",
+      "text": "返回指定实体的名称。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:entity_nbt",
+      "anchor": "homo:entity_nbt",
+      "input": "entity",
+      "output": "str",
+      "text": "返回指定实体的数据。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:get_tag",
+      "anchor": "homo:get_tag",
+      "input": "entity | num | vec",
+      "output": "[str]",
+      "text": "返回指定物品实体，或指定槽位的物品，或指定坐标向量处的方块所有标签组成的列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:has_tag",
+      "anchor": "homo:has_tag",
+      "input": "entity | num | vec, str",
+      "output": "bool",
+      "text": "判断指定物品实体，或指定槽位的物品，或指定坐标向量处的方块是否包含指定标签。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:get_entity_velocity",
+      "anchor": "hexcasting:get_entity_velocity",
+      "input": "entity",
+      "output": "vec",
+      "text": "返回指定实体移动方向上的向量，模长为其运动速度。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:get_entity_height",
+      "anchor": "hexcasting:get_entity_height",
+      "input": "entity",
+      "output": "num",
+      "text": "返回指定实体的身高。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:ride_bool",
+      "anchor": "homo:ride_bool",
+      "input": "entity",
+      "output": "bool",
+      "text": "判断指定实体是否处于骑乘或被骑乘状态。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:shift",
+      "anchor": "homo:shift",
+      "input": "entity",
+      "output": "bool",
+      "text": "判断指定实体是否处于潜行状态。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:flight/can_fly",
+      "anchor": "hexcasting:flight/can_fly",
+      "input": "entity",
+      "output": "bool",
+      "text": "判断指定实体是否处于飞行状态。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:mind",
+      "anchor": "homo:mind",
+      "input": "num",
+      "output": "bool",
+      "text": "判断施法者是否在最近的时间中按下了对应的按键，0 代表是否手持物品按下右键，1 ~ 6 则分别对应左shift，空格，W，A，S，D。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:mote/villager/level/get",
+      "anchor": "hexal:mote/villager/level/get",
+      "input": "villager",
+      "output": "num",
+      "text": "返回指定村民的熟练度。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:mote/trade/get",
+      "anchor": "hexal:mote/trade/get",
+      "input": "villager",
+      "output": "list",
+      "text": "返回指定村民所有的交易。"
+    }
+  ]
+}

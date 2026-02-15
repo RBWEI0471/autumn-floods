@@ -1,0 +1,20 @@
+{
+  "hexcasting.action.hexflow:pure_map": "玛特之策略",
+  "hexcasting.action.hexflow:pure_reduce": "康威之策略",
+  "hexcasting.action.hexflow:build_nested": "套娃之馏化",
+  "hexcasting.action.hexflow:nested_modify": "剖分之提整",
+  "hexcasting.action.hexflow:copy_mask": "提纲之策略",
+  "hexcasting.action.hexflow:call_stack": "汉诺之策略",
+  "hexcasting.action.hexflow:noob_num": "数字之精思",
+  "hexcasting.special.hexflow:noob_num": "数字之精思：%s",
+  "hexcasting.action.hexflow:mass_rotate": "重排之策略",
+  "hexcasting.action.hexflow:weak_escape": "探知",
+  "hexflow.book.entry": "",
+  "book.descrip.hexflow:pure_map": "",
+  "book.descrip.hexflow:pure_reduce": "",
+  "book.descrip.hexflow:build_nested": "",
+  "book.descrip.hexflow:nested_modify": "",
+  "book.descrip.hexflow:noob_num": "",
+  "book.descrip.hexflow:mass_rotate": "",
+  "book.descrip.hexflow:weak_escape": ""
+}

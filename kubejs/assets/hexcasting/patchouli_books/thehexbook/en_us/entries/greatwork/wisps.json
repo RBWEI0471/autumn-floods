@@ -1,0 +1,115 @@
+{
+  "name": "咒灵",
+  "category": "hexcasting:greatwork",
+  "icon": "minecraft:music_disc_5",
+  "sortnum": 1,
+  "advancement": "hexcasting:enlightenment",
+  "entry_color": "54398a",
+  "secret": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "差异分化出光明。通过其他思维着的供给，纯粹的，独立于我的意识——咒灵，得以创生。咒灵在被创建时可以写入咒术，并且会在一定的条件下作为施法者运行咒术。弹射式咒灵则会在接触到方块或实体时施放，循环式咒灵会以每秒二十次的频率施法。默认情况下，对咒灵执行的法术只能对属于我的咒灵执行，当咒灵被延后施法时，无常态消耗。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "咒灵作为施法者，自身亦可召唤咒灵，但在单次咒术中最多召唤一个。咒灵会继承创建者的渡鸦之思。构建两种咒灵的消耗都是 10,000 点媒质，同时还需指定一定量的媒质作为其媒质库用于施法及维持。因此，召唤循环式咒灵将消耗 (指定量 + 10,000) 点媒质，而召唤弹射式咒灵将消耗 (指定量 + 10,000 * 向量模长²) 点媒质。两种咒灵每tick都需要常态消耗 50 点媒质维持自身，媒质不足或无法运行时则将消散。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:wisp/summon/projectile",
+      "anchor": "hexal:wisp/summon/projectile",
+      "input": "[pattern], vec, vec, num",
+      "output": "",
+      "text": "召唤一个命中时施放咒术的弹射式咒灵。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "召唤弹射式咒灵将接收两个向量，其中第一个位置向量为生成的位置，第二个方向向量为运动的方向，运动速度为方向向量的模长。当其命中方块或生物时施放其中的咒术，影响半径为四格。咒术的初始栈包含一个代表其自身的 iota 和一个被命中的生物或坐标的 iota。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:wisp/summon/ticking",
+      "anchor": "hexal:wisp/summon/ticking",
+      "input": "[pattern], vec, num",
+      "output": "",
+      "text": "召唤一个每 tick 施放咒术的循环式咒灵。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "召唤循环式咒灵会令一个携带指定媒质库的循环式咒灵生成于指定的坐标向量处，以每秒 20 次的频率施放其中的咒术，影响半径为 8 格。初始栈包含一个代表其自身的 iota，而后每次施法的初始栈为上一次施法完成的栈，并继承其渡鸦之思。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:wisp/consume",
+      "anchor": "hexal:wisp/consume",
+      "input": "entity",
+      "output": "",
+      "text": "拆解一个咒灵，返还被拆解咒灵媒质库 * 0.95 点媒质，若由施法者执行，那么 0.95 份的媒质会优先尝试支出本次施法消耗，多出的部分不会被保留，消耗 100 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:wisp/self",
+      "anchor": "hexal:wisp/self",
+      "input": "",
+      "output": "entity",
+      "text": "由咒灵执行时，返回一个代表施法咒灵的 iota。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:wisp/media",
+      "anchor": "hexal:wisp/media",
+      "input": "",
+      "output": "num",
+      "text": "由咒灵执行时，返回媒质库中剩余的媒质量。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:wisp/hex",
+      "anchor": "hexal:wisp/hex",
+      "input": "entity",
+      "output": "[pattern]",
+      "text": "返回指定咒灵被写入的图案列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:wisp/move/target/set",
+      "anchor": "hexal:wisp/move/target/set",
+      "input": "vec",
+      "output": "",
+      "text": "由循环式咒灵执行时，会沿直线向指定位置移动，直至抵达。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:wisp/move/speed/set",
+      "anchor": "hexal:wisp/move/speed/set",
+      "input": "num",
+      "output": "",
+      "text": "由循环式咒灵执行时，会将其速度设定为指定数值，若指定数值大于原速度，则消耗 1000 * (指定数值 - 原速度)² 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:wisp/move/speed/get",
+      "anchor": "hexal:wisp/move/speed/get",
+      "input": "",
+      "output": "num",
+      "text": "由循环式咒灵执行时，会返回其当前速度。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:wisp/trigger/move",
+      "anchor": "hexal:wisp/trigger/move",
+      "input": "",
+      "output": "",
+      "text": "由循环式咒灵执行时，下一次施法延后，直至抵达指定位置。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:wisp/trigger/tick",
+      "anchor": "hexal:wisp/trigger/tick",
+      "input": "num",
+      "output": "",
+      "text": "由循环式咒灵执行时，下一次施法延后 num tick。"
+    }
+  ]
+}

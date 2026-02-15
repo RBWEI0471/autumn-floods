@@ -1,0 +1,210 @@
+{
+  "name": "读写",
+  "category": "hexcasting:patterns",
+  "icon": "minecraft:writable_book",
+  "sortnum": 4,
+  "advancement": "hexcasting:root",
+  "secret": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "anchor": "hexcasting:local",
+      "text": "诸如$(item)核心/$，$(item)法术书/$，$(item)卷轴/$等具有存储功能的咒法物品中，可以写入或读取iota。$(br2)此外，我也可以将其存到$(hex)咒术/$自身里，残卷称为$(l:patterns/readwrite#hexcasting:local)$(thing)渡鸦之思/$。它能存储一个 iota，默认为 $(thing)Null/$，一旦施法结束，其值就会被清除。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:write/local",
+      "anchor": "hexcasting:write/local",
+      "input": "any",
+      "output": "",
+      "text": "移除栈顶 iota，并将其写入$(l:patterns/readwrite#hexcasting:local)$(thing)渡鸦之思/$。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:read/local",
+      "anchor": "hexcasting:read/local",
+      "input": "",
+      "output": "any",
+      "text": "将$(l:patterns/readwrite#hexcasting:local)$(thing)渡鸦之思/$中的 iota 复制到栈顶。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:id_write",
+      "anchor": "homo:id_write",
+      "input": "num, any",
+      "output": "",
+      "text": "将栈顶 iota 以给定数字作为序号写入$(l:patterns/readwrite#hexcasting:local)$(thing)渡鸦之思/$。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:id_read",
+      "anchor": "homo:id_read",
+      "input": "num",
+      "output": "any",
+      "text": "将以给定数字作为序号的$(l:patterns/readwrite#hexcasting:local)$(thing)渡鸦之思/$中的 iota 复制到栈顶。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:data_add",
+      "anchor": "homo:data_add",
+      "input": "",
+      "output": "",
+      "text": "更改一个存储至咒术自身之中的数字 iota，初始值为零，每次绘制该图案时使当前值加一，咒术结束时清除。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:data_sub",
+      "anchor": "homo:data_sub",
+      "input": "",
+      "output": "",
+      "text": "更改一个存储至咒术自身之中的数字 iota，初始值为零，每次绘制该图案时使当前值减一，咒术结束时清除。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:data_get",
+      "anchor": "homo:data_get",
+      "input": "",
+      "output": "num",
+      "text": "返回咒术自身之中的数字 iota。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:data_set",
+      "anchor": "homo:data_set",
+      "input": "num",
+      "output": "",
+      "text": "将咒术自身之中的数字 iota 设置为指定数值。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:num_read",
+      "anchor": "homo:num_read",
+      "input": "num",
+      "output": "any",
+      "text": "复制$(l:patterns/hexcasting#homo:slot)$(thing)指定槽位/$物品的 iota，并将其压入栈顶，指定槽位无可读 iota 则返回 null。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:num_write",
+      "anchor": "homo:num_write",
+      "input": "any, num",
+      "output": "",
+      "text": "移除栈顶元素，若$(l:patterns/hexcasting#homo:slot)$(thing)指定槽位的/$物品可写入 iota，则将其写入。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:read",
+      "anchor": "hexcasting:read",
+      "input": "",
+      "output": "any",
+      "text": "复制副手所持物品的 iota，并将其压入栈顶。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:write",
+      "anchor": "hexcasting:write",
+      "input": "any",
+      "output": "",
+      "text": "移除栈顶 iota，并将其写入副手中的物品中。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:read/entity",
+      "anchor": "hexcasting:read/entity",
+      "input": "entity | vec",
+      "output": "any",
+      "text": "复制某个实体或咒术方块包含的 iota，并将其压入栈顶。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:write/entity",
+      "anchor": "hexcasting:write/entity",
+      "input": "entity | vec, any",
+      "output": "",
+      "text": "移除栈顶 iota，并将其写入某个实体或咒术方块中。"
+    },
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "ioticblocks:read/index",
+			"anchor": "ioticblocks:read/index",
+			"input": "entity | vec, num",
+			"output": "any",
+			"text": "从实体或方块中读取一个列表中指定下标的元素，并将其压入栈顶。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "ioticblocks:write/index",
+			"anchor": "ioticblocks:write/index",
+			"input": "entity | vec, num, any",
+			"output": "",
+			"text": "移除栈顶 iota，覆写从实体或方块中读取一个列表中指定下标的元素。"
+		},
+    {
+      "type": "patchouli:text",
+      "text": "读写是从指定的媒介中映射出对应的结果。如果希望将这些结果用列表去记录，查找时则需记住每一个结果对应的下标，这对思维来说实在是……舍近求远。$(br2)既然如此，不妨直接关联结果与语义：就如同在构造列表之时，将用作索引的下标替换为任意 iota 代表的键那般，此后每当查找用做索引的键，便可映射出对应的结果。这就是某种新的 iota 类型，字典。"
+    },
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexthings:empty_dict",
+			"anchor": "hexthings:empty_dict",
+			"output": "dict",
+			"text": "返回一个空字典。"
+		},
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "hexcasting:index_of",
+			"anchor": "hexcasting:index_of",
+			"input": "dict, key",
+			"output": "any",
+			"text": "返回字典中指定键所映射的值。"
+		},
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "hexcasting:replace",
+			"anchor": "hexcasting:replace",
+			"input": "dict, key, any",
+			"output": "dict",
+			"text": "将指定键与对应的值写入字典，若字典中已有对应的键，则替换其对应的值。"
+		},
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "hexcasting:remove_from",
+			"anchor": "hexcasting:remove_from",
+			"input": "dict, key",
+			"output": "dict, any",
+			"text": "返回字典中指定键所对应的值，并移除指定键。"
+		},
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "hexcasting:abs",
+			"anchor": "hexcasting:abs",
+			"input": "dict",
+			"output": "num",
+			"text": "返回字典中键的个数。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexthings:dict_keys",
+			"anchor": "hexthings:dict_keys",
+			"input": "dict",
+			"output": "list",
+			"text": "返回字典中所有键组成的列表。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexthings:dict_vals",
+			"anchor": "hexthings:dict_vals",
+			"input": "dict",
+			"output": "list",
+			"text": "返回字典中所有值组成的列表。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexthings:dict_ents",
+			"anchor": "hexthings:dict_ents",
+			"input": "dict",
+			"output": "list",
+			"text": "返回字典中所有[键与值组成的长度为 2 的列表]组成的列表。"
+		}
+  ]
+}

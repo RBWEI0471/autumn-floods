@@ -1,0 +1,7 @@
+{
+  "name": "作品",
+  "icon": "hexcasting:textures/item/cad/3_focus_empty.png",
+  "description": "将咒法的沟回镌刻至蕴含潜能的质料之中，便能构造出各司其职的意识代用品。但是，这远远不够。我没有触及到……那更本质的东西。除了探究自己的心灵，我还必须进一步开展考古工作。",
+  "sortnum": 3,
+  "secret": true
+}

@@ -1,0 +1,5 @@
+{
+  "values": [
+     "minecraft:stone", "minecraft:andesite", "minecraft:granite", "minecraft:gravel", "minecraft:diorite", "minecraft:deepslate", "minecraft:clay", "minecraft:tuff", "minecraft:sand", "minecraft:sandstone", "minecraft:moss_block", "minecraft:birch_log", "minecraft:birch_leaves", "minecraft:dripstone_block", "minecraft:red_sand", "minecraft:red_sandstone", "minecraft:mud", "minecraft:ice", "minecraft:packed_ice", "hexcasting:conjured_block", "hexcasting:conjured_light", "minecraft:amethyst_cluster", "#minecraft:logs","#minecraft:leaves","#minecraft:dirt"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "锁定页面",
+  "icon": "hexdebug:debugger",
+  "category": "hexcasting:casting",
+  "advancement": "homo:hhhaaaaaaa",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "这个界面理论上无法被解锁，实际上它被用于隐藏 Casting 章节，通过删除以外的方式使其隐藏。当有其他附属在此章节中添加页面时，则会正常显示。如果你看到了这一段话，说明你应当有编辑手册的能力，建议你重新修整这份手册，就像我做的那样。"
+    }
+  ]
+}

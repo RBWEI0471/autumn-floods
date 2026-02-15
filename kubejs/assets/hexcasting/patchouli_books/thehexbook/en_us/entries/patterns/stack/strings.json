@@ -1,0 +1,210 @@
+{
+  "name": "字符",
+  "category": "hexcasting:patterns/stack",
+  "icon": "minecraft:chiseled_quartz_block",
+  "sortnum": 6,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "secret": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:string/chat/caster",
+      "anchor": "moreiotas:string/chat/caster",
+      "input": "",
+      "output": "str",
+      "text": "返回施法者在聊天栏发送的最后一条讯息。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:string/chat/prefix/set",
+      "anchor": "moreiotas:string/chat/prefix/set",
+      "input": "str | null",
+      "output": "",
+      "text": "令耳语之精思只能读取以指定字符串起始的讯息，且此讯息不再可见。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:read_str",
+      "anchor": "homo:read_str",
+      "input": "",
+      "output": "str",
+      "text": "复制副手书与笔中的字符串，将其压入栈顶，副手无书与笔则返回 null。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:write_str",
+      "anchor": "homo:write_str",
+      "input": "str",
+      "output": "",
+      "text": "移除栈顶的字符串，若副手有书与笔，则将其写入。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:string/block/get",
+      "anchor": "moreiotas:string/block/get",
+      "input": "vec",
+      "output": "str | [str]",
+      "text": "若指定坐标向量处有一告示牌或讲台，返回其上文本。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:string/block/set",
+      "anchor": "moreiotas:string/block/set",
+      "input": "vec, str | [str]",
+      "output": "",
+      "text": "若指定坐标向量处有一告示牌或讲台，则字符串写入，消耗 100 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:all_index",
+      "anchor": "homo:all_index",
+      "input": "str.1, str.2",
+      "output": "list",
+      "text": "返回 str.1 中 长度为 1 的 str.2 对应下标组成的列表，没有则返回空列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:all_index_of",
+      "anchor": "homo:all_index_of",
+      "input": "str, list",
+      "output": "str",
+      "text": "若列表中各元素为字符串有效索引范围内的数字 iota，则返回一个字符串，由字符串中下标为\"列表中每个元素\"对应的\"字符\"组成。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:iota_str",
+      "anchor": "homo:iota_str",
+      "input": "any",
+      "output": "str",
+      "text": "返回栈顶 iota 的类型。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:string/iota",
+      "anchor": "moreiotas:string/iota",
+      "input": "any",
+      "output": "str",
+      "text": "返回栈顶 iota 的内容。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:num_to_str",
+      "anchor": "homo:num_to_str",
+      "input": "num | [num]",
+      "output": "str",
+      "text": "将数字 1 ~ 26 转化为 a ~ z，或将指定列表中的数字 1 ~ 26 转化为对应的 a ~ z 并相连，返回所得的字符串。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:str_to_num",
+      "anchor": "homo:str_to_num",
+      "input": "str",
+      "output": "[num]",
+      "text": "将指定字符串中的 a ~ z 转化为数字 1 ~ 26，返回所得数字组成的列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "header": "hexcasting.action.moreiotas:string/find",
+      "op_id": "hexcasting:index_of",
+      "anchor": "moreiotas:string/find",
+      "input": "str.1, str.2",
+      "output": "num",
+      "text": "返回 str.1 中 str.2 对应下标的最小值，没有则返回 -1 。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "header": "hexcasting.action.moreiotas:string/sub",
+      "op_id": "hexcasting:slice",
+      "anchor": "moreiotas:string/sub",
+      "input": "str, num, num",
+      "output": "str",
+      "text": "返回一个字符串，其中包含原字符串下标在两数之间的字符，包含较小下标对应的字符，不含较大下标对应的字符。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:string/split",
+      "anchor": "moreiotas:string/split",
+      "input": "str.1, str.2",
+      "output": "[str]",
+      "text": "以 str.2 为分隔符拆分 str.1 ，返回拆分所得字符串组成的列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "header": "hexcasting.action.moreiotas:string/add",
+      "op_id": "hexcasting:add",
+      "anchor": "moreiotas:string/add",
+      "input": "str.1, str.2",
+      "output": "str",
+      "text": "将 str.2 连接至 str.1 末位。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:string/parse",
+      "anchor": "moreiotas:string/parse",
+      "input": "str",
+      "output": "num | null",
+      "text": "若字符串仅由数字构成，则返回其中的数。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:abs",
+      "anchor": "moreiotas:string/len",
+      "input": "str",
+      "output": "num",
+      "text": "返回字符串的长度。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:string/chat/prefix/get",
+      "anchor": "moreiotas:string/chat/prefix/get",
+      "input": "",
+      "output": "str",
+      "text": "返回筛具之策略中存有的字符串。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:string/case",
+      "anchor": "moreiotas:string/case",
+      "input": "str, bool | null",
+      "output": "str",
+      "text": "依据布尔值切换字符串的大小写，True将字符串改为全大写；False将字符串改为全小写，Null则将切换所有字符的大小写。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:_nbt_",
+      "anchor": "homo:_nbt_",
+      "input": "str, str, str",
+      "output": "str",
+      "text": "从State数据或SNBT数据中检索信息。第一个字符串为需要检索的字符串，第二个字符串为被检索的关键词，第三个字符串为白、黑名单。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "显然，地貌之纯化（State数据），地质之纯化，原质之纯化与格物之纯化（SNBT数据）可以给予极为全面的信息。但是，因为获取的信息太过庞杂，发现之馏化便就力不从心了。$(br2)幸好，自然提供了一个专门用来处理这两种数据的图案。它会在需要被检索的字符串当中得到关键词对应的值（\"：\"或\"=\"后的值），而\"白、黑名单\"仅在SNBT检索出数组时使用，其余情况下不读取其内容，使用空字符串即可。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "对于State数据，检索关键词会在属性列表中查找与关键词匹配的属性值。关键词为空字符串时，返回方块名称。例如：对于字符串$(br2)Block{minecraft:bamboo}[age=1,leaves=large]$(br)$(li)若关键词为 large，则会返回 Null；$(li)若关键词为 leaves，则会返回字符串 large；$(li)若关键词为空字符串，则会返回方块名称： minecraft:bamboo。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "SNBT则复杂的多。譬如：$(br2){\"homo:id\":\"minecraft:furnace\",Items:$(br)[{Count:1b,Slot:0b,\"homo:id\":\"minecraft:cobblestone\"},$(br){Count:2b,Slot:1b,\"homo:id\":\"minecraft:oak_log\"},$(br){Count:2b,Slot:2b,\"homo:id\":\"minecraft:stone\"}]}$(br2)如果对字符串整体检索对应 \"homo:id\" 的数据，则将得到四个结果。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "因此，关键词在SNBT数据中只会对不处于括号内部的\"表层字符串\"生效，且关键词中的空格，冒号和双引号将被忽视。由此，检索 homoid，得到了 \"minecraft:furnace\"。而检索关键词 Items 时，我们会得到字符串$(br2)[{Count:1b……\"homo:id\":\"minecraft:stone\"}]。$(br2)这个字符串作为被括号包裹的里层部分，其中的内容不会被检索。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "但是，由于它包含着三个并列的字符串元素，以至于如果我们想查看熔炉输出槽位的物品，即包含字符串 Slot:2b 的元素中 \"homo:id\" 匹配的属性，关键词便无济于事了。此时，白、黑名单便派上了用场。$(br2)如果通过关键词检索得到的结果是一个格式为[{A},{B}……]的数组，那就排除\"不包含白名单中所有字符和包含黑名单中任意字符\"的元素。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "默认即为白名单模式，且二者均可为空。因此，仅仅 Slot:2b 即可表示须含有字符串 Slot:2b。白名单与黑名单之内的元素用 && 相连，而白、黑名单之间用 || 分开。$(br2)Count:2b && \"homo:id\" || Slot:1b && oak 表示须含有字符串 Count:2b 和 \"homo:id\" 但不得含有 Slot:1b 和 oak，|| Slot:1b 则表示不得含有字符串 Slot:1b。当且仅当满足所有条件的元素有一个时，将其输出，其余情况则会输出 null。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "此时，对于$(br2)[{Count:1b,Slot:0b,\"homo:id\":\"minecraft:cobblestone\"},$(br){Count:2b,Slot:1b,\"homo:id\":\"minecraft:oak_log\"},$(br){Count:2b,Slot:2b,\"homo:id\":\"minecraft:stone\"}]$(br2)会匹配出$(br2){Count:2b,Slot:2b,\"homo:id\":\"minecraft:stone\"}$(br2)只需要再次检索关键词 homoid ，就可以获得 \"minecraft:stone\" 了。"
+    }
+  ]
+}

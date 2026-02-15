@@ -1,0 +1,63 @@
+{
+	"name": "法术书",
+	"category": "hexcasting:items",
+	"icon": "hexcasting:spellbook",
+	"sortnum": 6,
+	"advancement": "hexcasting:opened_eyes",
+  "secret": true,
+	"pages": [
+    {
+      "type": "patchouli:text",
+      "text": "利用潜影贝的超空间折叠性质，我在方寸之间刻录了一本可以存储 64 个 iota 的$(item)图书馆/$。$(br2)置于主手时需要潜行并用滚轮翻页，而在打开施法网格时可直接使用滚轮。铁砧上可以改变当前书页的名字，主副手持有法术书时，默认 ` 键可唤出轮盘，当页面被命名且主手持有物品，右击页面即可更改图标。随着法术书页面的增加，八个槽位将从索引页面转为索引章节。"
+    },
+    { 
+      "type": "patchouli:multiblock",
+      "name": "使用潜影壳右击紫水晶母岩",
+      "multiblock": {
+        "pattern": [
+          ["ABA","B B","ABA"],
+          ["B B"," M ","B B"],
+          ["ABA","B0B","ABA"]
+        ],
+        "mapping": {
+          "A": "quark:dusky_myalite",
+          "B": "quark:myalite_crystal",
+          "M": "minecraft:budding_amethyst"
+        },
+        "symmetrical": true
+      }
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:page_num",
+      "anchor": "homo:page_num",
+      "input": "",
+      "output": "num",
+      "text": "返回法术书当前页码。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:page_highest",
+      "anchor": "homo:page_highest",
+      "input": "",
+      "output": "num",
+      "text": "返回法术书最大页码。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:page_name",
+      "anchor": "homo:page_name",
+      "input": "num",
+      "output": "str",
+      "text": "返回法术书指定页码的名称。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:page_to",
+      "anchor": "homo:page_to",
+      "input": "num",
+      "output": "",
+      "text": "将法术书翻至指定页码。"
+    }
+  ]
+}

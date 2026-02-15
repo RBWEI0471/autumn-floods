@@ -1,0 +1,23 @@
+{
+  "name": "剥离",
+  "category": "hexcasting:patterns/great_spells",
+  "icon": "hexcasting:quenched_allay_shard",
+  "sortnum": 0,
+  "advancement": "hexcasting:opened_eyes",
+  "read_by_default": true,
+  "secret": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:enlightenment",
+      "anchor": "homo:enlightenment",
+      "input": "entity, vector",
+      "output": "",
+      "text": "将意识从神经中解放，升华至永恒。$(br2)这大概就是破局的关键，一个没有笔顺的图案。一个线索，也是一个谜题。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "尝试的几种画法都失败了，看来它确有某种固定的笔顺。可是，上百种可能性，又如何手动穷举？$(br2)……没有更多资料了，残卷的年份相当错乱，很多记载完全找不到原型……作用目标应该是一个非施法者的生物，成功的条件被抹去了，一旦生物不匹配于那不知所指的向量，就将扣除四点生命值。$(br2)于破碎的逻辑之中，上百道断裂的失败，我必须用尽所学，找到……唯一正确的解。"
+    }
+  ]
+}

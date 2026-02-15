@@ -1,0 +1,297 @@
+{
+  "name": "常量",
+  "category": "hexcasting:patterns/stack",
+  "icon": "minecraft:bedrock",
+  "sortnum": 2,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "secret": true,
+  "pages": [
+    {
+      "type": "hexcasting:manual_pattern",
+      "op_id": "hexcasting:number",
+      "anchor": "Numbers",
+      "input": "",
+      "output": "number",
+      "text": "通过图案绘制数字一共有两种可用的方法，通过其他方式获得亦可。",
+      "patterns": [
+        {
+          "startdir": "SOUTH_EAST",
+          "signature": "aqaa"
+        }, {
+          "startdir": "NORTH_EAST",
+          "signature": "dedd",
+          "q": 3
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "text": "首先，绘制左页两图案中的一种，默认数值为 0。然后，每一画相对于上一画的$(italic)方向/$会以对应方式修改该数值。$(li)前方：加 1$(li)左前方：加 5$(li)右前方：加 10$(li)左后方：乘 2$(li)右后方：除以 2$(br)顺时针绘制，也即左页右图，会在绘制完成后取相反数（如左图逆时针绘制则不取）。$(p)绘制完成后会返回对应数。"
+    },
+    {
+			"type": "hexcasting:manual_pattern",
+			"op_id": "hexflow:noob_num",
+			"anchor": "hexflow:noob_num",
+			"input": "",
+			"output": "number",
+			"text": "另一种绘制数字的方法，默认数值为 0，此时每一画的$(italic)方向/$会以对应方式修改该数值。$(li)正右方：乘 2$(li)右上方：乘 2 加 1$(li)右下方：除以 10",
+			"patterns": [
+				{
+					"startdir": "SOUTH_EAST",
+					"signature": "aqawdedq"
+				}
+			]
+		},
+    {
+      "type": "hexcasting:manual_pattern_nosig",
+      "header": "数例 -32",
+      "text": "该图案会返回 -32：(1 + 5 + 10) * 2 的相反数。",
+      "patterns": {
+        "startdir": "NORTH_EAST",
+        "signature": "deddwqea"
+      }
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:const/true",
+      "anchor": "hexcasting:const/true",
+      "input": "",
+      "output": "bool",
+      "text": "返回 $(thing)True/$。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:const/false",
+      "anchor": "hexcasting:const/false",
+      "input": "",
+      "output": "bool",
+      "text": "返回 $(thing)False/$。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:const/null",
+      "anchor": "hexcasting:const/null",
+      "input": "",
+      "output": "null",
+      "text": "返回 $(l:casting/influences)$(thing)Null/$。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:empty_list",
+      "anchor": "hexcasting:empty_list",
+      "input": "",
+      "output": "list",
+      "text": "返回一个空列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:const/vec/0",
+      "anchor": "hexcasting:const/vec/0",
+      "input": "",
+      "output": "vector",
+      "text": "返回 [0, 0, 0]。"
+    },
+    {
+      "type": "hexcasting:manual_pattern",
+      "op_id": "hexcasting:const/vec/x",
+      "anchor": "hexcasting:const/vec/x",
+      "input": "",
+      "output": "vector",
+      "text": "左图返回 [1, 0, 0]；$(br2)右图返回 [-1, 0, 0]。",
+      "patterns": [
+        {
+          "startdir": "NORTH_WEST",
+          "signature": "qqqqqea",
+          "q": -1,
+          "r": -1
+        }, {
+          "startdir": "NORTH_EAST",
+          "signature": "eeeeeqa",
+          "r": 1
+        }
+      ]
+    },
+    {
+      "type": "hexcasting:manual_pattern",
+      "op_id": "hexcasting:const/vec/y",
+      "anchor": "hexcasting:const/vec/y",
+      "input": "",
+      "output": "vector",
+      "text": "左图返回 [0, 1, 0]；$(br2)右图返回 [0, -1, 0]。",
+      "patterns": [
+        {
+          "startdir": "NORTH_WEST",
+          "signature": "qqqqqew",
+          "q": -1,
+          "r": -1
+        }, {
+          "startdir": "NORTH_EAST",
+          "signature": "eeeeeqw",
+          "r": 1
+        }
+      ]
+    },
+    {
+      "type": "hexcasting:manual_pattern",
+      "op_id": "hexcasting:const/vec/z",
+      "anchor": "hexcasting:const/vec/z",
+      "input": "",
+      "output": "vector",
+      "text": "左图返回 [0, 0, 1]；$(br2)右图返回 [0, 0, -1]。",
+      "patterns": [
+        {
+          "startdir": "NORTH_WEST",
+          "signature": "qqqqqed",
+          "q": -1,
+          "r": -1
+        }, {
+          "startdir": "NORTH_EAST",
+          "signature": "eeeeeqd",
+          "r": 1
+        }
+      ]
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:string/empty",
+      "anchor": "moreiotas:string/empty",
+      "input": "",
+      "output": "str",
+      "text": "返回一个空字符串。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:string/space",
+      "anchor": "moreiotas:string/space",
+      "input": "",
+      "output": "str",
+      "text": "返回一个仅含单个空格的字符串。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:string/comma",
+      "anchor": "moreiotas:string/comma",
+      "input": "",
+      "output": "str",
+      "text": "返回一个仅含单个半角逗号的字符串。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:string/newline",
+      "anchor": "moreiotas:string/newline",
+      "input": "",
+      "output": "str",
+      "text": "返回一个仅含单个换行符的字符串。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:mark_a",
+      "anchor": "homo:mark_a",
+      "input": "",
+      "output": "str",
+      "text": "返回一个仅含单个单引号的字符串。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:mark_b",
+      "anchor": "homo:mark_b",
+      "input": "",
+      "output": "str",
+      "text": "返回一个仅含单个双引号的字符串。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:const/double/pi",
+      "anchor": "hexcasting:const/double/pi",
+      "input": "",
+      "output": "num",
+      "text": "返回 π，半圆的弧度。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:const/double/e",
+      "anchor": "hexcasting:const/double/e",
+      "input": "",
+      "output": "num",
+      "text": "返回 $(italic)e/$，自然对数的底。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:random",
+      "anchor": "hexcasting:random",
+      "input": "",
+      "output": "num",
+      "text": "返回一个 0 与 1 之间的随机数。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:16",
+      "anchor": "homo:16",
+      "input": "",
+      "output": "num",
+      "text": "返回 16"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:32",
+      "anchor": "homo:32",
+      "input": "",
+      "output": "num",
+      "text": "返回 32"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:64",
+      "anchor": "homo:64",
+      "input": "",
+      "output": "num",
+      "text": "返回 64"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:128",
+      "anchor": "homo:128",
+      "input": "",
+      "output": "num",
+      "text": "返回 128"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:256",
+      "anchor": "homo:256",
+      "input": "",
+      "output": "num",
+      "text": "返回 256"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:512",
+      "anchor": "homo:512",
+      "input": "",
+      "output": "num",
+      "text": "返回 512"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:1024",
+      "anchor": "homo:1024",
+      "input": "",
+      "output": "num",
+      "text": "返回 1024"
+    },
+    {
+			"type": "hexcasting:manual_pattern",
+			"anchor": "hexthings:noop",
+			"op_id": "hexthings:noop",
+			"text": "以此笔顺起始的一系列图案将不会进行任何操作",
+			"header": "hexcasting.special.hexthings:noop",
+			"patterns": [
+				{
+					"startdir": "NORTH_EAST",
+					"signature": "dade"
+				}
+			]
+		}
+  ]
+}

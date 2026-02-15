@@ -1,0 +1,23 @@
+{
+  "name": "罅隙",
+  "category": "hexcasting:patterns/great_spells",
+  "icon": "minecraft:painting",
+  "sortnum": 10,
+  "advancement": "hexcasting:enlightenment",
+  "read_by_default": true,
+  "secret": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:space",
+      "anchor": "homo:space",
+      "input": "vec, vec, vec, [str], bool",
+      "output": "",
+      "text": "将前两个向量作为立方体的对角顶点坐标，将匹配于黑白名单列表的方块移动至原位置向第三个偏移向量偏移处。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "对选中区域中的所有方块进行判断，若布尔值为 true，则选中所有名称包含于字符串列表内的方块，为 false，则排除所有名称包含于字符串列表内的方块，将符合条件的方块向第三个向量代表的偏移向量偏移，并清空原区域。$(br2)记录移动的方块总数为 a，移除的方块总数为 b。消耗(Math.log10(a) + 1)² * 100000 + b * 10 点媒质。"
+    }
+  ]
+}

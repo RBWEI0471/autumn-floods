@@ -1,0 +1,8 @@
+{
+  "name": "栈操作",
+  "icon": "minecraft:textures/item/book.png",
+  "description": "这一章节虽然图案繁多，但排布亦有规律可循。基础页面包含着所有用以获取指定信息的图案，而世界页面则处理维度和区域的信息。其后各个页面是对于特定类型 iota 数据的处理，其中有些图案会重复出现，因为对于不同类型的输入，它们会依照相似但不同的逻辑处理。",
+  "parent": "hexcasting:patterns",
+  "sortnum": 0,
+  "secret": true
+}

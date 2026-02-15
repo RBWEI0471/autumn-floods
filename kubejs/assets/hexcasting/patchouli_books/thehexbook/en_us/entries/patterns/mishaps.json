@@ -1,0 +1,42 @@
+{
+  "name": "事故",
+  "category": "hexcasting:patterns",
+  "icon": "minecraft:textures/mob_effect/poison.png",
+  "sortnum": 2,
+  "advancement": "hexcasting:root",
+  "secret": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "在进行错误操作时，往往会引发事故。事故的后果通常不是很严重，主要用于对我进行提示。$(br2)事故会将当前咒术的延续设为空值，换而言之，将终止咒术。根据事故的类型，我能大致推断出其造成的有害后果。我结合残页，补全了事故类型，其中有一些我未曾见过，但是有所记载的事故，或许以后会遇见他们。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)无效图案$(br2)绘制的图案不对应操作。$(br2)产生黄色火花，并向栈顶压入一个$(action)垃圾/$。$(br2)$(li)Iota 错误$(br2)栈中的 iota 参数不满足此操作的条件，错误信息只会提示最先压入的参数。$(br2)产生灰色火花，将无效的 iota 替换为$(action)垃圾/$。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)Iota 过少$(br2)此操作需要的参数不足。$(br2)产生灰色火花，并向栈顶压入等同于缺少数量的$(action)垃圾/$。$(br2)$(li)Iota 过多$(br2)含列表中元素在内，施法栈总 iota 的数量大于 1024。$(br2)产生黑色火花，将整个施法栈变为$(action)垃圾/$。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)向量越界$(br2)试图影响在施法范围之外的某一位置。$(br2)产生红色火花，掉落手中物品并飞向对应位置。$(br2)$(li)实体越界$(br2)试图影响在施法范围之外的某一实体。$(br2)产生粉色火花，掉落手中物品并飞向对应实体。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)物品错误$(br2)提供一个不适合此操作的物品。$(br2)产生棕色火花。如果持有则令其掉落；实体则将其击飞。$(br2)$(li)方块错误$(br2)提供一个不适合此操作的方块。$(br2)产生亮绿色火花，并在对应位置产生一次视觉上的爆炸。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)反思过急$(br2)在绘制$(l:patterns/patterns_as_iotas#hexcasting:open_paren)$(action)内省/$前绘制$(l:patterns/patterns_as_iotas#hexcasting:close_paren)$(action)反思/$。$(br2)产生橙色火花，并压入一个$(l:patterns/patterns_as_iotas#hexcasting:close_paren)$(action)反思/$。$(br2)$(li)钻研过深$(br2)咒术尚能运行的图案数归零。$(br2)产生暗蓝色火花，并使我窒息。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)数学错误$(br2)试图进行非法的数学操作。$(br2)产生红色火花，压入一个$(action)垃圾/$，并扣去我当前生命值的一半。$(br2)$(li)惰性剥离$(br2)试图剥离错误的，或已被剥除意识的生物的意识。$(br2)产生暗绿色火花，并杀死对应生物，视为由我击杀。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)缺失法术环$(br2)试图直接执行独属于法术环的操作。$(br2)产生淡蓝色火花，并将物品栏中所有物品散落在地。$(br2)$(li)缺失阿卡夏记录$(br2)试图在错误的方块上访问$(l:greatwork/akashiclib)$(item)阿卡夏记录/$。$(br2)产生紫色火花，消耗部分经验。"
+    }
+  ]
+}

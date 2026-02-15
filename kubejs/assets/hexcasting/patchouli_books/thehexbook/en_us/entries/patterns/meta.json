@@ -1,0 +1,176 @@
+{
+  "name": "元运行",
+  "category": "hexcasting:patterns",
+  "icon": "minecraft:shulker_box",
+  "sortnum": 6,
+  "advancement": "hexcasting:opened_eyes",
+  "secret": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "这一页的图案机理可谓匪夷所思。完全不需费些什么力气，栈操作的假说便四顾茫然。试问：赫尔墨斯的执行如何运作？卡戎的边界在何处停摆？修普诺斯的咒术从何创建？托特的参数又如何传递？$(br2)自然向我提出问题后完全不予解答，而仅仅罗列诸多表象。这是在展示一道不可跨越的沟壑，还是在导向一个愈发晦涩的深渊？"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "经过初步分析，我将原理似乎相近的图案分为四组：$(br)$(li)1.以赫尔墨斯为代表的卡戎，厄科与海奎特之策略$(br)$(li)2.以托特为代表的汉诺，玛特与康威之策略$(br)$(li)3.以修普诺斯为代表的厄洛斯，狄俄尼索斯与匝格瑞俄斯之策略。$(br2)在存在的维度之中，不会有无的位置。思维的狩猎之中，这道断裂令人如此……目眩神迷。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:eval",
+      "anchor": "hexcasting:eval",
+      "input": "pattern | [pattern]",
+      "output": "many",
+      "text": "将栈顶的$(thing)图案/$或$(thing)图案列表/$依次运行，运行的$(thing)结果/$会返回$(thing)栈/$中。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:halt",
+      "anchor": "hexcasting:halt",
+      "text": "运行至该$(thing)图案/$时，终止当前咒术的执行。终止的效果有其边界，推测与咒术的创建相关。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:echo",
+      "anchor": "homo:echo",
+      "input": "[pattern], num",
+      "output": "any",
+      "text": "将栈顶的$(thing)图案列表/$运行指定次数，运行的$(thing)结果/$会返回$(thing)栈/$中。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextweaks:while",
+      "anchor": "hextweaks:while",
+      "input": "[pattern]",
+      "output": "",
+      "text": "运行栈顶的图案列表并检视列表下方的 iota，直至占卜之纯化对该 iota 将返回 false 时停止。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:for_each",
+      "anchor": "hexcasting:for_each",
+      "input": "[pattern], list",
+      "output": "list",
+      "text": "继承当前栈中的所有元素，对后一$(thing)列表/$中的每个$(thing)元素/$运行前一$(thing)图案列表/$中的$(thing)图案/$。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "具体来讲，对应后一$(thing)列表/$中的每个$(thing)元素/$，它将依次执行以下操作：$(li)1.创建一个新$(thing)栈/$，其中包括当前$(thing)栈/$中的所有$(thing)元素/$和后一$(thing)列表/$中的一个$(thing)元素/$。$(li)2.存入前一$(thing)列表/$中的所有$(thing)图案/$。$(li)3.运行图案，并将剩余所有$(thing)元素/$存进一个$(thing)列表/$，回到第一步，循环。$(li)4.在所有$(thing)元素/$都运行一遍后，将存有每次运行剩余元素的$(thing)列表/$压入原本的$(thing)栈/$中。"
+    },
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "hexflow:call_stack",
+			"anchor": "hexflow:call_stack",
+			"input": "(pattern | [pattern]) | (pattern | [pattern], num)",
+			"output": "many",
+			"text": "$(br)继承当前当前栈中指定数量的元素，若未指定则默认为零，以其为初始栈执行$(thing)图案列表/$。"
+		},
+    {
+      "type": "patchouli:text",
+      "text": "具体来讲，它将依次执行以下操作：$(br)$(li)1.创建一个新$(thing)栈/$，若栈顶元素为数字，则将图案列表前指定数量的元素压入初始栈，若未指定则不压入。$(br)$(li)2.存入前一$(thing)列表/$中的所有$(thing)图案/$。$(br)$(li)3.运行图案，返回运行结果。"
+    },
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "hexflow:pure_reduce",
+			"anchor": "hexflow:pure_reduce",
+			"input": "[pattern], list",
+			"output": "list",
+			"text": "依次对后一$(thing)列表/$中的$(thing)元素/$运行前一$(thing)图案列表/$中的$(thing)图案/$，每次运行后剩余的$(thing)元素/$将继承至下一次运行。"
+		},
+    {
+      "type": "patchouli:text",
+      "text": "具体来讲，对应后一$(thing)列表/$中的每个$(thing)元素/$，它将依次执行以下操作：$(li)1.创建一个新$(thing)栈/$，其中包括后一$(thing)列表/$中的前两个$(thing)元素/$。$(li)2.存入前一$(thing)列表/$中的所有$(thing)图案/$。$(li)3.运行图案，并创建一个新$(thing)栈/$，其中包括前一次运行后$(thing)栈/$中剩余的所有$(thing)元素/$与后一$(thing)列表/$中的下一个$(thing)元素/$，回到第二步，循环。$(li)在所有$(thing)元素/$运行后，返回输出结果。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexflow:pure_map",
+      "anchor": "hexflow:pure_map",
+      "input": "[pattern], list",
+      "output": "list",
+      "text": "对后一$(thing)列表/$中的每个$(thing)元素/$运行前一$(thing)图案列表/$中的$(thing)图案/$。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "具体来讲，对应后一$(thing)列表/$中的每个$(thing)元素/$，它将依次执行以下操作：$(li)1.创建一个新$(thing)栈/$，其中包括后一$(thing)列表/$中的一个$(thing)元素/$。$(li)2.存入前一$(thing)列表/$中的所有$(thing)图案/$。$(li)3.运行图案，并将剩余所有$(thing)元素/$存进一个$(thing)列表/$，回到第一步，循环。$(li)4.在所有$(thing)元素/$都运行一遍后，将存有每次运行剩余元素的$(thing)列表/$压入原本的$(thing)栈/$中。"
+    },
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "homo:time",
+			"anchor": "homo:time",
+			"input": "[pattern], num",
+			"output": "",
+			"text": "记录一个$(thing)图案列表/$，在给定数值 tick 后，创建一个新的咒术，用以执行记录的列表。"
+		},
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "homo:key",
+			"anchor": "homo:key",
+			"input": "[pattern]",
+			"output": "",
+			"text": "记录栈顶的$(thing)图案列表/$，或覆写已有的记录。此后每当按下 G 键，便创建一个新的咒术，用以执行记录的列表。"
+		},
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "hexoverpowered:mind_env/schedule",
+			"anchor": "hexoverpowered:mind_env/schedule",
+			"input": "[pattern], num",
+			"output": "",
+			"text": "记录一个$(thing)图案列表/$，在给定数值 tick 后，创建一个新的咒术或覆盖已有的咒术。同一时间只能存在一个被延时的咒术，咒术不会返回事故信息。"
+		},
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "hexoverpowered:mind_env/running_code",
+			"anchor": "hexoverpowered:mind_env/running_code",
+			"input": "",
+			"output": "",
+			"text": "返回当前环境中上一次拖延之策略所执行的图案列表。"
+		},
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "homo:forever",
+			"anchor": "homo:forever",
+			"input": "null | (false | null, str) | ([pattern], num) ([pattern], true, str)",
+			"output": "",
+			"text": "$(br2)创建或管理循环咒术，其将循环执行图案列表。"
+		},
+    {
+      "type": "patchouli:text",
+      "text": "若为 $(thing)null/$，则返回所有循环 ID 组成的列表；若为 $(thing)False/$ 和 str，或施法者死亡或离线时，删除指定 ID 的循环。$(thing)null/$ 和 str 则会判断是否存在指定 ID 的循环。$(br2)若为图案列表和$(thing)数/$，则每 tick 创建一个新的咒术用以执行记录的列表，直至创建 num 次；若为图案列表，$(thing)True/$和 str，则创建一个指定 ID 的循环咒术，循环每 tick 创建一个新的咒术用以执行记录的列表，直至被取消。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:event",
+      "anchor": "homo:event",
+      "input": "(many, [pattern], str, num) |$(br2)(bool | null, str, num) |$(br2)(num, bool | null | str)",
+      "output": "",
+      "text": "$(br2)$(br2)$(br)创建或管理触发咒术，其将依据条件执行图案列表。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "1.若栈顶向下第三元素为图案列表，则创建指定事件下指定 ID 的触发咒术，所需的参数 many 依据事件而改变；$(br2)2.若栈顶向下为 (bool | null, str, num)，则开关或移除指定事件下指定 ID 的触发咒术；$(br2)3.若栈顶向下为 (num, bool | null | str)，若为布尔值，则返回指定事件下所有开启或关闭的触发咒术的 ID；若为 null，则返回指定事件下所有触发咒术的 ID，若为 str，则返回指定事件下指定 ID 触发咒术的图案列表。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "每一个触发事件内可以存有任意数量的触发咒术，由栈顶向下第二元素指定 ID，存入相同 ID 的触发咒术会将其覆写，不同事件之间的 ID 相互独立。14 种不同的触发事件由数字 1 - 14 代表。$(br2)根据复杂程度的不同，事件需要数量零到三个不等，用以判断的参数，在栈顶以下第三元素后写入。当判断参数与事件参数相等或判断参数为 null 时，视为满足条件，所有条件都满足则运行对应的图案列表。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "下面 14 种触发条件参数由少及多，编号由小及大的列表：$(br)$(li)1.玩家维度改变事件 $(br)$(li)2.玩家重生事件 $(br)$(li)3.玩家登入事件 $(br)$(li)4.玩家退出事件 $(br)$(li)5.物品右键事件，物品名称 $(br)$(li)6.玩家聊天事件，聊天内容 $(br)$(li)7.物品拾取事件，物品名称 $(br)$(li)8.物品丢弃事件，物品名称 "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "触发条件的参数均由字符串表示，如向量 (0.50,0.50,0.50)，实体名称 minecraft:player：$(br)$(li)9.实体交互事件 $(br)$(li2)参数为实体名称，物品名称，实体名称返回为 EntityIota $(br)$(li)10.方块放置事件 $(br)$(li2)参数为方块名称，方块坐标，方块坐标返回为 Vec3Iota $(br)$(li)11.方块破坏事件，同上 "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)12.方块右键事件，方块名称，物品名称，方块坐标；方块坐标返回为 Vec3Iota $(br)$(li)13.方块左键事件，同上 $(br)$(li)14.实体受伤事件，实体名称，伤害类型，伤害数值 $(br2)仅当伤害来源或受伤实体为施法者时触发咒术，参数实体名称返回受伤实体或来源实体的 EntityIota，伤害数值返回为 DoubleIota，若无来源实体，则返回 null。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "当运行图案列表时，会先向栈中压入$(action)探知/$和一个列表 iota，列表由相应参数构成，但不局限于字符串 iota 的形式。$(br2)譬如，对应于参数的实体名称，伤害类型和伤害数值，实体受伤事件会返回 [entity | null, str, num]，但实体和数值返回了对应的 iota，这使得图案列表可以获取事件信息。由此，可以构造一个触发咒术，每当施法者受到伤害时，揭示伤害来源实体："
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)$(li)字符串 minecraft:player$(br)$(li)虚指 null$(br)$(li)字符串 2$(br)$(li)图案列表 [$(li2)数字之精思，1$(li2)抉择之馏化$(li2)揭示$(br)  ]$(br)$(li)字符串 eh1$(br)$(li)数字 14/$"
+    }
+  ]
+}

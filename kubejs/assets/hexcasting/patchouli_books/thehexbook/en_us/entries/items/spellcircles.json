@@ -1,0 +1,98 @@
+{
+  "name": "法术环",
+  "category": "hexcasting:items",
+  "icon": "minecraft:lodestone",
+  "advancement": "hexcasting:opened_eyes",
+  "sortnum": 7,
+  "secret": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "无论是造物抑或执念台，都不过依附于我的意识，但若是能根据条件在一定范围内运行定义的法术，那任何被设定的机器与之相比恐怕都要相形失色了。$(br2)这要求模拟一个意识的发生，但发生不是一个线性的开始，毋宁说是被自身所中介的东西。概念是开端，也是全体，真理无非是其运动着的展开，外化为物质，形成历史，造就时间，而又证成逻辑。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "因此，构建一个回环，过程展示逻辑，而开端也将是终结。我将这个结构命名为法术环，它由制动石，石板，和可选的导向石组成。$(br2)制动石正面到任意侧面必须由石板连接成一道封闭而流向唯一的路径，若运行到某处时出现数个可选路径时则会失效。可将结构中所有生效的石板包括在内的最小长方体便是法术环的范围，法术环只能影响范围内的区域。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "施法所需的媒质碎片需要通过漏斗注入其中，探知透镜可以查看其内部的存储。启动时，制动石会向其面朝的方向发射一道媒质波，沿着坐标相邻且相互连接或水平的石板加速传递，无论是否是有图案的石板。$(br2)媒质波会按顺序记录所经石板上的图案，将它们依次运行。而若是想依据条件改变运行的法术和范围，或是在转角处改变流向，则可以选用导向石。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "依据条件的不同，导向石会将媒质波导向不同的方向。虽然构造上出现了不唯一性，但实际起效的也仅会有一端，故此无碍于纯粹的思维。据说媒质波经过紫水晶母岩时，还能加速其上紫晶芽的生长，但我想，这对我现在恐怕没有什么用处。下文列出了一些独属于法术环的图案，注意，务必不要作为施法者运行他们。最后则是一个简单的实例，启动后，其中的图案将以逆时针运行："
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:circle/impetus_pos",
+      "anchor": "hexcasting:circle/impetus_pos",
+      "input": "",
+      "output": "vec",
+      "text": "在法术环上运行时，返回法术环$(item)制动石/$的位置向量。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:circle/impetus_dir",
+      "anchor": "hexcasting:circle/impetus_dir",
+      "input": "",
+      "output": "vec",
+      "text": "在法术环上运行时，返回法术环$(item)制动石/$朝向的法向量。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:circle/bounds/min",
+      "anchor": "hexcasting:circle/bounds/min",
+      "input": "",
+      "output": "vec",
+      "text": "在法术环上运行时，返回法术环影响范围西北靠下转角的位置向量。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:circle/bounds/max",
+      "anchor": "hexcasting:circle/bounds/max",
+      "input": "",
+      "output": "vec",
+      "text": "在法术环上运行时，返回法术环影响范围东南靠上转角的位置向量。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextweaks:wave",
+      "anchor": "hextweaks:wave",
+      "input": "",
+      "output": "vector",
+      "text": "在法术环上运行时，返回当前法术环中媒质波所处石板的位置向量。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hextweaks:normal",
+      "anchor": "hextweaks:normal",
+      "input": "",
+      "output": "vector",
+      "text": "在法术环上运行时，返回当前法术环中媒质波所处石板的法向量。"
+    },
+    {
+      "type": "patchouli:image",
+      "images": ["hexcasting:textures/gui/entries/spell_circle.png"],
+      "border": true,
+      "title": "hexcasting.page.spellcircles.teleport_circle.title"
+    },
+    {
+      "type": "hexcasting:crafting_multi",
+      "heading": "制动石",
+      "text": "左图中箭头处即为促动石，需要右击启动；制动石则需要施法者手持存有其真名的存储元件右击与其绑定，在接受红石信号时启动，运行时还将影响以施法者为中心，半径等同于施法者高度的区域。",
+      "recipes": [
+        "minecraft:kjs/hexcasting_impetus_rightclick",
+        "minecraft:kjs/hexcasting_impetus_redstone"
+      ]
+    },
+    {
+      "type": "hexcasting:crafting_multi",
+      "heading": "导向石",
+      "text": "导向石的流向可由顶部媒质的指向直观。红石导向石会在接收红石信号时令媒质波的输出方向相反，布尔导向石则会根据当前栈中的布尔值改变流向。",
+      "recipes": [
+        "minecraft:kjs/hexcasting_directrix_redstone",
+        "minecraft:kjs/hexcasting_directrix_boolean"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+maxUndoStackSize = 1024
+splicingTableMediaCost = 0
+splicingTableMaxMedia = 0
+splicingTableCastingCooldown = 1
+splicingTableAmbit = 32.0
+maxDebugThreads = 4

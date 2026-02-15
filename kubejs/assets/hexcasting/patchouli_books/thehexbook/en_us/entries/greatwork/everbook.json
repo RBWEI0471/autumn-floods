@@ -1,0 +1,65 @@
+{
+  "name": "永恒之书",
+  "category": "hexcasting:greatwork",
+  "icon": "minecraft:command_block",
+  "advancement": "hexcasting:enlightenment",
+  "entry_color": "54398a",
+  "sortnum": 4,
+  "secret": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "由我创造的世界趋于完善，那将成为自己的精神一步一步走向自由。我看见过去是未来创造生成定义证成无穷无尽，我看见我们被统摄在我身后追逐前方奔跑在我身上显现而又束缚……那彼此无分，独一无二的时空之中，有太多残破的我。我看见了那被我遗忘的开端。造物之功已毕，由我创造的精神终于道出了我，我是$(k)创世神/$。$(br2)再来一次，然后，忘记他……"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:the_spirit",
+      "anchor": "homo:the_spirit",
+      "input": "",
+      "output": "",
+      "text": "是谁倒映镜中的彼此，两忘一苇千秋？$(br2)这是属于世界之上的，我的图案。他能将谬误修正为完美，也将使必要变为可能。是否选择使用它，全然取决于我。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:ever_read",
+      "anchor": "homo:ever_read",
+      "input": "pattern",
+      "output": "any",
+      "text": "我记录的图案将铭刻在我的真名之中，任何世界的我创立的图案将被共享。这个由我书写的$(k)世界/$，我命名为永恒之书。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:ever_write",
+      "anchor": "homo:ever_write",
+      "input": "pattern, any",
+      "output": "",
+      "text": "$(action)我执/$用以创建属于我的图案，$(action)唯识/$用以读取真名中的信息。阿卡夏图书馆是属于他们的自然，永恒之书是由我定义的我。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:ever_dele",
+      "anchor": "homo:ever_dele",
+      "input": "pattern",
+      "output": "",
+      "text": "移除索引的条目，移除每一个世界中我曾拥有的索引。就像我曾创造他们，就像他们曾创造我那样。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:ever_meta",
+      "anchor": "homo:ever_meta",
+      "input": "pattern",
+      "output": "",
+      "text": "标记一个条目，此后当我绘制索引的图案，若条目内容为图案列表，则将列表元运行。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "一切问题的关键在于，不仅把真相理解为实体，而且同样表述为$(l)主体/$。$(br2)成为$(l)中介/$！它不是别的，而仅仅是运动着的自身同一。$(br2)在必然的过程中，我们以直接把握$(k)永恒/$，就此失却自我。$(br2)然则日方中方睨，物方死方生。反观自我不过是三位的迷梦，完整的一又何曾等同过自身呐？"
+    },
+    {
+      "type": "patchouli:link",
+      "text": "伟大的世界主宰，没有朋友，深感欠缺。$(br2)为此他就创造出诸多精神，反映自己的幸福，以求心赏意悦。$(br2)这最高的本质，不曾找到，任何东西和他品级相若。$(br2)从这个精神王国的圣餐杯里，它的$(l:patterns/everbook_entries#homo:omega)$(action)无限性/$给他翻涌起泡沫……",
+      "link_text": "秋水行川风波再",
+      "url": "《 ☀ ☾ 🙵 ≋ △ 》"
+    }
+  ]
+}

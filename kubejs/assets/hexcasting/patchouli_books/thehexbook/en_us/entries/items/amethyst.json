@@ -1,0 +1,37 @@
+{
+  "name": "媒质",
+  "icon": "minecraft:amethyst_shard",
+  "category": "hexcasting:items",
+  "sortnum": 0,
+  "advancement": "hexcasting:opened_eyes",
+  "secret": true,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "hexcasting:amethyst_dust",
+      "anchor": "dust",
+      "text": "在晶洞里采集紫水晶簇会获得三种形态的紫水晶，如果认为一个紫水晶粉中含有 10,000 点$(media)媒质/$的话，紫水晶碎片等价于 50,000 点，紫晶辉簇则有 100,000 点。大块的$(media)媒质/$虽然有其用处，但并不适合施法。如果我手头只有$(l:items/amethyst)$(item)紫晶辉簇/$，就算是最为基础的$(l:patterns/spells/blockworks#hexcasting:conjure_block)$(action)构筑方块/$也会消耗一整块水晶。自然不愿意给留有余量的做法令人有些不快，但这对我不成问题。"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "使用$(l:items/amethyst#homo:battery)$(action)制作试剂瓶/$法术将$(media)媒质/$改变形态，施放$(hex)咒术/$时，液态$(media)媒质/$便不会遭到浪费。$(item)缀品/$和$(item)造物/$内部的媒质池也是如此。它们初次制作时便已经决定了最大容量，当主手持有未装满的$(item)媒质之瓶/$，缀品或造物时，副手持有$(l:items/amethyst)媒质碎片/$时，左击方块即可对现有容量进行补充。",
+      "item": "hexcasting:battery{\"hexcasting:media\":6400000,\"hexcasting:start_media\":6400000}"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "可是，在自然界中，$(item)紫水晶/$的主要存在形式毕竟是$(item)紫水晶块/$。在$(media)媒质/$紧缺的当下，我必须得找到方法将它们加以利用。单纯的粉碎无法达成目的，因为它们的晶体结构疏散而惰性。$(br2)经过研究推测，唯有在一场爆炸中用其他富含能量和磁性的物质将以充能活化，才有投入使用的可能。无数次险象环生之后，我终于获得一个极其危险的配方：一份原料包含一个$(item)铜块/$，$(item)红石块/$和$(item)紫水晶块/$。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "每当爆炸波及到一份原料，便会生成一份已然活化的媒质，其中蕴含巨大的能量。但是却具有非常危险的特征：它会随时间衰变。每秒它都会损失 100,000 点媒质量，放射性射线还会持续造成伤害，更致命的是，如果同时携带多个衰变媒质，它们所释放的射线会以指数增长。$(br2)但这一切都是值得的，因为他给的实在是太多了，整整 6,400,000 点！"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:battery",
+      "anchor": "homo:battery",
+      "input": "num",
+      "output": "",
+      "text": "对应的槽位放上媒质碎片，施放法术后，便会将其转化为媒质之瓶。"
+    }
+  ]
+}

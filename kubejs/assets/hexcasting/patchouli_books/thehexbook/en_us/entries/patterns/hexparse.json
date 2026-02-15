@@ -1,0 +1,66 @@
+{
+  "name": "图案解析",
+  "category": "hexcasting:patterns",
+  "icon": "minecraft:loom",
+  "advancement": "hexcasting:opened_eyes",
+  "sortnum": 8,
+  "secret": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "法术同样有其注册名，在对应的图案页面按住 左shift 时显示于标题之下，例如，意识之精思名为 get_caster，故此，通过指令或图案就可以将文本与图案列表相互转换：$(p)指令 $(c:/hexParse get_caster)/hexParse get_caster/$$(p)即可将存有图案-意识之精思的列表写入副手核心之中，图案列表中，图案的注册名之间以逗号相连即可。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)/hexParse <代码文本> [重命名] 或 /hexParse clipboard [重命名]：$(br)将输入的文本或剪切板内容解析至手持核心，若提供了重命名参数则会同时将核心重命名$(br)$(li)/hexParse read：$(br)将手持核心的内容解析至聊天窗口$(br)$(li)/hexParse mind_stack push <代码>：$(br)将输入的文本解析至法杖思维栈"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexparse:focus2code",
+      "anchor": "hexparse:focus2code",
+      "input": "",
+      "output": "",
+      "text": "将手持核心中的内容解析为字符串，并输出至聊天栏，效果同/hexParse read。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexparse:code2focus",
+      "anchor": "hexparse:code2focus",
+      "input": "",
+      "output": "[patterns]",
+      "text": "将剪切板中的内容解析为图案，并写入手持核心，效果同/hexParse clipboard。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexparse:compile",
+      "anchor": "hexparse:compile",
+      "input": "str",
+      "output": "[patterns]",
+      "text": "将图案名称组成的字符串解析为对应的图案列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexparse:remove_comments",
+      "anchor": "hexparse:remove_comments",
+      "input": "list",
+      "output": "list",
+      "text": "移除列表中的所有注释 iota。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexparse:create_linebreak",
+      "anchor": "hexparse:create_linebreak",
+      "input": "any | comment",
+      "output": "comment | str",
+      "text": "返回一个用于换行的注释 iota。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexparse:comment_switcher",
+      "anchor": "hexparse:comment_switcher",
+      "input": "any | comment",
+      "output": "comment | str",
+      "text": "将一个 iota 转化为注释 iota，或将注释 iota 转化为字符串 iota。此 iota 仅用于注释，执行时无任何实际效果。"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "卓越法术",
+  "icon": "scholar:textures/item/white_writable_book.png",
+  "description": "$(o)潮水的呼吸追逐云海的交界$(br2)$(br)轻风的舞步踏越时光的洪流$(br2)$(br)是谁拨动星河的齿轮$(br)纵横天幕的光影$(br2)$(br)是谁倒映镜中的彼此$(br)两忘一苇千秋？/$",
+  "parent": "hexcasting:patterns",
+  "sortnum": 2,
+  "secret": true
+}

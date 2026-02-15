@@ -1,0 +1,143 @@
+{
+  "name": "方块",
+  "category": "hexcasting:patterns/spells",
+  "icon": "minecraft:cobblestone",
+  "sortnum": 2,
+  "advancement": "hexcasting:opened_eyes",
+  "read_by_default": true,
+  "secret": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "消耗物品的法术，会先检索将要使用的物品，然后消耗，使用的物品与消耗的物品并不完全等同，具体而言：$(li)首先，法术会在快捷栏内$(item)法杖/$所处位置的右侧依次检索可用物品，达到最右侧后便会从最左侧开始向右搜寻。若$(item)法杖/$在副手，则会从零号槽位开始检索。$(li)然后，法术会从$(italic)物品栏内最靠后的位置/$开始消耗同种物品，且物品栏优先于快捷栏。"
+    },
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "homo:interaction",
+			"anchor": "homo:interaction",
+			"input": "entity | vec",
+			"output": "",
+			"text": "使用施法者的副手与指定实体交互，或从顶面与指定坐标处的方块交互，无视施法范围限制。"
+		},
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "homo:use",
+			"anchor": "homo:use",
+			"input": "num, vec | [vec, vec]",
+			"output": "",
+			"text": "对指定坐标处的方块使用指定槽位的物品，若第二参数为列表，则依照$(l:patterns/spells/contain)$(action)物流章节/$的逻辑进行处理，若为单一位置向量则视为指定坐标顶面，无视施法范围限制。"
+		},
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:place_type",
+      "anchor": "hexal:place_type",
+      "input": "mote, vec",
+      "output": "",
+      "text": "将指定物元中的方块放置于指定坐标向量处，消耗 1,250 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:place_block",
+      "anchor": "hexcasting:place_block",
+      "input": "vec",
+      "output": "",
+      "text": "选择一个方块放在指定坐标向量处，消耗 1,250 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:break_block",
+      "anchor": "hexcasting:break_block",
+      "input": "vec",
+      "output": "",
+      "text": "破坏指定坐标向量处的方块，消耗 1,250 点媒质；若为常见的自然方块或咒术方块，则仅消耗 100 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:annihilation",
+      "anchor": "homo:annihilation",
+      "input": "vec",
+      "output": "",
+      "text": "湮灭指定坐标向量处的方块，消耗 10 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:falling_block",
+      "anchor": "hexal:falling_block",
+      "input": "vec",
+      "output": "",
+      "text": "令指定坐标向量处的方块变为下落的方块实体，消耗 100 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:smelt",
+      "anchor": "hexal:smelt",
+      "input": "vec | entity | mote",
+      "output": "",
+      "text": "烧炼指定坐标向量处的方块，或烧炼所有物品，每烧炼一个物品，消耗 1,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:freeze",
+      "anchor": "hexal:freeze",
+      "input": "vec",
+      "output": "",
+      "text": "冻结指定坐标向量处的方块，消耗 100 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:create_water",
+      "anchor": "hexcasting:create_water",
+      "input": "vec",
+      "output": "",
+      "text": "在指定坐标向量处填充一桶水，消耗 10,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:create_lava",
+      "anchor": "hexcasting:create_lava",
+      "input": "vec",
+      "output": "",
+      "text": "在指定坐标向量处填充一桶岩浆，消耗 100,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:destroy_water",
+      "anchor": "hexcasting:destroy_water",
+      "input": "vec",
+      "output": "",
+      "text": "清空指定坐标向量处的流体容器，或清除指定坐标向量为中心 5x5x5 的流体，范围内的流体被清除时，还会链式清除相邻流体，直至上限 1024，消耗 200,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:ignite",
+      "anchor": "hexcasting:ignite",
+      "input": "entity | vec",
+      "output": "",
+      "text": "点燃指定坐标向量处的实体或方块，消耗 10,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:conjure_block",
+      "anchor": "hexcasting:conjure_block",
+      "input": "vec",
+      "output": "",
+      "text": "在指定坐标向量处构筑一个空灵的方块，消耗 10,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:conjure_light",
+      "anchor": "hexcasting:conjure_light",
+      "input": "vec",
+      "output": "",
+      "text": "在指定坐标向量处构筑一个空灵的光源，消耗 10,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:bonemeal",
+      "anchor": "hexcasting:bonemeal",
+      "input": "vec",
+      "output": "",
+      "text": "对指定坐标向量处的植物施加骨粉，消耗 11,250 点媒质。"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "widget.spellwheel.page": "第 %s 页",
+  "widget.spellwheel.page.suffix": " (第 %s 页)",
+  "widget.spellwheel.chapter": "第 %s 章",
+  "widget.spellwheel.empty": "空",
+  "widget.spellwheel.empty.desc": "未分配.",
+  "key.spellwheel.open": "打开法术书轮盘",
+  "category.spellwheel.main": "法术书轮盘",
+  "text.spellwheel.no_icon": "无名称的页面无法设置图标",
+  "text.spellwheel.you_sure": "更改此槽位的图标？",
+  "text.spellwheel.not_artifact": "这不是一个有效的施法物品: %s"
+}

@@ -1,0 +1,86 @@
+{
+  "name": "转义",
+  "category": "hexcasting:patterns",
+  "icon": "minecraft:barrel",
+  "sortnum": 5,
+  "advancement": "hexcasting:opened_eyes",
+  "secret": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "如果只是将$(thing)图案/$绘制出来，自然当然不会将它加入$(thing)栈/$中。唯有跳脱$(thing)栈/$与$(thing)图案/$的框架，才能理解$(l:patterns/patterns_as_iotas#hexcasting:escape)$(action)考察/$与$(l:patterns/patterns_as_iotas#hexcasting:open_paren)$(action)内省/$。$(br2)他们既能对$(thing)栈/$中的$(thing)图案/$施加影响，又不会被$(thing)栈/$所捕捉。他们就像作用于$(thing)栈/$本身的法术，令$(thing)图案/$本身也可被视为 iota。不对应操作的图案，无非是用于装饰的笔顺。但这些无意义的笔顺，却会被$(l:patterns/meta)$(action)元运行/$重新与操作相联。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l:patterns/patterns_as_iotas#hexcasting:escape)$(action)考察/$会将其后的图案封存为笔顺，而$(l:patterns/patterns_as_iotas#hexcasting:open_paren)$(action)内省/$和$(l:patterns/patterns_as_iotas#hexcasting:close_paren)$(action)反思/$之间绘制的所有图案都不会与操作联系，直至最后一个$(l:patterns/patterns_as_iotas#hexcasting:close_paren)$(action)反思/$结束后，再将其中的所有 iota 组成$(thing)列表/$。$(br2)$(l:patterns/patterns_as_iotas#hexcasting:escape)$(action)考察/$拥有最高的优先级，因此$(l:patterns/patterns_as_iotas#hexcasting:open_paren)$(action)内省/$和$(l:patterns/patterns_as_iotas#hexcasting:close_paren)$(action)反思/$不会使其间的$(l:patterns/patterns_as_iotas#hexcasting:escape)$(action)考察/$变为$(thing)图案 iota/$，只有前一个$(l:patterns/patterns_as_iotas#hexcasting:escape)$(action)考察/$能使后一个$(l:patterns/patterns_as_iotas#hexcasting:escape)$(action)考察/$变为$(thing)图案 iota/$。除此之外，$(l:patterns/patterns_as_iotas#hexcasting:escape)$(action)考察/$还有独特的性质，它会使得下一个图案被$(action)转义/$，$(l:patterns/meta)$(action)元运行/$不会将$(action)转义/$标记的 iota 匹配于笔顺。"
+    },
+    {
+      "type": "hexcasting:manual_pattern",
+      "header": "hexcasting.rawhook.hexcasting:open_paren",
+      "anchor": "hexcasting:open_paren",
+      "text": "绘制$(action)内省/$会让之后绘制的$(thing)图案/$不再与操作联系。而在绘制$(l:patterns/patterns_as_iotas#hexcasting:close_paren)$(action)反思/$后，之前绘制的$(thing)图案/$就会作为一个$(thing)列表/$加到$(thing)栈/$中。",
+      "patterns": {
+        "startdir": "WEST",
+        "signature": "qqq"
+      }
+    },
+    {
+      "type": "hexcasting:manual_pattern",
+      "header": "hexcasting.rawhook.hexcasting:close_paren",
+      "anchor": "hexcasting:close_paren",
+      "text": "如果绘制$(action)内省/$后再绘制一个$(action)内省/$，则它也将被加到$(thing)列表/$中，此后绘制对应次数的$(l:patterns/patterns_as_iotas#hexcasting:close_paren)$(action)反思/$，才能回到正常的施法模式。",
+      "patterns": {
+        "startdir": "EAST",
+        "signature": "eee"
+      }
+    },
+    {
+      "type": "hexcasting:manual_pattern",
+      "header": "hexcasting.rawhook.hexcasting:escape",
+      "anchor": "hexcasting:escape",
+      "text": "先绘制$(l:patterns/patterns_as_iotas#hexcasting:escape)$(action)考察/$，然后绘制任意$(thing)图案/$。第二个$(thing)图案/$就会作为$(thing)图案 iota/$ 被加到$(thing)栈/$中。",
+      "patterns": {
+        "startdir": "WEST",
+        "signature": "qqqaw"
+      }
+    },
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "hexflow:weak_escape",
+			"anchor": "hexflow:weak_escape",
+			"input": "",
+			"output": "",
+			"text": "$(action)内省/$和$(action)反思/$会使其间的$(action)探知/$变为$(thing)图案 iota/$，因此，相较于考察，探知更适合在内省反思中写入 iota。"
+		},
+    {
+			"type": "hexcasting:manual_pattern",
+			"anchor": "hexthings:unquote",
+			"op_id": "hexthings:unquote",
+			"text": "绘制$(action)内化/$后，会暂时退出所有层数的转义状态，直至$(action)反观/$为止。",
+			"header": "hexcasting.action.hexthings:unquote",
+			"patterns": [
+				{
+					"startdir": "NORTH_EAST",
+					"signature": "aqqq"
+				}
+			]
+		},
+		{
+			"type": "hexcasting:pattern",
+			"anchor": "hexthings:requote",
+			"op_id": "hexthings:requote",
+			"text": "绘制$(action)反观/$后，会将其与$(action)内化/$之间的所有 iota 存入绘制$(action)内化/$前的括号列表中。",
+			"header": "hexcasting.action.hexthings:requote"
+		},
+    {
+      "type": "hexcasting:manual_pattern",
+      "header": "hexcasting.rawhook.hexcasting:undo",
+      "anchor": "hexcasting:undo",
+      "text": "若在$(l:patterns/patterns_as_iotas#hexcasting:close_paren)$(action)反思/$过程中有$(thing)图案/$绘制错误，则可绘制消解以移除当前$(thing)图案列表/$下的最后绘制的$(thing)图案/$。",
+      "patterns": {
+        "startdir": "EAST",
+        "signature": "eeedw"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "启迪",
+  "icon": "hexcasting:charged_amethyst",
+  "category": "hexcasting:basics",
+  "sortnum": 1,
+  "advancement": "hexcasting:root",
+  "secret": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "致密的玄武岩下，终于，我找到了那座晶洞。那目眩神迷的能量压迫着我的颅骨。毫无疑问，那琳琅作响的$(l:items/amethyst)$(item)紫水晶/$，就是记载中可供施法的，固态的$(media)媒质/$。$(br2)开采的水晶分为晶粉和碎片，除此以外，还有晶型致密，形状完好的辉簇。但，这还不够。根据记载，即使是辉簇，都远远没能达到所谓单晶的品级。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "在取向各异的晶粒组成的多晶之外，似乎还存在过晶格取向绝对一致的单晶。考察过自然晶簇的形成环境后，我只能推断，这些晶簇必然有人工制备的方法。$(br2)我侧耳倾听，我摘下手套。我闭上眼。我缓缓的触碰。刹那与永恒之间，我的耳畔映现出不能用言语描绘的维度，我的眼前诉说着不能用思维穷尽的话语，我看到听到它在流淌，从我体内流过，而又$(l:basics/media)流出/$……"
+    }
+  ]
+}

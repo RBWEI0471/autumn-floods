@@ -1,0 +1,19 @@
+{
+  "name": "升华",
+  "category": "hexcasting:patterns/great_spells",
+  "icon": "minecraft:totem_of_undying",
+  "sortnum": 1,
+  "advancement": "hexcasting:enlightenment",
+  "read_by_default": true,
+  "secret": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:infinite",
+      "anchor": "homo:infinite",
+      "input": "entity",
+      "output": "",
+      "text": "升华一个实体，记录他下一次将要受到的伤害数值，不小于 1 点。记录成功后 9 秒内，每当其将要受到伤害，将伤害修正为记录值，消耗 64,000 点媒质。"
+    }
+  ]
+}

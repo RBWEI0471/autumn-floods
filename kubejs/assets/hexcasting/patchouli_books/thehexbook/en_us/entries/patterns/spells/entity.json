@@ -1,0 +1,152 @@
+{
+  "name": "实体",
+  "category": "hexcasting:patterns/spells",
+  "icon": "minecraft:jack_o_lantern",
+  "sortnum": 0,
+  "advancement": "hexcasting:opened_eyes",
+  "read_by_default": true,
+  "secret": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:yaw",
+      "anchor": "homo:yaw",
+      "input": "entity, vec",
+      "output": "",
+      "text": "令指定实体看向指定坐标向量。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:ride",
+      "anchor": "homo:ride",
+      "input": "entity.1, entity.2",
+      "output": "",
+      "text": "若 entity.1 与 entity.2 相近，则令 entity.1 骑乘 entity.2。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:high",
+      "anchor": "homo:high",
+      "input": "entity, num",
+      "output": "",
+      "text": "将实体的纵坐标与指定数值相加，保留其速度。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:tell",
+      "anchor": "homo:tell",
+      "input": "entity, any",
+      "output": "",
+      "text": "若实体为施法者，则令他发送此 iota 讯息，否则命名为该 iota 讯息，并令其名称高亮。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:control",
+      "anchor": "homo:control",
+      "input": "entity.1, entity.2",
+      "output": "",
+      "text": "将 entity.2 设为 entity.1 的攻击目标，消耗 二者当前生命值中较小值 * 1,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:simulation",
+      "anchor": "homo:simulation",
+      "input": "entity, str, num",
+      "output": "",
+      "text": "对一个实体造成来源为指定名称的虚拟实体，数值为指定正整数的伤害，对同一实体造成的累计伤害不能超过四点，消耗 100 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:blink",
+      "anchor": "hexcasting:blink",
+      "input": "entity, num",
+      "output": "",
+      "text": "将指定实体沿其视线方向传送指定距离，每格消耗 25,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:add_motion",
+      "anchor": "hexcasting:add_motion",
+      "input": "entity, vec",
+      "output": "",
+      "text": "给予指定实体沿向量方向，大小等于其模长的速度，消耗 (模长的平方 * 10,000) 点媒质，在一次施法内对同一个实体多次使用，每次额外消耗 10,000 点媒质。"
+    },
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "homo:uncrafting",
+			"anchor": "homo:uncrafting",
+			"input": "entity",
+			"output": "",
+			"text": "将指定物品实体拆解为掉落物品，随机选择指定物品的一个合成配方，将其中每一个原料依据常见，少见，稀有和史诗的稀有度，以 4/5 ~ 1/5 的概率返还，消耗 10,000 点媒质。"
+		},
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:dimension",
+      "anchor": "homo:dimension",
+      "input": "entity, str",
+      "output": "",
+      "text": "将指定实体传送至指定维度相同坐标向量处。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:gravity",
+      "anchor": "homo:gravity",
+      "input": "entity, num",
+      "output": "",
+      "text": "设置实体的重力，默认值为 8，零代表无重力，负数代表重力方向向上。若数值在 0 - 8 之间，消耗 100 点媒质；大于 8 为 (num - 8) * 10000 点，小于 0 为 num² * 10000 点。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:flight",
+      "anchor": "hexcasting:flight",
+      "input": "player",
+      "output": "",
+      "text": "将施法者弹起并给予如同鞘翅一般的滑翔能力，按住空格即可开启，碰到物块时则消失，消耗 100,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:flight/range",
+      "anchor": "hexcasting:flight/range",
+      "input": "entity, num",
+      "output": "",
+      "text": "创建一个半径为指定数值，高度不限的区域，于此范围内可以无限制飞行，一旦离开此范围则会令该区域永久失效，每格半径消耗 10,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:flight/time",
+      "anchor": "hexcasting:flight/time",
+      "input": "entity, num",
+      "output": "",
+      "text": "给予施法者给定时长的飞行效果，每秒持续时间消耗 100,000 点媒质。"
+    },
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "homo:pos",
+			"anchor": "homo:pos",
+			"input": "entity, vec",
+			"output": "",
+			"text": "指定任意实体移动至指定坐标向量处，依据实体与坐标向量的距离不同，16 格以内消耗 (距离的平方 * 1,000 点媒质)，16 格以外则有几率随机偏移。"
+		},
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:teleport/great",
+      "anchor": "hexcasting:teleport/great",
+      "input": "entity, vec",
+      "output": "",
+      "hex_size": 8,
+      "text": "将实体移动至原坐标向偏移向量偏移处，譬如，使用向量之精思，+X 型时，目标实体会被传送到原有位置 1 格以东处，消耗 1,000,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:tear",
+      "anchor": "homo:tear",
+      "input": "entity, vec",
+      "output": "",
+      "text": "将指定实体沿其当前速度的相反方向撕裂，并依据撕裂前后速度模长的差值计算消耗。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "记录实体当前速度为 v，然后给予实体沿指定向量方向，大小等于其模长的速度，并进行撕裂。$(br2)撕裂时，对实体造成|v|与|vec 在 v 相反方向上的分量|中较小值的平方点伤害。若撕裂后速度的模长减去|v|的差值大于 0.1，则消耗(|vec + v| - |v|) * 30,000 点媒质，否则，消耗 100 点媒质。"
+    }
+  ]
+}

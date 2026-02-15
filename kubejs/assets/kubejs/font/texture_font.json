@@ -1,0 +1,153 @@
+{
+    "providers": [
+        {
+            "type": "bitmap",
+            "file": "kubejs:staff_a.png",
+            "ascent": 8,
+            "chars": [ 
+                "\u0061" 
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kubejs:staff_b.png",
+            "ascent": 8,
+            "chars": [ 
+                "\u0062" 
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kubejs:staff_c.png",
+            "ascent": 8,
+            "chars": [ 
+                "\u0063" 
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kubejs:staff_d.png",
+            "ascent": 8,
+            "chars": [ 
+                "\u0064" 
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kubejs:staff_e.png",
+            "ascent": 8,
+            "chars": [ 
+                "\u0065" 
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kubejs:staff_f.png",
+            "ascent": 8,
+            "chars": [ 
+                "\u0066" 
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kubejs:staff_g.png",
+            "ascent": 8,
+            "chars": [ 
+                "\u0067" 
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kubejs:ender_chest.png",
+            "ascent": 10,
+            "height": 14,
+            "chars": [ 
+                "\u0068" 
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kubejs:crafting_table.png",
+            "ascent": 10,
+            "height": 14,
+            "chars": [ 
+                "\u0069" 
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kubejs:anvil.png",
+            "ascent": 10,
+            "height": 14,
+            "chars": [ 
+                "\u0070" 
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kubejs:stone_cutter.png",
+            "ascent": 10,
+            "height": 14,
+            "chars": [ 
+                "\u0071" 
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kubejs:book_1.png",
+            "ascent": 8,
+            "chars": [ 
+                "\u0072" 
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kubejs:book_2.png",
+            "ascent": 8,
+            "chars": [ 
+                "\u0073" 
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kubejs:book_3.png",
+            "ascent": 8,
+            "chars": [ 
+                "\u0074" 
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kubejs:lens_1.png",
+            "ascent": 8,
+            "chars": [ 
+                "\u0075" 
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kubejs:lens_2.png",
+            "ascent": 8,
+            "chars": [ 
+                "\u0076" 
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kubejs:lens_3.png",
+            "ascent": 8,
+            "chars": [ 
+                "\u0077" 
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "kubejs:lava_bucket.png",
+            "ascent": 12,
+            "height": 16,
+            "chars": [ 
+                "\u0078" 
+            ]
+        }
+    ]
+}

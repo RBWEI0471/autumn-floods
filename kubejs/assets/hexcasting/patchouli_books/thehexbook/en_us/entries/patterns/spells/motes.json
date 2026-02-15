@@ -1,0 +1,222 @@
+{
+  "name": "物元",
+  "category": "hexcasting:patterns/spells",
+  "icon": "hexal:mediafied_storage",
+  "sortnum": 3,
+  "advancement": "hexcasting:opened_eyes",
+  "read_by_default": true,
+  "secret": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "相较实体来讲，物品的概念更抽象，也更单薄。我可以轻松地将一份物品抽象为 iota 的形式，我称之为物元。与之相匹配的，是承载物元的容器，物元枢纽。物元枢纽最多能承载 1023 条物元 iota，每条物元 iota 可以包含任意数量的特定物品。漏斗可以与之交互，右键可以查看枢纽内前 54 个物元。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:kjs/hexal_mediafied_storage",
+      "text": "噢，那不是异次元，那是自由的深渊。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:mote/storage/bind/temp",
+      "anchor": "hexal:mote/storage/bind/temp",
+      "input": "vec",
+      "output": "",
+      "text": "将施法者与指定的物元枢纽临时绑定，直至本次施法结束，同时只能绑定一个最新的物元枢纽，消耗 10 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:motes",
+      "anchor": "homo:motes",
+      "input": "",
+      "output": "[motes]",
+      "text": "返回一个列表，包含当前绑定的枢纽中的所有物元。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:mote/storage/bind",
+      "anchor": "hexal:mote/storage/bind",
+      "input": "vec",
+      "output": "",
+      "text": "将施法者与指定的物元枢纽绑定，同时只能绑定一个最新的物元枢纽，消耗 10 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "header": "hexcasting.action.hexal:mote/count/get",
+      "op_id": "hexcasting:abs",
+      "anchor": "hexal:mote/count/get",
+      "input": "mote",
+      "output": "num",
+      "text": "返回指定物元中的物品数量。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:get_all_motes",
+      "anchor": "homo:get_all_motes",
+      "input": "",
+      "output": "[string]",
+      "text": "返回一个列表，包含当前绑定的枢纽中所有物元的类型。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:get_contained_motes",
+      "anchor": "homo:get_contained_motes",
+      "input": "str | mote",
+      "output": "[mote]",
+      "text": "返回一个列表，包含当前绑定的枢纽中所有对应于指定类型的物元。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:mote/make",
+      "anchor": "hexal:mote/make",
+      "input": "(item) | (item, mote)",
+      "output": "mote",
+      "text": "将一份物品实体转换为物元，并存入绑定的枢纽中。若同时传入一个物元，则会将所给物体与该物元合并，消耗 10 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:mote/return",
+      "anchor": "hexal:mote/return",
+      "input": "(mote, vec) | (mote, vec, num)",
+      "output": "",
+      "text": "将一个物元转换为物品实体，并生成于指定坐标向量。若同时传入一个数，则最多返还指定数量，消耗 100 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "header": "hexcasting.action.hexal:mote/combine",
+      "op_id": "hexcasting:add",
+      "anchor": "hexal:mote/combine",
+      "input": "mote, mote",
+      "output": "mote",
+      "text": "将第二条物元合并至第一条物元中。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:mote/split",
+      "anchor": "hexal:mote/split",
+      "input": "mote, num",
+      "output": "mote, mote",
+      "text": "从指定物元中拆分出指定数值个物品作为一条新物元，并返回拆分出的两个物元 iota。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:mote/storage/get",
+      "anchor": "hexal:mote/storage/get",
+      "input": "mote",
+      "output": "vec",
+      "text": "返回指定物元对应的枢纽的坐标向量。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:mote/storage/set",
+      "anchor": "hexal:mote/storage/set",
+      "input": "mote, vec",
+      "output": "mote",
+      "text": "将指定物元转移至指定坐标向量的物元枢纽中，返回对应的物元 iota。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:mote/storage/remaining_capacity/get",
+      "anchor": "hexal:mote/storage/remaining_capacity/get",
+      "input": "",
+      "output": "num",
+      "text": "返回当前绑定的枢纽的剩余的空间。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:mote/storage/contains",
+      "anchor": "hexal:mote/storage/contains",
+      "input": "vec, mote",
+      "output": "bool",
+      "text": "判断指定坐标向量的物元枢纽是否包含可与所给物元合并的物元。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:download",
+      "anchor": "homo:download",
+      "input": "mote, num",
+      "output": "",
+      "text": "从指定物元中提取指定数量的物品，给予施法者。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:cloud",
+      "anchor": "homo:cloud",
+      "input": "num",
+      "output": "",
+      "text": "将指定槽位的物品转换为物元，并存入绑定的枢纽中。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:mote/combinable",
+      "anchor": "hexal:mote/combinable",
+      "input": "mote, (mote | item)",
+      "output": "bool",
+      "text": "判断第一条物元是否可与第二条物元或物品实体合并。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:recipes",
+      "anchor": "homo:recipes",
+      "input": "str",
+      "output": "[str]",
+      "text": "接受一个物品名称，返回该物品所有合成配方字符串组成的列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:restock",
+      "anchor": "homo:restock",
+      "input": "villager",
+      "output": "",
+      "text": "令指定村民补货，消耗 100 点媒质。"
+    },
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "homo:merge",
+			"anchor": "homo:merge",
+			"input": "villager, villager, num, num",
+			"output": "",
+			"text": "将前一村民的两个指定交易移至后者，并增加后者的经验和熟练度，消耗 100,000 点媒质。"
+		},
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:mote/trade",
+      "anchor": "hexal:mote/trade",
+      "input": "(villager, [mote]) | (villager, [mote], num)",
+      "output": "item",
+      "text": "$(br)若未指定数值，则依次匹配交易选项，若指定数值，则会交易至物品耗尽或村民补货为止，返回所得物品组成的物元，消耗 100 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:mote/use_on",
+      "anchor": "hexal:mote/use_on",
+      "input": "(mote, entity) | (mote, vec, vec)",
+      "output": "",
+      "text": "对指定实体，或指定坐标向量处方块的指定面使用一个数据较为简单的物元中物品，消耗 100 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:mote/craft",
+      "anchor": "hexal:mote/craft",
+      "input": "mote | [mote] | [[mote]]",
+      "output": "[mote]",
+      "text": "接受一个一到三维的物元数组，单一物元对应仅需一个原材料的合成；物元组成的列表对应无序合成。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "三个长度为一到三的物元列表组成的列表对应有序合成。合成的产物将以物元返还至绑定的枢纽中。$(br2)三维数组可以看成一个3x3的工作台，例如，输入一个包含 128 个石头的物元会返换物元 [石头按钮 x128]；若依次输入三个列表：1.[[钻石 x2, 钻石 x2, 钻石 x2]，2.[Null, 木棍 x2]，3.[Null, 木棍 x2]]，则会返回物元 [钻石镐 x2]。消耗 100 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:recipe",
+      "anchor": "homo:recipe",
+      "input": "str, num",
+      "output": "[mote] | [str]",
+      "text": "接受一个字符串和一个数字，从绑定的枢纽中自动获取需要的材料，依照字符串进行合成。若材料足够，则返回模拟合成所得的物元；若材料不足以合成，则返回缺失的原料。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "字符串由物品的名称或占位符构成，中间以英文逗号隔开，占位符由\"*\"表示。最终分隔成九个部分，若不足九个，剩余的部分则会视为空。字符串将被转化为$(l:patterns/spells/motes#hexal:mote/craft)$(action)合成/$中的三维数组。若绑定的枢纽中的原料足够合成指定次数，则返回一个由堆叠后的合成物元组成的列表；若不足以合成指定次数，则返回一个由原料名称组成的列表。譬如，字符串\"minecraft:diamond,minecraft:diamond,minecraft:diamond,*,minecraft:stick,*,*,minecraft:stick,*\"将模拟出钻石镐的合成。"
+    }
+  ]
+}

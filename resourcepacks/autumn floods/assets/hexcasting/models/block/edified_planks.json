@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "hexcasting:block/slate_amethyst_pillar_end",
+    "side": "hexcasting:block/slate_amethyst_pillar_side",
+    "top": "hexcasting:block/slate_amethyst_pillar_end"
+  }
+}

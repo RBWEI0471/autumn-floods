@@ -1,0 +1,125 @@
+{
+  "name": "机制",
+  "icon": "minecraft:crafting_table",
+  "category": "hexcasting:basics",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "相较于完整的咒法体系，这些对于现实细枝末节的记录则显得凌乱而外在了。我将他们分为机制，配方与红石元件三个部分，无关紧要的细节则集中于最后。$(br2)以下是第一部分，概括地记录了基础机制。"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "$(li)掉落物品自动堆叠。$(li)进入世界时解锁配方书。$(li)可堆叠物品的最大堆叠提升到了 1024。$(li)在背包和各个容器的右上角都有整理，过滤和快捷存取功能。$(li)在物品栏右击可以直接打开潜影盒，也可以用物品右击潜影盒存入。",
+      "item": "minecraft:barrel",
+      "title": "物品"
+    },
+    {
+      "anchor": "命名空间",
+      "type": "patchouli:spotlight",
+      "text": "$(li)JEI 开发者工具，可以获取物品的$(l)注册名/$，详细信息和指定配方 JSON 文件，默认绑定至O，I，P。$(li)FTB Ultimine，作用是连锁挖掘，按住绑定按键与左shift时用鼠标滚轮可切换连锁模式，默认绑定至左shift，此时切换连锁需按住左ctrl。$(li)其余请自行配置，心灵感应和施法按键则无法更改。",
+      "item": "hexdebug:focus_holder",
+      "title": "键位"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "$(li)打开背包时，合成栏附近存在分别对应工作台，末影箱，铁砧，切石机的按钮，背包右下角的按钮则是垃圾桶。$(li)合成栏右上侧的两个按钮中，左侧的按钮会将背包中物品无序存入，右侧的按钮则会将身上的物品自动堆叠到附近的容器中。",
+      "item": "minecraft:crafting_table",
+      "title": "按钮"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "最后还有一些改动，之后是生成，配方与战利品的更改：$(li)快捷栏的工具损坏时会尝试自动补给。$(li)右击成熟的农作物可以收获并重新种植。$(li)对于方块背面放置时会进行辅助。",
+      "item": "minecraft:raiser_armor_trim_smithing_template",
+      "title": "杂项"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "移除",
+      "text": "$(li)移除低等级的马铠，鞍，兔子皮和铁粒的生成。$(li)移除考古系统中嗅探兽的蛋和纹饰陶片。$(li)远古种子，relic唱片和盔甲纹饰被移入地牢战利品中。$(li)嗅探兽，幻翼与发光鱿鱼被禁止生成，关于它们掉落物的合成均已被其他方式代替，相关成就被移除或更改。$(li)火焰保护，摔落保护，爆炸保护，弹射物保护，击退，冲击，节肢杀手和各类诅咒附魔被禁用。"
+      
+    },
+    {
+      "type": "patchouli:text",
+      "title": "战利",
+      "text": "下列是原版的更改，模组部分则收录于对应词条中：$(br2)战利品表：$(li)铜矿有几率掉落粗铁。$(li)向战利品表中加入咒法物品。$(li)兔子掉落生兔肉，金胡萝卜，胡萝卜和兔子脚。$(li)优化猪灵易物，猫咪的礼物，村庄英雄和钓鱼的战利品表。"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "配方",
+      "text": "物品合成：$(li)蛙明灯可以复制。$(li)锁链盔甲可由铜锭合成。$(li)重写关于铁粒的配方。$(li)切制铜块可以在工作台中由对应的铜块合成。$(li)为部分使用铁锭的配方添加由铜锭代替的版本。$(li)砖块，骨头，砂岩，烈焰棒，萤石，羊毛，头颅等物品可以通过切石机粉碎。$(br2)以下是其余的配方更改，之后是红石元件的部分："
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:kjs/deepslate",
+      "recipe2": "minecraft:kjs/fishing_rod"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:kjs/item_frame",
+      "recipe2": "minecraft:kjs/glow_item_frame"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:kjs/ender_pearl",
+      "recipe2": "minecraft:kjs/beetroot_soup"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:kjs/elytra",
+      "recipe2": "minecraft:kjs/stone_pickaxe"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "通过漏斗、投掷器等途径进入溜槽的物品，会从溜槽正下方漏出；给予红石信号或在其下方放置方块时，会使其自动关闭。",
+      "item": "quark:chute",
+      "link_recipe": true
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "$(li)活塞可以推动方块实体。$(li)使用发射器发射常规方块时，会直接将其于面前放置。$(li)若活塞推动铁杆末端，会破坏尖端的方块。$(li)当推动方块与其他方块之间被锁链的两端连接时，会令它们共同移动。",
+      "item": "minecraft:piston",
+      "link_recipe": true
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "以下是三个分类之中较为无关紧要的部分，统一于此。$(li)马匹可以游泳。$(li)猪繁殖的幼崽增多。$(li)村民会跟随绿宝石块。$(li)普通模式下村民被僵尸击杀时必定转化。$(li)召唤出的恼鬼会在唤魔者死亡后消失。$(li)命名后的雪傀儡被女巫杀死后会掉落同名玩家的头。",
+      "item": "minecraft:dead_brain_coral_block",
+      "title": "杂项"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "$(li)跳跃药水改为羽毛酿造。$(li)缓降药水改为小麦酿造。$(li)幸运药水由兔子脚酿造。$(li)幸运效果不只会提高物品的品级，同时将提高抽取数。$(li)最大生命值大于 100 点且当前生命值大于 2 点的生物在受到凋零伤害时，会转化为百分比真实伤害。",
+      "item": "minecraft:sculk_catalyst",
+      "title": "状态"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "末影观察者在玩家直视时发出红石信号，信号强度取决于玩家准心与所视方块侧面中心间的距离。",
+      "item": "quark:ender_watcher",
+      "link_recipe": true
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "重力沙只有接收红石信号时才会掉落，若无法向下掉落则会向天空坠落。当它掉落时会带动相邻的重力沙，比较器检测时会给出 15 级的红石信号。",
+      "item": "quark:gravisand",
+      "link_recipe": true
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "通过漏斗，溜槽或是以掉落物形式进入管道的物品会被传输：若路径末端连接容器则会存入，末端开口则会直接抛出。在管道分叉时优先向下其次向前，只有左右则方向随机，迫不得已才向上移动。若连接容器已满，物品返回并尝试更换路径，比较器可以检查管道中物品数量，红石信号则会阻止其联通。",
+      "item": "quark:pipe",
+      "link_recipe": true
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:kjs/saddle",
+      "recipe2": "minecraft:kjs/stonecutter"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:kjs/lodestone",
+      "recipe2": "minecraft:kjs/sugar"
+    }
+  ]
+}

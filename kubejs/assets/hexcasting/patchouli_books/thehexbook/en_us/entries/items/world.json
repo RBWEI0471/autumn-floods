@@ -1,0 +1,73 @@
+{
+  "name": "维陆",
+  "icon": "short_circuit:circuit",
+  "category": "hexcasting:items",
+  "sortnum": 4,
+  "advancement": "hexcasting:opened_eyes",
+  "secret": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "通过研习这个世界当中各种生物的$(l:items/decoration)绘彩/$，我就可以创建一种名为维陆的方块。每一个维陆都是同一个维度中不同箱庭的钥匙，而我可以无限的创造他们。$(br2)手持焊铁右键可以切换将要创造的世界大小，选定后右击维陆即可创建一个新的箱庭。每一个维陆都有其独特的 ID，代表它通向对应 ID 的箱庭。使用维陆右击已生成的维陆即可复制其 ID。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:kjs/short_circuit_circuit_2",
+      "recipe2": "minecraft:kjs/short_circuit_poking_stick"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:world_set",
+      "anchor": "homo:world_set",
+      "input": "entity | vec",
+      "output": "",
+      "text": "如果入栈一个向量，则将其设为记录坐标，如果入栈一个实体，且存在记录坐标，则将实体传送至维路中记录坐标处，若不存在，则传送至维路中坐标(1,1,1)处。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:world_to",
+      "anchor": "homo:world_to",
+      "input": "entity, str, vec",
+      "output": "",
+      "text": "将一个处于维路中的生物传送至指定维度的指定坐标处，若目标维度并非维路中，则消耗 100,000 点媒质。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "箱庭虽然位于一个独立的维度，但却可以与世界遥相呼应。潜行时使用焊铁右键内部的方块，即可以将其转化为输入和输出面。外界对应方向的红石信号通过输入和输出面与内部直接相连，因此它可以作为一个高度压缩的红石元件。$(br2)创立完成后回到主世界空手右击该维陆，即可令其完成重载。重载后外部的红石信号需要更新，同时内部创立的所有结构变得可见。潜行时使用焊铁再次右击它，即可使它变的不透明。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:kjs/short_circuit_circuit",
+      "text": "倘若在一次爆炸之中摧毁了两个维陆，则会直接撕开空间的裂口，在爆炸生成之处展开外溢出巡航式咒灵的质道，咒灵拥有的$(media)媒质/$会随着存在的时间而增加，300tick 时存在时间达到最大，而后结束短暂的一生。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "质道是不稳的时空，贸然进入的下场只会是撕裂。但是，没有形体的媒质却可以在那个无限的彼端留存。我用末地外岛的折跃材料做成瓶状结构，将裂隙的空间密封。$(br2)搭建如右图所示的多方块结构，按下按钮即可得到一个容量近乎无限的媒质瓶！"
+    },
+    { 
+      "type": "patchouli:multiblock",
+      "name": "玻璃中心包围的方块即为质道",
+      "multiblock": {
+      "pattern": [
+        ["   "," A ","   "],
+        ["BBB","BCB","BBB"],
+        ["DED","E E","DED"],
+        ["EFE","FGF","EFE"],
+        ["DED","E0E","DED"],
+        ["HHH","HHH","HHH"]
+      ],
+      "mapping": {
+        "A": "minecraft:polished_blackstone_button[face=floor]",
+        "B": "minecraft:polished_blackstone_slab",
+        "C": "minecraft:chiseled_polished_blackstone",
+        "D": "quark:dusky_myalite",
+        "E": "quark:myalite_crystal",
+        "F": "minecraft:glass",
+        "G": "hexal:slipway",
+        "H": "minecraft:smooth_stone_slab[type=top]"
+      },
+      "symmetrical": true
+      }
+    }
+  ]
+}

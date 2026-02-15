@@ -1,0 +1,23 @@
+{
+  "name": "冲刺",
+  "category": "hexcasting:patterns/great_spells",
+  "icon": "minecraft:elytra",
+  "sortnum": 7,
+  "advancement": "hexcasting:enlightenment",
+  "read_by_default": true,
+  "secret": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:otto",
+      "anchor": "homo:otto",
+      "input": "entity, num",
+      "output": "",
+      "text": "依据实体当前速度，以不同的方式给予实体沿视线方向的速度，速度越快，消耗越小，大幅加速并传送的可能性越高。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "给予实体沿视线方向，模长等于 num 的速度，消耗 num / |v| * 10000 点媒质，当前速度小于 1 时，|v| 按 1 计算。$(br2)每次加速时，有 |v| / 100 的概率令当前速度各分量乘 num，并沿视线方向传送 |v| / num 格，当前速度大于 100 时，|v| 按 100 计算。若施法者单次传送距离大于 64，则修正为 64 格；若其他实体单次传送距离大于 64，则将其移除。"
+    }
+  ]
+}

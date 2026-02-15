@@ -1,0 +1,23 @@
+{
+  "name": "索命",
+  "category": "hexcasting:patterns/great_spells",
+  "icon": "minecraft:barrier",
+  "sortnum": 4,
+  "advancement": "hexcasting:enlightenment",
+  "read_by_default": true,
+  "secret": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:avada_kedavra",
+      "anchor": "homo:avada_kedavra",
+      "input": "entity, num",
+      "output": "",
+      "text": "当施法者手持法杖时，若第二参数是生物当前生命值向下取整的，大于 2，小于 1000 的质因数，则分解指定生物的意识，或操纵已被剥离的生物。若实体不属于生物，则直接击毙。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "记录生物的当前生命值并取底，记为 health。若生物已被剥离，且 health / num 小于等于 4，则将生物击毙；否则，对生物造成 num 点攻击伤害，并生成一份战利品。$(br2)若未剥离，且 num 等于 health，则剥离其意识，否则对生物造成 health / num + num 点伤害，并将最大生命值设置为当前生命值。索命咒同样会对施法者造成来源为生物的攻击伤害，在 num 与 health / num 间取较小值。"
+    }
+  ]
+}

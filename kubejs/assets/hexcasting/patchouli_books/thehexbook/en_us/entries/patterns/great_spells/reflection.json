@@ -1,0 +1,23 @@
+{
+  "name": "反制",
+  "category": "hexcasting:patterns/great_spells",
+  "icon": "minecraft:eye_armor_trim_smithing_template",
+  "sortnum": 9,
+  "advancement": "hexcasting:enlightenment",
+  "read_by_default": true,
+  "secret": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:reflection",
+      "anchor": "homo:reflection",
+      "input": "",
+      "output": "",
+      "text": "一定条件下，取消施法者受到的伤害，并将伤害反制至其来源。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "给予施法者 1 秒的反制效果，反制期间将取消所有伤害，反制效果结束后，进入 6 秒的冷却时长，在反制或冷却期间再次使用，只会令施法者获得凋零状态。$(br2)但若是在反制期间内受到来自其他实体的伤害，则会将伤害反制至原实体，并取消冷却，消耗 64,000 点媒质。"
+    }
+  ]
+}

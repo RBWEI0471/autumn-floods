@@ -1,0 +1,6 @@
+{
+  "name": "探索",
+  "icon": "hexcasting:textures/item/cad/2_cypher.png",
+  "description": "据说研究这种魔法的人似乎都会手持一根$(item)法杖/$撮空理线，用各有章法的$(l:patterns)图案/$连成语句组成$(hex)咒术/$来规定自然。他们熟练地运用各种$(item)施法物品/$运转咒术，有些人画到一半还会分解成耀眼的光消散在空中，真好奇他们去了哪……",
+  "sortnum": 0
+}

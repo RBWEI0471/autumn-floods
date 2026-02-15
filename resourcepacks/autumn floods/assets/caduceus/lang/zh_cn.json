@@ -1,0 +1,16 @@
+{
+	"caduceus.book.casting.caduceus_mishaps.no_prompt.title": "阿尔刻未受限",
+	"caduceus.book.casting.caduceus_mishaps.no_prompt.text": "试图在$(l:patterns/delimcc#caduceus:eval/prompt)$(action)忒提斯之策略/$之外绘制$(l:patterns/delimcc#caduceus:eval/prompt)$(action)阿尔刻之策略/$。",
+	"caduceus.tooltip.continuation": "[Jump -> (%s)]",
+	"caduceus.tooltip.continuation.delimited": "[Call -> (%s)]",
+	"caduceus.tooltip.continuation.frame.mark.inline": "%s*",
+	"caduceus.tooltip.continuation.frame.mark.hover": "包含：%s",
+	"caduceus.tooltip.continuation.frame.caduceus:prompt": "Prompt",
+	"caduceus.tooltip.continuation.frame.hexcasting:evaluate": "执行帧",
+	"caduceus.tooltip.continuation.frame.hexcasting:foreach": "遍历帧",
+	"caduceus.tooltip.continuation.frame.hexcasting:end": "终止帧",
+	"hexcasting.action.caduceus:eval/prompt": "忒提斯之策略",
+	"hexcasting.action.caduceus:eval/control": "阿尔刻之策略",
+	"hexcasting.mishap.no_prompt": "没有先使用忒提斯之策略",
+	"hexcasting.mishap.invalid_value.class.continuation": "一个跳转"
+}

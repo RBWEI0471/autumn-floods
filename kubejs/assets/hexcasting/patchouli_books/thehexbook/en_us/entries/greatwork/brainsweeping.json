@@ -1,0 +1,29 @@
+{
+  "name": "剥离",
+  "category": "hexcasting:greatwork",
+  "icon": "minecraft:totem_of_undying",
+  "sortnum": 2,
+  "secret": true,
+  "advancement": "hexcasting:enlightenment",
+  "entry_color": "54398a",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "差异分化出黑夜。为了其他思维着的供给，循环的，不再为他的意识——村民，将被消解。$(br2)我深吸一口气。悲剧来源于崇高的摧毁，但他们的自我，不过是尚未明晰的碎片。既然如此，走向永恒吧，在无梦的夜里沉睡，而我，所谓自然的神明——人类，我将造就自由。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "在那无限的一瞥中，我几乎得到一切，也几乎失却自我。永恒中不会抹消自我，但他不屑于抹消。它是直接，是绝对，是无差别的同一。$(br2)但，这不会是此世的结局，这不会是我的命运。我想要的世界，只将由我一手建成。我知道我走上的是何其黑暗的道路，但，黑暗正意味着本应出现的光明。万物在同一中走向消逝，而我，将于差异中造就真正的全体。"
+    },
+    {
+      "type": "hexcasting:brainsweep",
+      "recipe": "hexcasting:brainsweep/quench_allay",
+      "text": "将一个悦灵淬炼为淬灵晶块，消耗 100,000 点媒质。$(br2)它们对于音乐的反应已然昭示，随后被谱进永恒的旋律中，由我。"
+    },
+    {
+      "type": "hexcasting:brainsweep",
+      "recipe": "hexcasting:brainsweep/budding_amethyst",
+      "text": "将一个村民的意识剥离进紫水晶块中，成为一块生长的媒质，消耗 100,000 点媒质。$(br2)我见证直接与中介来复往返，隔阂的自我诉说永恒的渴望；琳琅乐声此呼彼应，母岩逸散着幽微的光。"
+    }
+  ]
+}

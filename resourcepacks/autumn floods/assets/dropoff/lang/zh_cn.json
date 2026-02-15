@@ -1,0 +1,7 @@
+{
+  "dropoff.dump_nearby" : "将物品全部转移至附近容器中",
+  "dropoff.quick_stack" : "将物品快速堆叠至附近容器中",
+  "dropoff.key.dump": "Dump",
+  "dropoff.key.deposit": "Deposit",
+  "dropoff.tooltip.favorited" : "Favorited!"
+}

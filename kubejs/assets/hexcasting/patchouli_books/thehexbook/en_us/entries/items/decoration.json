@@ -1,0 +1,47 @@
+{
+  "name": "装饰",
+  "category": "hexcasting:items",
+  "icon": "hexcasting:slate",
+  "sortnum": 3,
+  "advancement": "hexcasting:opened_eyes",
+  "secret": true,
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "hexcasting:slate",
+      "text": "石板可以存储或展示一个图案，可以依附于方块的任意侧面，对物品状态的石板使用书吏之策略，或是对方块状态的石板使用史家之策略即可使其变为有图案的石板，可以用来组建法术环。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "hexcasting:abacus",
+      "text": "手持算盘潜行或者使用法杖施法时使用滚轮可以修改算盘所存储的数值，主手手持时修改令个位数[-1/+1]，副手手持时令十分位部分[+0.1/-0.1]。主手手持并且按下 ctrl 时令十位数部分[-10/+10]，副手手持并且按下 ctrl 时令百分位部分[+0.01/-0.01]。"
+    },
+    {
+      "type": "hexcasting:crafting_multi",
+      "heading": "卷轴",
+      "text": "卷轴可以存储或展示一个图案，可以挂在墙上成为装饰性实体，此时对其使用紫水晶粉则可以令其显示笔顺。",
+      "recipes": [
+        "hexcasting:scroll_small",
+        "hexcasting:scroll_medium",
+        "hexcasting:scroll"
+      ]
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:kjs/hexcasting_scroll_paper",
+      "text": "纸卷轴可以通过任意木材与小型卷轴合成，也可通过切割白桦木获得。可与远古纸卷轴之间在切石机中相互转换。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:colorize",
+      "anchor": "hexcasting:colorize",
+      "input": "",
+      "output": "",
+      "text": "将绘彩置于副手并施法，直至下次施法前，我的意识颜色将被永久改变，消耗10,000点媒质。据说还有一种失传的绘彩，在制作过程中需要一种早已灭绝的植物。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "绘彩可以安全的更改自我意识的颜色，同时也可以晕染其他由能量构成的物体，比如施法粒子，构筑的光源，哨卫等等。他们自身同样富于变化的能力，因此常作为物品的制作材料。$(br2)九种颜色绘彩分别由矿石合成，而生物绘彩则由灵魂闪光绘彩萃取对应生物获得。有两种特殊的绘彩，$(item)灵魂闪光绘彩/$的颜色为我所独有，而$(item)空无绘彩/$则会将我灵魂的颜色重置为初始状态。"
+    }
+  ]
+}

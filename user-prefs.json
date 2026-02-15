@@ -1,0 +1,3768 @@
+{
+  "export": {
+    "filesSelection": [
+      {
+        "path": "config",
+        "isSelected": true
+      },
+      {
+        "path": "config\\hexdebug",
+        "isSelected": true
+      },
+      {
+        "path": "config\\hexdebug\\client.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\hexdebug\\server.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\hexthings",
+        "isSelected": true
+      },
+      {
+        "path": "config\\hexthings\\client.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\hexthings\\server.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\inline",
+        "isSelected": true
+      },
+      {
+        "path": "config\\inline\\client-config.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jade",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jade\\hide-blocks.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jade\\hide-entities.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jade\\jade.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jade\\plugins.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jade\\sort-order.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jei",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jei\\blacklist.cfg",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jei\\ingredient-list-mod-sort-order.ini",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jei\\ingredient-list-type-sort-order.ini",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jei\\jei-client.ini",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jei\\jei-colors.ini",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jei\\jei-debug.ini",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jei\\jei-mod-id-format.ini",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jei\\recipe-category-sort-order.ini",
+        "isSelected": true
+      },
+      {
+        "path": "config\\quark_emotes",
+        "isSelected": true
+      },
+      {
+        "path": "config\\balm-client.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\balm-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\biggerstacks-client.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\biggerstacks-local.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\biggerstacks-rules.xml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\chunkloaders-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\constructionwand-client.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\fml.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\forge-client.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\great_scrollable_tooltips.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\hex-spell-wheel.txt",
+        "isSelected": true
+      },
+      {
+        "path": "config\\hexal-client.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\hexcasting-client.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\hexcasting-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\hexoverpowered-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\hexoverpowered-mixin.ini",
+        "isSelected": true
+      },
+      {
+        "path": "config\\hexparse-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\hextweaks.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jecharacters.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\MouseTweaks.cfg",
+        "isSelected": true
+      },
+      {
+        "path": "config\\patchouli-client.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\paucal-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\quark-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\quickstack-client.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\scholar-client.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\scholar-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\short_circuit.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\sidebar_buttons.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\waystones-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\zeta-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "datapacks",
+        "isSelected": false
+      },
+      {
+        "path": "defaultconfigs",
+        "isSelected": true
+      },
+      {
+        "path": "defaultconfigs\\ftblibrary",
+        "isSelected": true
+      },
+      {
+        "path": "defaultconfigs\\ftblibrary\\ftblibrary-client.snbt",
+        "isSelected": true
+      },
+      {
+        "path": "defaultconfigs\\ftbultimine",
+        "isSelected": true
+      },
+      {
+        "path": "defaultconfigs\\ftbultimine\\ftbultimine-client.snbt",
+        "isSelected": true
+      },
+      {
+        "path": "defaultconfigs\\ftbultimine\\ftbultimine-server.snbt",
+        "isSelected": true
+      },
+      {
+        "path": "defaultconfigs\\constructionwand-server.toml",
+        "isSelected": true
+      },
+      {
+        "path": "defaultconfigs\\forge-server.toml",
+        "isSelected": true
+      },
+      {
+        "path": "defaultconfigs\\ftbessentials-server.snbt",
+        "isSelected": true
+      },
+      {
+        "path": "defaultconfigs\\ftbultimine-server.snbt",
+        "isSelected": true
+      },
+      {
+        "path": "defaultconfigs\\hexal-server.toml",
+        "isSelected": true
+      },
+      {
+        "path": "defaultconfigs\\hexcasting-server.toml",
+        "isSelected": true
+      },
+      {
+        "path": "defaultconfigs\\jei-server.toml",
+        "isSelected": true
+      },
+      {
+        "path": "defaultconfigs\\journeymap-server.toml",
+        "isSelected": true
+      },
+      {
+        "path": "defaultconfigs\\moreiotas-server.toml",
+        "isSelected": true
+      },
+      {
+        "path": "defaultconfigs\\packingtape-server.toml",
+        "isSelected": true
+      },
+      {
+        "path": "defaultconfigs\\quickstack-server.toml",
+        "isSelected": true
+      },
+      {
+        "path": "defaultconfigs\\usefulluck-server.toml",
+        "isSelected": true
+      },
+      {
+        "path": "defaultconfigs\\xptome-server.toml",
+        "isSelected": true
+      },
+      {
+        "path": "downloads",
+        "isSelected": false
+      },
+      {
+        "path": "journeymap",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\config",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\config\\5.10",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\config\\5.10\\journeymap.core.config",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\config\\5.10\\journeymap.fullmap.config",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\config\\5.10\\journeymap.minimap.config",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\config\\5.10\\journeymap.minimap2.config",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\config\\5.10\\journeymap.topo.config",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\config\\5.10\\journeymap.waypoint.config",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\config\\5.10\\journeymap.webmap.config",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\container",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\container\\htoolbar_begin.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\container\\htoolbar_end.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\container\\htoolbar_inner.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\container\\vtoolbar_begin.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\container\\vtoolbar_end.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\container\\vtoolbar_inner.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\control",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\control\\flat_button_disabled.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\control\\flat_button_hover.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\control\\flat_button_off.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\control\\flat_button_on.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\control\\flat_toggle_disabled.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\control\\flat_toggle_hover.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\control\\flat_toggle_off.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\control\\flat_toggle_on.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\about.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\actions.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\alert.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\animals.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\automap.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\biome.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\browser.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\caves.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\close.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\day.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\delete.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\disable.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\follow.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\grid.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\keys.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\layers.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\monsters.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\night.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\options.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\pets.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\players.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\reset.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\savemap.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\search.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\server.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\theme.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\topo.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\villagers.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\waypoints.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\zoomin.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\icon\\zoomout.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\circle",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\circle\\flat_compass_point.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\circle\\flat_mask_256.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\circle\\flat_mask_512.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\circle\\flat_rim_256.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\circle\\flat_rim_512.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\circle\\pur_compass_point.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\circle\\pur_mask_256.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\circle\\pur_mask_512.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\circle\\pur_rim_256.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\circle\\pur_rim_512.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\square",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\square\\flat_bottom.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\square\\flat_bottomleft.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\square\\flat_bottomright.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\square\\flat_compass_point.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\square\\flat_left.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\square\\flat_right.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\square\\flat_top.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\square\\flat_topleft.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\square\\flat_topright.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\square\\pur_bottom.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\square\\pur_bottomleft.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\square\\pur_bottomright.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\square\\pur_compass_point.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\square\\pur_left.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\square\\pur_right.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\square\\pur_top.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\square\\pur_topleft.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\minimap\\square\\pur_topright.png",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\DesertTemple.theme2.json",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\EndCity.theme2.json",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\ForestMansion.theme2.json",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\NetherFortress.theme2.json",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\OceanMonument.theme2.json",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\Purist.theme2.json",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\flat\\Stronghold.theme2.json",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\icon\\theme\\default.theme.config",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\server",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\server\\5.10",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\server\\5.10\\journeymap.server.default.config",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\server\\5.10\\journeymap.server.global.config",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\server\\5.10\\journeymap.server.minecraft~overworld.config",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\server\\5.10\\journeymap.server.minecraft~overworld11.config",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\server\\5.10\\journeymap.server.minecraft~the_end.config",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\server\\5.10\\journeymap.server.minecraft~the_nether.config",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\server\\5.10\\journeymap.server.short_circuit~circuit_board.config",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\server\\5.10\\journeymap.server.short_circuit~runtime.config",
+        "isSelected": true
+      },
+      {
+        "path": "journeymap\\journeymap.log",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\lang",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\lang\\zh_cn.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\categories",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\categories\\hexparse",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\categories\\hexparse\\commands.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\categories\\patterns",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\categories\\patterns\\grand",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\categories\\patterns\\grand\\mindflay_rituals.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\categories\\patterns\\grand.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\categories\\patterns\\great_spells.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\categories\\patterns\\spells.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\categories\\patterns\\stack.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\categories\\basics.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\categories\\casting.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\categories\\creative_unlocker.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\categories\\greatwork.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\categories\\interop.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\categories\\items.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\categories\\lore.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\categories\\patterns.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\basics",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\basics\\caduceus_changes.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\basics\\change_e.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\basics\\couldnt_cast.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\basics\\geodes.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\basics\\media.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\basics\\slipways.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\basics\\start_to_see.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\basics\\work.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\casting",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\casting\\101.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\casting\\caduceus_mishaps.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\casting\\cardamom1.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\casting\\continuations.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\casting\\influences.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\casting\\item_iotas.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\casting\\mishaps.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\casting\\mishaps2.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\casting\\naming.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\casting\\stack.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\casting\\vectors.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\creative_unlocker",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\creative_unlocker\\media_cube.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\greatwork",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\greatwork\\akashiclib.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\greatwork\\brainsweeping.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\greatwork\\directrix.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\greatwork\\enlightened_splicing_table.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\greatwork\\everbook.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\greatwork\\fanciful_staves.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\greatwork\\hex.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\greatwork\\impetus.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\greatwork\\quenching_allays.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\greatwork\\quenching_debuggers.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\greatwork\\spellbook.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\greatwork\\spellcircles.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\greatwork\\the_work.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\greatwork\\wisps.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\hexparse_commands",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\hexparse_commands\\config.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\hexparse_commands\\io.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\hexparse_commands\\misc.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\hexparse_commands\\op.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\interop",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\interop\\computercraft.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\interop\\pehkui.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\abacus.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\amethyst.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\ancient_cyphers.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\debugging.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\decoration.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\edified.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\focus.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\focus_holder.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\hexcasting.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\jeweler_hammer.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\lens.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\magnet.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\phials.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\pigments.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\potions.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\relay.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\road.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\scroll.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\slate.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\spellbook.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\spellcircles.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\splicing_table.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\staff.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\thought_knot.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\tools.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\items\\world.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\lore",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\lore\\cardamom1.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\lore\\cardamom2.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\lore\\cardamom3.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\lore\\cardamom4.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\lore\\cardamom5.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\lore\\experiment1.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\lore\\experiment2.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\lore\\inventory.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\grand",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\grand\\mindflay_rituals",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\grand\\mindflay_rituals\\restock.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\grand\\mindflay_rituals\\slipways.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\grand\\mindflay_rituals\\titration.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\grand\\explode.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\grand\\fireball.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\grand\\mindflay.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\great_spells",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\great_spells\\altiora.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\great_spells\\attribute.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\great_spells\\avada_kedavra.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\great_spells\\brainsweep.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\great_spells\\create_lava.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\great_spells\\explode.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\great_spells\\eye_of_providence.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\great_spells\\focus.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\great_spells\\gates.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\great_spells\\greater_sentinel.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\great_spells\\great_wisps.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\great_spells\\infinite.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\great_spells\\infusion.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\great_spells\\kcit.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\great_spells\\make_battery.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\great_spells\\otto.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\great_spells\\reflection.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\great_spells\\space.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\great_spells\\teleport.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\great_spells\\tick.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\great_spells\\weather_manip.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\great_spells\\zeniths.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\spells",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\spells\\basic.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\spells\\blockworks.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\spells\\colorize.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\spells\\contain.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\spells\\cyclevariant.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\spells\\entity.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\spells\\flight.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\spells\\hexal_spells.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\spells\\hexcasting.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\spells\\itempicking.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\spells\\links.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\spells\\motes.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\spells\\nadirs.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\spells\\sentinels.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\spells\\tags.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\spells\\wisps.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\stack",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\stack\\basics.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\stack\\consts.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\stack\\lists.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\stack\\logic.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\stack\\math.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\stack\\matrices.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\stack\\stackmanip.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\stack\\strings.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\stack\\world.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\advanced_math.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\akashic_patterns.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\basics.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\circle.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\consts.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\debugging.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\delimcc.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\dict.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\enlightened_splicing_table.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\entities.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\everbook.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\everbook_entries.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\hexal_basics.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\hexal_maths.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\hexcasting.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\hexparse.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\hextweaks_pe.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\hextweaks_utility.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\hexutils.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\influences.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\iota.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\items.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\jump_manipulation.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\lists.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\logic.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\logos.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\math.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\matrices.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\meta.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\mishaps.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\numbers.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\patterns_as_iotas.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\readers_guide.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\readwrite.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\readwrite_blocks.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\sets.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\splicing_table.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\stackmanip.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\strings.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\types.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\patterns\\uiua.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\hexflow.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\pages.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\entries\\properties.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\templates",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\templates\\brainsweep.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\templates\\crafting_multi.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\templates\\manual_pattern.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\templates\\manual_pattern_nosig.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hexcasting\\patchouli_books\\thehexbook\\en_us\\templates\\pattern.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hex_playground",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hex_playground\\lang",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\hex_playground\\lang\\zh_cn.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\font",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\font\\texture_font.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\block",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\block\\hexmedia_stage0.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\block\\hexmedia_stage1.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\block\\hexmedia_stage2.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\block\\torchflower_crop_stage0.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\block\\torchflower_crop_stage1.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\block\\torchflower_crop_stage2.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\item",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\item\\hexmedia_seeds.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\item\\torchflower_seeds.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\anvil.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\book_1.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\book_2.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\book_3.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\crafting_table.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\ender_chest.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\lava_bucket.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\lens_1.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\lens_2.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\lens_3.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\staff_a.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\staff_b.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\staff_c.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\staff_d.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\staff_e.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\staff_f.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\staff_g.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\stone_cutter.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\client_scripts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\client_scripts\\JEI.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\client_scripts\\key.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\client_scripts\\tooltip.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\config",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\config\\client.properties",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\config\\common.properties",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\config\\probejs.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexal",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexal\\recipes",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexal\\recipes\\brainsweep",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexal\\recipes\\brainsweep\\mediafied_storage.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\advancements",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\advancements\\lore",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\advancements\\lore\\cardamom1.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\advancements\\lore\\cardamom2.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\advancements\\lore\\cardamom3.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\advancements\\lore\\cardamom4.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\advancements\\lore\\cardamom5.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\advancements\\lore\\experiment1.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\advancements\\lore\\experiment2.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\advancements\\lore\\inventory.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\advancements\\aaa_wasteful_cast.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\advancements\\aab_big_cast.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\advancements\\creative_unlocker.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\advancements\\enlightenment.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\advancements\\grant_patchi_book.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\advancements\\lore.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\advancements\\opened_eyes.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\advancements\\root.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\advancements\\y_u_no_cast_angy.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\lore",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\lore\\minecraft",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\lore\\minecraft\\chests",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\lore\\minecraft\\chests\\village",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\lore\\minecraft\\chests\\village\\village_desert_house.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\lore\\minecraft\\chests\\village\\village_plains_house.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\lore\\minecraft\\chests\\village\\village_savanna_house.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\lore\\minecraft\\chests\\village\\village_snowy_house.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\lore\\minecraft\\chests\\village\\village_taiga_house.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\lore\\minecraft\\chests\\abandoned_mineshaft.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\lore\\minecraft\\chests\\ancient_city.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\lore\\minecraft\\chests\\pillager_outpost.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\lore\\minecraft\\chests\\simple_dungeon.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\lore\\minecraft\\chests\\stronghold_library.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\lore\\minecraft\\chests\\woodland_mansion.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\scroll",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\scroll\\hexcasting",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\scroll\\hexcasting\\random_scroll.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\scroll\\minecraft",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\scroll\\minecraft\\chests",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\scroll\\minecraft\\chests\\village",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\scroll\\minecraft\\chests\\village\\village_cartographer.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\scroll\\minecraft\\chests\\abandoned_mineshaft.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\scroll\\minecraft\\chests\\ancient_city.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\scroll\\minecraft\\chests\\bastion_other.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\scroll\\minecraft\\chests\\bastion_treasure.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\scroll\\minecraft\\chests\\desert_pyramid.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\scroll\\minecraft\\chests\\end_city_treasure.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\scroll\\minecraft\\chests\\jungle_temple.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\scroll\\minecraft\\chests\\nether_bridge.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\scroll\\minecraft\\chests\\pillager_outpost.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\scroll\\minecraft\\chests\\shipwreck_map.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\scroll\\minecraft\\chests\\simple_dungeon.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\scroll\\minecraft\\chests\\stronghold_library.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\scroll\\minecraft\\chests\\woodland_mansion.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\loot_modifiers\\amethyst_cluster.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\recipes",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\recipes\\brainsweep",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\recipes\\brainsweep\\akashic_record.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\recipes\\brainsweep\\budding_amethyst.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\recipes\\brainsweep\\directrix_boolean.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\recipes\\brainsweep\\directrix_redstone.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\recipes\\brainsweep\\impetus_look.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\recipes\\brainsweep\\impetus_rightclick.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\recipes\\brainsweep\\impetus_storedplayer.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\recipes\\brainsweep\\quench_allay.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\tags",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\tags\\blocks",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\tags\\blocks\\cheap_to_break_block.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\tags\\entity_types",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\tags\\entity_types\\cannot_teleport.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\tags\\items",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexcasting\\tags\\items\\grants_root_advancement.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexdebug",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexdebug\\recipes",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexdebug\\recipes\\brainsweep",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hexdebug\\recipes\\brainsweep\\enlightened_splicing_table.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hextweaks",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hextweaks\\advancements",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hextweaks\\advancements\\grandspell",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hextweaks\\advancements\\grandspell\\explode.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hextweaks\\advancements\\grandspell\\fireball.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hextweaks\\advancements\\grandspell\\mindflayplus.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hextweaks\\computercraft",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hextweaks\\computercraft\\pocket_upgrades",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hextweaks\\computercraft\\pocket_upgrades\\wand.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hextweaks\\computercraft\\turtle_upgrades",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\hextweaks\\computercraft\\turtle_upgrades\\wand.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\lootjs",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\lootjs\\structures",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\lootjs\\structures\\empty_test_structure.nbt",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\advancements",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\advancements\\adventure",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\advancements\\adventure\\craft_decorated_pot_using_only_sherds.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\advancements\\adventure\\kill_all_mobs.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\advancements\\adventure\\salvage_sherd.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\advancements\\adventure\\two_birds_one_arrow.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\advancements\\husbandry",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\advancements\\husbandry\\bred_all_animals.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\advancements\\husbandry\\feed_snifflet.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\advancements\\husbandry\\make_a_sign_glow.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\advancements\\husbandry\\obtain_sniffer_egg.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\advancements\\husbandry\\plant_any_sniffer_seed.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\blocks",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\blocks\\budding_amethyst.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\blocks\\copper_ore.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\blocks\\deepslate_copper_ore.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\village",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\village\\village_armorer.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\village\\village_butcher.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\village\\village_cartographer.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\village\\village_desert_house.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\village\\village_fisher.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\village\\village_fletcher.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\village\\village_mason.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\village\\village_plains_house.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\village\\village_savanna_house.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\village\\village_shepherd.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\village\\village_snowy_house.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\village\\village_taiga_house.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\village\\village_tannery.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\village\\village_temple.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\village\\village_toolsmith.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\village\\village_weaponsmith.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\abandoned_mineshaft.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\ancient_city.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\ancient_city_ice_box.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\bastion_bridge.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\bastion_hoglin_stable.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\bastion_other.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\bastion_treasure.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\buried_treasure.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\desert_pyramid.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\end_city_treasure.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\igloo_chest.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\jungle_temple.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\jungle_temple_dispenser.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\nether_bridge.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\pillager_outpost.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\ruined_portal.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\shipwreck_map.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\shipwreck_supply.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\shipwreck_treasure.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\simple_dungeon.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\spawn_bonus_chest.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\stronghold_corridor.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\stronghold_crossing.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\stronghold_library.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\underwater_ruin_big.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\underwater_ruin_small.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\chests\\woodland_mansion.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\gameplay",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\gameplay\\fishing",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\gameplay\\fishing\\fish.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\gameplay\\fishing\\junk.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\gameplay\\fishing\\treasure.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\gameplay\\hero_of_the_village",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\gameplay\\hero_of_the_village\\armorer_gift.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\gameplay\\hero_of_the_village\\butcher_gift.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\gameplay\\hero_of_the_village\\cartographer_gift.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\gameplay\\hero_of_the_village\\cleric_gift.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\gameplay\\hero_of_the_village\\farmer_gift.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\gameplay\\hero_of_the_village\\fisherman_gift.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\gameplay\\hero_of_the_village\\fletcher_gift.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\gameplay\\hero_of_the_village\\leatherworker_gift.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\gameplay\\hero_of_the_village\\librarian_gift.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\gameplay\\hero_of_the_village\\mason_gift.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\gameplay\\hero_of_the_village\\shepherd_gift.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\gameplay\\hero_of_the_village\\toolsmith_gift.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\minecraft\\loot_tables\\gameplay\\hero_of_the_village\\weaponsmith_gift.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\ancient_apple_overlevel.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\apply_color_rune.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\crab_in_a_bucket.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\crawl_in_hollow_log.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\foxhound_speed_up_furnace.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\get_all_blossom_saplings.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\get_all_corundum.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\get_bottled_cloud.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\get_diamond_heart.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\get_forgotten_hat.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\get_own_head.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\influence.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\instamine_deepslate.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\make_stoneling.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\mine_fed_toretoise.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\mine_toretoise.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\overlevel_enchant.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\pathfinder_map_center.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\pat_potato.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\poison_baby.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\redirect_beacon.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\retreive_flamerang.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\shiba_help.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\tame_foxhound.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\throw_parrot_egg.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\throw_pickarang.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\use_viaduct.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\watcher_center.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data\\quark\\advancements\\wear_full_rainbow.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\cache",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\cache\\docs",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\cache\\docs\\dynamicjs.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\cache\\docs\\events.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\cache\\docs\\kubejs.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\cache\\docs\\kubejs_recipes.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\cache\\docs\\morejs.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\cache\\docs\\probe.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\cache\\docs\\registry.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\cache\\docs\\types.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\cache\\cachedForgeEvents.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\cache\\cachedJava.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\index.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_0.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_1.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_10.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_11.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_12.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_13.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_14.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_15.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_16.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_17.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_18.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_19.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_2.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_20.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_21.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_22.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_23.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_24.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_25.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_26.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_27.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_28.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_29.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_3.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_30.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_31.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_32.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_33.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_34.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_35.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_36.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_37.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_38.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_39.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_4.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_40.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_41.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_42.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_43.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_44.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_45.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_46.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_47.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_5.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_6.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_7.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_8.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\internals\\internal_9.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\constants.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\events.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\globals.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\names.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\raw.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\registries.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\generated\\tag_events.d.ts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\probe\\.gitignore",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\server_scripts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\server_scripts\\hexcasting",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\server_scripts\\hexcasting\\battery.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\server_scripts\\hexcasting\\colorizer.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\server_scripts\\hexcasting\\focus.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\server_scripts\\hexcasting\\lens.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\server_scripts\\hexcasting\\world_recipe.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\server_scripts\\Imports.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\server_scripts\\loottables.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\server_scripts\\menu_button.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\server_scripts\\minecraft.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\server_scripts\\op_recipe.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\server_scripts\\patterns.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\server_scripts\\recipe.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\startup_scripts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\startup_scripts\\pattern",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\startup_scripts\\pattern\\name.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\startup_scripts\\pattern\\spell.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\startup_scripts\\reflection",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\startup_scripts\\reflection\\ClassOp.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\startup_scripts\\reflection\\FieldOp.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\startup_scripts\\button.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\startup_scripts\\hexagram.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\startup_scripts\\Imports.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\startup_scripts\\minecraft.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\startup_scripts\\pattern.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\jsconfig.json",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\README.txt",
+        "isSelected": true
+      },
+      {
+        "path": "mods",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\architectury-9.2.14-forge.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\balm-forge-1.20.1-7.3.38-all.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\biggerstacks-1.20.1-2026.02.04-all.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\caduceus-forge-0.2.1+1.20.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\caelus-forge-3.2.0+1.20.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\chunkloaders-1.2.9-forge-mc1.20.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\cloth-config-11.1.136-forge.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\constructionwand-1.20.1-2.11.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\ftb-library-forge-2001.2.12.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\ftb-ultimine-forge-2001.1.7.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\geckolib-forge-1.20.1-4.8.3.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\great_scrollable_tooltips-15.5.0+forge.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\hex-spellwheel-forge-1.1.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\hexal-forge-1.20.1-0.3.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\hexcasting-forge-1.20.1-0.11.3.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\hexcellular-forge-1.20.1-1.0.3.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\hexdebug-forge-0.8.0+1.20.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\hexFlow-forge-1.20.1-0.4.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\HexOverpowered-forge-1.20.1-0.11.5.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\hexParse-forge-1.20.1-1.8.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\hexthings-forge-0.1.6.1+1.20.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\hextweaks-5.3.3.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\inline-forge-1.20.1-1.2.2.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\ioticblocks-forge-1.0.2+1.20.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\Jade-1.20.1-Forge-11.13.2.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\jecharacters-1.20.1-forge-4.6.3.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\JEI Copy Recipe Json-1.1.2-fix.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\jei-1.20.1-forge-15.20.0.112.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\journeymap-1.20.1-5.10.3-forge.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\kotlinforforge-4.12.0-all.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\kubejs-forge-2001.6.5-build.16.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\kubejsadditions-forge-4.3.4.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\lootjs-forge-1.20.1-2.13.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\moreiotas-forge-1.20.1-0.1.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\morejs-forge-1.20.1-0.10.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\MouseTweaks-forge-mc1.20.1-2.25.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\PackingTape-1.20.1-0.14.4.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\Patchouli-1.20.1-84.1-FORGE.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\paucal-0.6.0+1.20.1-forge.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\probejs-6.0.1-forge.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\Quark-4.0-462.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\QuarkOddities-1.20.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\quickstack-1.20.1-1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\rhino-forge-2001.2.3-build.10.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\scholar-1.20.1-1.1.9-forge.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\short_circuit-forge-1.20.1-1.0.9.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\supermartijn642configlib-1.1.8-forge-mc1.20.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\supermartijn642corelib-1.1.20-forge-mc1.20.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\usefulluck-1.0.5.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\waystones-forge-1.20.1-14.1.18.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\xptome-1.20.1-2.2.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\Zeta-1.0-31.jar",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\caduceus",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\caduceus\\lang",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\caduceus\\lang\\zh_cn.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\chunkloaders",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\chunkloaders\\lang",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\chunkloaders\\lang\\zh_cn.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\constructionwand",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\constructionwand\\lang",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\constructionwand\\lang\\zh_cn.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\constructionwand\\models",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\constructionwand\\models\\item",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\constructionwand\\models\\item\\infinity_wand.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\constructionwand\\textures",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\constructionwand\\textures\\item",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\constructionwand\\textures\\item\\infinity_wand.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\dropoff",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\dropoff\\lang",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\dropoff\\lang\\zh_cn.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexal",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexal\\lang",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexal\\lang\\zh_cn.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\models",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\models\\block",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\models\\block\\edified_planks.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\models\\block\\edified_slab.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\models\\block\\edified_slab_top.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\particles",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\particles\\conjure_particle.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\block",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\block\\quenched_allay_0.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\block\\quenched_allay_1.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\block\\quenched_allay_2.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\block\\quenched_allay_3.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\block\\slate_amethyst_pillar_end.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\block\\slate_amethyst_pillar_side.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\item",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\item\\phial",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\item\\phial\\phial_largest_0.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\item\\phial\\phial_largest_1.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\item\\phial\\phial_largest_2.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\item\\phial\\phial_largest_3.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\item\\phial\\phial_largest_4.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\item\\staff",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\item\\staff\\quenched_0.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\item\\staff\\quenched_1.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\item\\staff\\quenched_2.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\item\\staff\\quenched_3.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\item\\patchouli_book.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\particle",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\particle\\cloud.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\particles",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\particles\\cloud.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcasting\\textures\\particles\\conjure_particle.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcellular",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcellular\\lang",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexcellular\\lang\\zh_cn.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexdebug",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexdebug\\lang",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexdebug\\lang\\zh_cn.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexdebug\\textures",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexdebug\\textures\\block",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexdebug\\textures\\block\\focus_holder",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexdebug\\textures\\block\\focus_holder\\full.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexdebug\\textures\\item",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexdebug\\textures\\item\\debugger.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexdebug\\textures\\item\\evaluator.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexflow",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexflow\\lang",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexflow\\lang\\zh_cn.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexparse",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexparse\\hexdebug_splicing_iotas",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexparse\\hexdebug_splicing_iotas\\comment.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexparse\\lang",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexparse\\lang\\zh_cn.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexthings",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexthings\\lang",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hexthings\\lang\\zh_cn.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hextweaks",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hextweaks\\lang",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\hextweaks\\lang\\zh_cn.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\minecraft",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\minecraft\\models",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\minecraft\\models\\item",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\minecraft\\models\\item\\item_frame.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\minecraft\\textures",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\minecraft\\textures\\block",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\minecraft\\textures\\block\\item_frame.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\minecraft\\textures\\item",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\minecraft\\textures\\item\\item_frame.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\moreiotas",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\moreiotas\\lang",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\moreiotas\\lang\\zh_cn.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\packingtape",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\packingtape\\lang",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\packingtape\\lang\\en_us.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\patchouli",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\patchouli\\lang",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\patchouli\\lang\\zh_cn.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\quark",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\quark\\lang",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\quark\\lang\\zh_cn.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\scholar",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\scholar\\lang",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\scholar\\lang\\zh_cn.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\short_circuit",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\short_circuit\\lang",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\short_circuit\\lang\\zh_cn.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\short_circuit\\textures",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\short_circuit\\textures\\item",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\short_circuit\\textures\\item\\circuit.png",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\short_circuit\\textures\\item\\circuit.png.mcmeta",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\spellwheel",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\spellwheel\\lang",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\spellwheel\\lang\\zh_cn.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\waystones",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\waystones\\lang",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\assets\\waystones\\lang\\zh_cn.json",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\pack.mcmeta",
+        "isSelected": true
+      },
+      {
+        "path": "resourcepacks\\autumn floods\\pack.png",
+        "isSelected": true
+      },
+      {
+        "path": "saves",
+        "isSelected": false
+      },
+      {
+        "path": "shaderpacks",
+        "isSelected": false
+      },
+      {
+        "path": ".curseclient",
+        "isSelected": false
+      },
+      {
+        "path": "minecraftinstance.json",
+        "isSelected": false
+      },
+      {
+        "path": "options.txt",
+        "isSelected": true
+      }
+    ],
+    "recommendedRam": 7168,
+    "enableRecommendedRam": true
+  }
+}

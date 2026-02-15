@@ -1,0 +1,188 @@
+{
+  "name": "矩阵",
+  "category": "hexcasting:patterns/stack",
+  "icon": "quark:crate",
+  "sortnum": 8,
+  "advancement": "hexcasting:opened_eyes",
+  "read_by_default": true,
+  "secret": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "矩阵是一种繁复的 iota，用于依照指定规则变换向量。它是由 n × m 的数字构成的矩形网格，将 m 维的输入转换为 n 维的输出。矩阵将一连串对于向量的复杂计算预先封装，随后施加于向量之上。矩阵之间亦可相乘相加，从而实现变换规则的叠加与组合。单个数字、向量或结构规整的数字列表可通过组阵之纯化转化为对应尺寸的矩阵；依据矩阵的尺寸，又可通过解阵之纯化还原。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:matrix/identity",
+      "anchor": "moreiotas:matrix/identity",
+      "input": "num",
+      "output": "mat",
+      "text": "返回 num 阶单位矩阵，即主对角线处为 1，其余各处为 0 的方阵。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:matrix/make",
+      "anchor": "moreiotas:matrix/make",
+      "input": "num | vec | list",
+      "output": "mat",
+      "text": "将一个数、向量或列表转换为矩阵。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "若 iota 为数，其将转换为 1 × 1 的矩阵；若为向量，将转换为 3 × 1 的矩阵；若为列表，则此列表需完全由数，或向量，或长度相同的，仅含数的列表组成；若组成元素为数，将转换为 1 × n 的矩阵；为向量，将转换为 3 × n 的矩阵；为 m 个长度为 n 的列表，则将转换为 n × m 的矩阵。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:matrix/unmake",
+      "anchor": "moreiotas:matrix/unmake",
+      "input": "mat",
+      "output": "num | vec | list",
+      "text": "依据矩阵的尺寸，将一个矩阵还原为数、向量或列表。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "若 iota 为 1 × 1 的矩阵，其将转换为数；若为 3 × 1 或 1 × 3 的矩阵，将转换为向量；若为 3 × n 或 n × 3 的矩阵，将转换为向量组成的列表；若为其他尺寸的 n × m 的矩阵，则将转换为 m 个长度为 n 的列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:matrix/unmake/direct",
+      "anchor": "moreiotas:matrix/unmake/direct",
+      "input": "mat",
+      "output": "[[num]]",
+      "text": "将一个矩阵还原为 m 个长度为 n 的数字列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:matrix/zero",
+      "anchor": "moreiotas:matrix/zero",
+      "input": "num.1, num.2",
+      "output": "mat",
+      "text": "返回 num.1 × num.2 的零矩阵"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:matrix/rotation",
+      "anchor": "moreiotas:matrix/rotation",
+      "input": "vec, num",
+      "output": "mat",
+      "text": "返回以 vec 为轴，正向旋转弧度 num，单位为 rad 的旋转矩阵。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "header": "hexcasting.action.book.moreiotas:add",
+      "op_id": "hexcasting:add",
+      "anchor": "hexcasting:add",
+      "input": "mat, mat",
+      "output": "mat",
+      "text": "将两个尺寸相等的矩阵相加。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "header": "hexcasting.action.book.moreiotas:mul",
+      "op_id": "hexcasting:mul",
+      "anchor": "hexcasting:mul",
+      "input": "mat.1, mat.2",
+      "output": "mat",
+      "text": "将 n × m 的矩阵 mat.1 与 m × p 的矩阵 mat.2 相乘，返回 n × p 的矩阵。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "header": "hexcasting.action.book.moreiotas:div",
+      "op_id": "hexcasting:div",
+      "anchor": "hexcasting:div",
+      "input": "mat.1, mat.2",
+      "output": "mat",
+      "text": "将 n × m 的矩阵 mat.1 与 m × m 的矩阵 mat.2 的逆矩阵相乘，返回 n × m 的矩阵。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "header": "hexcasting.action.book.moreiotas:pow",
+      "op_id": "hexcasting:pow",
+      "anchor": "hexcasting:pow",
+      "input": "mat, num",
+      "output": "mat",
+      "text": "返回矩阵的 num 次幂。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:altmul",
+      "anchor": "moreiotas:altmul",
+      "input": "mat.1, mat.2",
+      "output": "mat",
+      "text": "将 n × m 的矩阵 mat.1 中各元素与 n × m 的矩阵 mat.2 中相应元素相乘。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:altdiv",
+      "anchor": "moreiotas:altdiv",
+      "input": "mat.1, mat.2",
+      "output": "mat",
+      "text": "将 n × m 的矩阵 mat.1 中各元素与 n × m 的矩阵 mat.2 中相应元素相除。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:altpow",
+      "anchor": "moreiotas:altpow",
+      "input": "mat, mat",
+      "output": "mat",
+      "text": "返回以 n × m 的矩阵 mat.1 中各元素作为底数，n × m 的矩阵 mat.2 中相应元素作为指数的幂矩阵。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:matrix/inverse",
+      "anchor": "moreiotas:matrix/inverse",
+      "input": "mat",
+      "output": "mat",
+      "text": "返回指定矩阵的逆矩阵，原矩阵与逆矩阵相乘将得到单位矩阵。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:matrix/determinant",
+      "anchor": "moreiotas:matrix/determinant",
+      "input": "mat",
+      "output": "num",
+      "text": "返回一个尺寸为 4 × 4 以内的，n × n 的行列式。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:matrix/concat/vert",
+      "anchor": "moreiotas:matrix/concat/vert",
+      "input": "mat.1, mat.2",
+      "output": "mat",
+      "text": "将 m × n 的矩阵 mat.1 垂直拼接于 p × n 的矩阵 mat.2 的上方，返回 ( m + p ) × n 的矩阵。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:matrix/concat/hori",
+      "anchor": "moreiotas:matrix/concat/hori",
+      "input": "mat, mat",
+      "output": "mat",
+      "text": "将 n × m 的矩阵 mat.1 水平拼接于 n × p 的矩阵 mat.2 的左侧，返回 n × ( m + p ) 的矩阵。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:matrix/split/vert",
+      "anchor": "moreiotas:matrix/split/vert",
+      "input": "mat, num",
+      "output": "mat, mat",
+      "text": "将 n × m 的矩阵在第 num 行处分割，依次返回上方 n × num 的矩阵和下方 n × (m - num) 的矩阵。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:matrix/split/hori",
+      "anchor": "moreiotas:matrix/split/hori",
+      "input": "mat, num",
+      "output": "mat, mat",
+      "text": "将 n × m 的矩阵在第 num 列处分割，依次返回左侧 n × num 的矩阵和右侧 n × (m - num) 的矩阵。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "header": "hexcasting.action.moreiotas:matrix/transpose",
+      "op_id": "hexcasting:reverse",
+      "anchor": "hexcasting:reverse",
+      "input": "mat",
+      "output": "mat",
+      "text": "将 n × m 的矩阵中所有元素沿主对角线对称翻转，返回 m × n 的矩阵。"
+    }
+  ]
+}

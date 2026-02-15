@@ -1,0 +1,23 @@
+{
+  "name": "流转",
+  "category": "hexcasting:patterns/great_spells",
+  "icon": "minecraft:nautilus_shell",
+  "sortnum": 8,
+  "advancement": "hexcasting:enlightenment",
+  "read_by_default": true,
+  "secret": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:focus",
+      "anchor": "homo:focus",
+      "input": "entity, vec | num | entity",
+      "output": "",
+      "text": "若第二参数是向量，则将实体的速度转向指定向量的方向，保留其速度大小；若第二个参数是实体，则交换两个实体的速度。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "若第二个参数是数字，则以当前世界时间加上 此数字 tick 作为返回时间，记录实体当前的速度，然后将实体速度归零，达到返回时间后，将记录的速度加回。$(br2)如果在延迟期间再次释放，则记录实体当前的速度增加至记录值，并将返回时间更新为此次返回时间。"
+    }
+  ]
+}

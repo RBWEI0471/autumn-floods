@@ -1,0 +1,327 @@
+{
+  "name": "世界",
+  "category": "hexcasting:patterns/stack",
+  "icon": "minecraft:grass_block",
+  "sortnum": 1,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "secret": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:current_tick",
+      "anchor": "hexal:current_tick",
+      "input": "",
+      "output": "num",
+      "text": "返回世界创建后经过的总时间。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:world",
+      "anchor": "homo:world",
+      "input": "",
+      "output": "str",
+      "text": "返回当前维度的名称。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:light_level",
+      "anchor": "hexal:light_level",
+      "input": "vec",
+      "output": "num",
+      "text": "返回指定坐标向量处的光照强度。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:sky",
+      "anchor": "homo:sky",
+      "input": "vec",
+      "output": "bool",
+      "text": "判断指定坐标向量是否露天。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:raycast/entity",
+      "anchor": "hexcasting:raycast/entity",
+      "input": "vec, vec",
+      "output": "entity",
+      "text": "返回前一坐标向量沿后一方向向量作射线延伸所触及的第一个实体，射线不受方块阻挡，消耗 100 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:raycast",
+      "anchor": "hexcasting:raycast",
+      "input": "vec, vec",
+      "output": "vec",
+      "text": "返回前一坐标向量沿后一方向向量作射线延伸所触及的第一个方块的坐标向量，射线不受生物和流体阻挡，消耗 100 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:block_id",
+      "anchor": "homo:block_id",
+      "input": "vec",
+      "output": "str",
+      "text": "返回指定坐标向量处方块的名称。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:block_state",
+      "anchor": "homo:block_state",
+      "input": "vec",
+      "output": "str",
+      "text": "返回指定坐标向量处方块的方块状态。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:block_data",
+      "anchor": "homo:block_data",
+      "input": "vec",
+      "output": "str",
+      "text": "返回指定坐标向量处方块的实体数据。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:is_air",
+      "anchor": "homo:is_air",
+      "input": "vec",
+      "output": "bool",
+      "text": "判断指定坐标向量处方块是否属于空气。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:replaceable",
+      "anchor": "homo:replaceable",
+      "input": "vec",
+      "output": "bool",
+      "text": "判断指定坐标向量处方块是否可被替换。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:shape",
+      "anchor": "homo:shape",
+      "input": "vec",
+      "output": "vec",
+      "text": "返回指定坐标向量处方块的碰撞体积。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:ray_block",
+      "anchor": "homo:ray_block",
+      "input": "vec, vec, bool",
+      "output": "[vec]",
+      "text": "以两个向量确定一条射线或线段，返回线上经过的所有方块的坐标向量组成的列表。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "将第一个向量作为起始的坐标向量，若布尔值为 false，则以第二个向量作为坐标向量，返回两坐标连线经过的所有方块的坐标向量组成的列表。$(br2)若布尔值为 true，则以第二个向量作为方向向量，返回以坐标向量沿方向向量延伸过程中经过的一定数量个方块的坐标向量，数量等同于向量的模长取整。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:square_block",
+      "anchor": "homo:square_block",
+      "input": "vec, num, bool | null",
+      "output": "[vec]",
+      "text": "以一个向量和一个正整数确定一个正方体，返回正方体十二条棱，或六个面，或其中的方块的坐标向量组成的列表。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "将一个坐标向量作为正方体的中心坐标，一个正整数作为正方体的二分之边长，若布尔值为 true，返回该正方体所有方块的坐标向量组成的列表。$(br2)若布尔值为 false，返回正方体面上所有方块的坐标向量组成的列表；为 null，返回正方体十二条棱上所有方块的坐标向量组成的列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:rectangle_block",
+      "anchor": "homo:rectangle_block",
+      "input": "vec, vec, bool | null",
+      "output": "[vec]",
+      "text": "以两个向量确定一个立方体，返回立方体十二条棱，或六个面，或其中的方块的坐标向量组成的列表。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "将两个坐标向量作为立方体的两个对角顶点坐标，若布尔值为 true，返回该立方体所有方块的坐标向量组成的列表。$(br2)若布尔值为 false，返回立方体面上所有方块的坐标向量组成的列表；为 null，返回立方体十二条棱上所有方块的坐标向量组成的列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:circle_block",
+      "anchor": "homo:circle_block",
+      "input": "vec, num, bool",
+      "output": "[vec]",
+      "text": "将一个坐标向量作为球体的中心坐标，一个正整数作为球体的半径，若布尔值为 true，返回球体所有方块的坐标向量组成的列表；为 false，返回球面所有方块的坐标向量组成的列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:found",
+      "anchor": "homo:found",
+      "input": "vec, num, str",
+      "output": "bool",
+      "text": "判断以指定坐标向量为平面中心，2 * num 为平面边长，Y 轴小于等于指定方块，大于等于 -64 的立方体中是否含有指定名称的方块，不受施法范围限制。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:raycast/axis",
+      "anchor": "hexcasting:raycast/axis",
+      "input": "vec, vec",
+      "output": "vec",
+      "text": "返回前一坐标向量沿后一方向向量作射线延伸所触及的方块面的法向量，消耗 100 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:get_entity",
+      "anchor": "hexcasting:get_entity",
+      "input": "vec",
+      "output": "entity",
+      "text": "返回指定坐标向量处实体。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:get_entity/not_player",
+      "anchor": "homo:get_entity/not_player",
+      "input": "vec",
+      "output": "entity",
+      "text": "返回指定坐标向量处非玩家实体。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:get_entity/living",
+      "anchor": "hexcasting:get_entity/living",
+      "input": "vec",
+      "output": "entity",
+      "text": "返回指定坐标向量处生物实体。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:get_entity/monster",
+      "anchor": "hexcasting:get_entity/monster",
+      "input": "vec",
+      "output": "entity",
+      "text": "返回指定坐标向量处敌对生物。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:get_entity/item",
+      "anchor": "hexcasting:get_entity/item",
+      "input": "vec",
+      "output": "entity",
+      "text": "返回指定坐标向量处物品实体。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:get_entity/animal",
+      "anchor": "hexcasting:get_entity/animal",
+      "input": "vec",
+      "output": "entity",
+      "text": "返回指定坐标向量处动物实体。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:get_entity/wisp",
+      "anchor": "hexal:get_entity/wisp",
+      "input": "vec",
+      "output": "entity",
+      "text": "返回指定坐标向量处咒灵。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:zone_block",
+      "anchor": "homo:zone_block",
+      "input": "vec, num",
+      "output": "[vec]",
+      "text": "返回以指定坐标向量为中心，指定数值为半径的范围内所有方块实体的位置列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:zone_entity",
+      "anchor": "hexcasting:zone_entity",
+      "input": "vec, num",
+      "output": "[entity]",
+      "text": "返回以指定坐标向量为中心，指定数值为半径的范围内所有实体组成的列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:zone_entity/not_player",
+      "anchor": "hexcasting:zone_entity/not_player",
+      "input": "vec, num",
+      "output": "[entity]",
+      "text": "返回以指定坐标向量为中心，指定数值为半径的范围内所有非玩家实体组成的列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:zone_entity/living",
+      "anchor": "hexcasting:zone_entity/living",
+      "input": "vec, num",
+      "output": "[entity]",
+      "text": "返回以指定坐标向量为中心，指定数值为半径的范围内所有生物组成的列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:zone_entity/not_living",
+      "anchor": "hexcasting:zone_entity/not_living",
+      "input": "vec, num",
+      "output": "[entity]",
+      "text": "返回以指定坐标向量为中心，指定数值为半径的范围内所有非生物实体组成的列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:zone_entity/monster",
+      "anchor": "hexcasting:zone_entity/monster",
+      "input": "vec, num",
+      "output": "[entity]",
+      "text": "返回以指定坐标向量为中心，指定数值为半径的范围内所有怪物组成的列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:zone_entity/not_monster",
+      "anchor": "hexcasting:zone_entity/not_monster",
+      "input": "vec, num",
+      "output": "[entity]",
+      "text": "返回以指定坐标向量为中心，指定数值为半径的范围内所有非怪物实体组成的列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:zone_entity/item",
+      "anchor": "hexcasting:zone_entity/item",
+      "input": "vec, num",
+      "output": "[entity]",
+      "text": "返回以指定坐标向量为中心，指定数值为半径的范围内所有物品组成的列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:zone_entity/not_item",
+      "anchor": "hexcasting:zone_entity/not_item",
+      "input": "vec, num",
+      "output": "[entity]",
+      "text": "返回以指定坐标向量为中心，指定数值为半径的范围内所有非物品实体组成的列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:zone_entity/animal",
+      "anchor": "hexcasting:zone_entity/animal",
+      "input": "vec, num",
+      "output": "[entity]",
+      "text": "返回以指定坐标向量为中心，指定数值为半径的范围内所有动物组成的列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:zone_entity/not_animal",
+      "anchor": "hexcasting:zone_entity/not_animal",
+      "input": "vec, num",
+      "output": "[entity]",
+      "text": "返回以指定坐标向量为中心，指定数值为半径的范围内所有非动物实体组成的列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:zone_entity/wisp",
+      "anchor": "hexal:zone_entity/wisp",
+      "input": "vec, num",
+      "output": "[entity]",
+      "text": "返回以指定坐标向量为中心，指定数值为半径的范围内所有咒灵组成的列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:zone_entity/not_wisp",
+      "anchor": "hexal:zone_entity/not_wisp",
+      "input": "vec, num",
+      "output": "[entity]",
+      "text": "返回以指定坐标向量为中心，指定数值为半径的范围内所有非咒灵实体组成的列表。"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "全视",
+  "category": "hexcasting:patterns/great_spells",
+  "icon": "minecraft:heart_of_the_sea",
+  "sortnum": 2,
+  "advancement": "hexcasting:enlightenment",
+  "read_by_default": true,
+  "secret": true,
+  "pages": [
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "homo:eye_of_providence",
+			"anchor": "homo:eye_of_providence",
+			"input": "str, bool",
+			"output": "",
+			"text": "令本次咒术在指定维度施放，且不限制施法距离，若为 false，消耗 100,000 点媒质；若为 true，将施法者的生命值设为 0.0001。"
+		}
+  ]
+}

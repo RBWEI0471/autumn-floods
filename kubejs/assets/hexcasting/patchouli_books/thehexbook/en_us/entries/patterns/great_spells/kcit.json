@@ -1,0 +1,19 @@
+{
+  "name": "聚变",
+  "category": "hexcasting:patterns/great_spells",
+  "icon": "minecraft:ender_eye",
+  "sortnum": 5,
+  "advancement": "hexcasting:enlightenment",
+  "read_by_default": true,
+  "secret": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:kcit",
+      "anchor": "homo:kcit",
+      "input": "vec",
+      "output": "",
+      "text": "将指定坐标向量处的方块运行时间减少 1 tick，并有 1/64 的概率触发随机刻，消耗 10 点媒质。"
+    }
+  ]
+}

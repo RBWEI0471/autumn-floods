@@ -1,0 +1,143 @@
+{
+  "name": "标签",
+  "category": "hexcasting:patterns/spells",
+  "icon": "minecraft:sculk_catalyst",
+  "sortnum": 0.5,
+  "advancement": "hexcasting:opened_eyes",
+  "read_by_default": true,
+  "secret": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:name",
+      "anchor": "homo:name",
+      "input": "entity, str",
+      "output": "",
+      "text": "更改指定实体的名称。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:tags",
+      "anchor": "homo:tags",
+      "input": "entity, str, bool | null",
+      "output": "any",
+      "text": "若布尔值为True或False，则添加或移除以 T_ 起始的字符串标签，为null，则判断实体是否持有指定标签；若字符串为空，则使用发光效果代替字符串标签。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "部分法术也会添加标签：$(br2)坠落标记时，持有 'fall'$(br2)实体升华时，持有 'infinite'$(br2)反制冷却时，持有 're_cold'$(br2)轮盘生效时，持有 'roulette'$(br2)溯洄记录时，持有 'the_spirit'$(br2)反制生效时，持有 'reflection'"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "判断标签亦可检测状态效果，当实体持有状态效果包含指定检测标签时，则返回该状态效果的剩余时间。状态效果的检测标签为命名空间的后半部分，譬如：$(br2)隐身效果的命名空间为：$(br2)'minecraft:invisibility'，故检测标签为 'invisibility'。$(br2)明晰效果的命名空间为：$(br2)'hexcasting:enlarge_grid'，故检测标签为 'enlarge_grid'。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:fall",
+      "anchor": "homo:fall",
+      "input": "entity",
+      "output": "",
+      "text": "标记一个实体，令其当前摔落距离增加当前速度的模长，下一次受到的摔落伤害乘以摔落时速度的模长，消耗 10,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:effect",
+      "anchor": "homo:effect",
+      "input": "entity.1, entity.2",
+      "output": "",
+      "text": "将 entity.1 的所有状态效果移除并给予 entity.2，消耗为 100,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:potion/weakness",
+      "anchor": "hexcasting:potion/weakness",
+      "input": "entity, num.1, num.2",
+      "output": "",
+      "text": "给予指定实体时长为 num.1，等级为 num.2 的$(thing)虚弱/$效果，消耗 num.1 * num.2² * 1,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:potion/levitation",
+      "anchor": "hexcasting:potion/levitation",
+      "input": "entity, num",
+      "output": "",
+      "text": "给予指定实体时长为 num 的$(thing)漂浮/$效果，消耗 num * 2,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:potion/wither",
+      "anchor": "hexcasting:potion/wither",
+      "input": "entity, num.1, num.2",
+      "output": "",
+      "text": "给予指定实体时长为 num.1，等级为 num.2 的$(thing)凋零/$效果，消耗 num.1 * num.2² * 10,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:potion/poison",
+      "anchor": "hexcasting:potion/poison",
+      "input": "entity, num.1, num.2",
+      "output": "",
+      "text": "给予指定实体时长为 num.1，等级为 num.2 的$(thing)中毒/$效果，消耗 num.1 * num.2² * 10,000 / 3 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:potion/slowness",
+      "anchor": "hexcasting:potion/slowness",
+      "input": "entity, num.1, num.2",
+      "output": "",
+      "text": "给予指定实体时长为 num.1，等级为 num.2 的$(thing)缓慢/$效果，消耗 num.1 * num.2² * 2,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:potion/regeneration",
+      "anchor": "hexcasting:potion/regeneration",
+      "input": "entity, num.1, num.2",
+      "output": "",
+      "text": "给予指定实体时长为 num.1，等级为 num.2 的$(thing)再生/$效果，消耗 num.1 * num.2³ * 10,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:potion/night_vision",
+      "anchor": "hexcasting:potion/night_vision",
+      "input": "entity, num",
+      "output": "",
+      "text": "给予指定实体时长为 num 的$(thing)夜视/$效果，消耗 num * 2,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:potion/absorption",
+      "anchor": "hexcasting:potion/absorption",
+      "input": "entity, num.1, num.2",
+      "output": "",
+      "text": "给予指定实体时长为 num.1，等级为 num.2 的$(thing)伤害吸收/$效果，消耗 num.1 * num.2³ * 10,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:potion/haste",
+      "anchor": "hexcasting:potion/haste",
+      "input": "entity, num.1, num.2",
+      "output": "",
+      "text": "给予指定实体时长为 num.1，等级为 num.2 的$(thing)急迫/$效果，消耗 num.1 * num.2³ * 10,000 / 3 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:potion/strength",
+      "anchor": "hexcasting:potion/strength",
+      "input": "entity, num.1, num.2",
+      "output": "",
+      "text": "给予指定实体时长为 num.1，等级为 num.2 的$(thing)力量/$效果，消耗 num.1 * num.2³ * 10,000 / 3 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:plague",
+      "anchor": "homo:plague",
+      "input": "[entity], bool",
+      "output": "",
+      "text": "以变异或适应的方式使正负面效果在列表中的实体之间相互传播。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "统计列表中所有实体的正面或负面效果，依据布尔值决定。记录其中每一种效果在所有实体中的最高效果等级和最长持续时间。$(br2)对于列表中的每一个实体，有 1/2 概率从记录中获得一种新的效果，持续时间为记录中该效果的最长持续时间除以二，等级为记录中该效果的最高效果等级加一，否则从实体当前拥有的效果中随机选择一个，将持续时间乘以二，效果等级减一；若效果等级小于零，则移除列表中所有实体的此种效果。"
+    }
+  ]
+}

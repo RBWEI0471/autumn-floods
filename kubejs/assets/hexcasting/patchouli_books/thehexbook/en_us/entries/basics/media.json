@@ -1,0 +1,24 @@
+{
+  "name": "媒质",
+  "icon": "minecraft:quartz",
+  "category": "hexcasting:basics",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "相较于其他华丽的魔法，$(hex)咒法/$更可以被称之为自然的艺术。$(hex)咒法/$与艺术都表达于感性，凝结于概念，最终实现于语言。$(br2)据官方所言，$(hex)咒法/$是运用$(media)媒质/$的技艺：将$(thing)概念/$以符合$(hex)逻辑/$的方式表述为$(hex)咒术/$，以使得产生于意识的$(media)媒质/$单向的作用于自然；$(thing)概念/$承载于$(item)媒介/$以特定方式绘成的$(action)图案/$，而$(hex)逻辑/$又由$(hex)整体/$的目的与$(action)图案/$的限制共同界定。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "譬如，“告知我沿视线方向所看向方块的位置向量”，以$(hex)咒术/$语言表述，则需依次绘制：$(br2)施法者，$(l:patterns/stack/basics#hexcasting:get_caster)$(action)意识之精思/$，$(br2)眼部位置，$(l:patterns/stack/basics#hexcasting:entity_pos/eye)$(action)司北之纯化/$，$(br2)施法者，$(l:patterns/stack/basics#hexcasting:get_caster)$(action)意识之精思/$，$(br2)视线方向，$(l:patterns/stack/basics#hexcasting:get_entity_look)$(action)照准之纯化/$，$(br2)在某位置沿某方向视向的方块坐标，$(l:patterns/stack/world#hexcasting:raycast)$(action)弓箭之馏化/$，$(br2)告知于我，$(l:patterns/stack/basics#hexcasting:print)$(action)揭示/$。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "据我考察的残页来看，具体到$(hex)逻辑/$部分，还有一些术语如 $(thing)栈/$ 和 $(thing)iota/$ 等，有待深入学习。但由于相关于$(media)媒质/$的资料缺失，研究只能被迫终止。$(br2)正常的思考只能产生（或外溢，残页语）极少量的$(media)媒质/$，因此仅凭自己难以施法。但记载中，地下似乎出现过一种特殊的$(item)母岩/$，$(media)媒质/$会在其上缓缓生长为$(item)晶体/$。（ps：历史中从来没有进一步的文本，莫非自然能在梦中给予启迪？）"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "考察的发现不止于此，梳理文本的过程中，我完全没能检索到如今携带的笔记，透镜和法杖的记忆。佩戴透镜时，法杖会蒙蔽周边敌对生物的索敌，笔记则可以给予再生效果，并免疫岩浆，摔落与窒息。$(br2)不仅如此，当我以不同的方式考察他们时，还会得到不同的提示。以他们展现出来的性质绝不应当被我忽略，意识到这点的时间同样未免太过巧合；他们与我一定有更深的关系，我想，总有一天，他们会展现出真正的来意。"
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "name": "逻辑",
+  "category": "hexcasting:patterns/stack",
+  "icon": "minecraft:observer",
+  "sortnum": 7,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "secret": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:if",
+      "anchor": "hexcasting:if",
+      "input": "bool, any.1, any.2",
+      "output": "any",
+      "text": "如果是 True，则仅保留any.1；如果是 False，则仅保留any.2。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:equals",
+      "anchor": "hexcasting:equals",
+      "input": "any, any",
+      "output": "bool",
+      "text": "移除两个参数，如果第一个参数等于第二个，则返回 True，否则返回 False。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:bool_coerce",
+      "anchor": "hexcasting:bool_coerce",
+      "input": "any",
+      "output": "bool",
+      "text": "移除栈顶元素。若其为 $(thing)0/$、$(thing)Null/$、False和空列表，则返回 False，否则返回 True。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "header": "hexcasting.action.book.hexcasting:bool_to_number",
+      "op_id": "hexcasting:abs",
+      "anchor": "hexcasting:abs",
+      "input": "bool",
+      "output": "number",
+      "text": "移除栈顶布尔值。若其为 True 则返回 $(thing)1/$，若其为 False 则返回 $(thing)0/$。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:not",
+      "anchor": "hexcasting:not",
+      "input": "num | bool",
+      "output": "num | bool",
+      "text": "移除栈顶的元素，若为布尔值，为 True 则返回 False；为 False 则返回 True。若为数，则返回其相反数，然后减一。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:not_equals",
+      "anchor": "hexcasting:not_equals",
+      "input": "any, any",
+      "output": "bool",
+      "text": "移除两个参数，如果第一个参数不等于第二个，则返回 True，否则返回 False。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:or",
+      "anchor": "hexcasting:or",
+      "input": "bool, bool",
+      "output": "bool",
+      "text": "移除两个布尔值，如果至少有一个参数是 True，则返回 True，否则返回 False。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:and",
+      "anchor": "hexcasting:and",
+      "input": "bool, bool",
+      "output": "bool",
+      "text": "移除两个布尔值，如果两个参数都是 True，则返回 True，否则返回 False。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:xor",
+      "anchor": "hexcasting:xor",
+      "input": "bool, bool",
+      "output": "bool",
+      "text": "移除两个布尔值，如果参数中仅一个是 True，则返回 True，否则返回 False。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:greater",
+      "anchor": "hexcasting:greater",
+      "input": "number, number",
+      "output": "bool",
+      "text": "移除两个数，如果第一个数大于第二个，则返回 True，否则返回 False。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:less",
+      "anchor": "hexcasting:less",
+      "input": "number, number",
+      "output": "bool",
+      "text": "移除两个数，如果第一个数小于第二个，则返回 True，否则返回 False。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:greater_eq",
+      "anchor": "hexcasting:greater_eq",
+      "input": "number, number",
+      "output": "bool",
+      "text": "移除两个数，如果第一个数大于或等于第二个，则返回 True，否则返回 False。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:less_eq",
+      "anchor": "hexcasting:less_eq",
+      "input": "number, number",
+      "output": "bool",
+      "text": "移除两个数，如果第一个数小于或等于第二个，则返回 True，否则返回 False。"
+    }
+  ]
+}

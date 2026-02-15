@@ -1,0 +1,113 @@
+{
+  "name": "iota",
+  "category": "hexcasting:patterns",
+  "icon": "hexcasting:default_colorizer",
+  "advancement": "hexcasting:root",
+  "sortnum": 1,
+  "secret": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "目前所知的 iota 共有九种，各自指涉着不同的范畴。简单的，如$(p)$(thing)布尔-bool/$，用于条件操作的逻辑判断值，True，或 False$(p)$(thing)列表-list/$，任意 iota 构成的有序列表，长度为 n 的列表从左至右的元素对应下标 0 ~ (n-1)$(p)$(thing)实体-entity/$，代表此维度中某个特定既存的实体，如施法者，某个生物，某根箭矢，某组掉落物等"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)数字-num/$，精确至小数点后四位，但仅显示至小数点后两位。自然在检查两数是否相等时，允许 0.0001 的误差$(p)$(thing)字符串-str/$，一串特定的字符，最大长度为32768，咒术中诸如方块名称，维度名称的字符串是其$(l:basics/change_e#注册名)$(action)\"注册名\"/$，也即自然的命名，自然在比较注册名时，会忽略最外层的单双引号。$(p)这些描述固然简洁，但明显并不触及那些……更深的东西。晦涩的本质无论是阅读还是书写都让人感到疲惫，因此我仅仅象征性地写一段："
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)虚指-null/garbage/$，是一种代表空无的 iota ，显示为 $(thing)null/$。$(p)虽说如此，真正的空无其实是不能被思考的，因此$(thing)虚指/$也不过是相对的空无罢了。$(p)在所规定的范围之中缺失了本该存在的“有”，便被恰当的称之空无。$(p)但是，若是在这空无之外更缺乏规定，则会变成不可思的存在，$(thing)“垃圾”，garbage/$。"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "向量-vec",
+      "text": "$(thing)向量/$是由三个$(thing)数/$X、Y、Z构成的列表，它代表着一条从原点出发的有向线段；起始于(0,0,0)，终止于三个轴向移动对应距离后到达的(X,Y,Z)。我将其模长简记为|vec|，实际操作中，(X,Y,Z)既可以表示相对于原点进行偏移后所抵达的终点位置-坐标向量，如$(l:patterns/stack/basics#hexcasting:entity_pos/eye)$(action)司北之纯化/$；也可以表示从原点指向终点的方向-方向向量，如$(l:patterns/stack/basics#hexcasting:get_entity_look)$(action)照准之纯化/$；还可以表示从原点到终点的运动过程-偏移向量，如$(action)卓越传送/$。"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "图案-patterns",
+      "anchor": "hexcasting:patterns",
+      "text": "借助$(l:patterns/patterns_as_iotas)$(action)转义/$，我能将$(thing)图案/$封存为$(l)笔划/$，它们可以在$(item)核心/$或$(thing)卷轴/$等咒术物品中写入或读取。而如果将它们与$(l:patterns/meta)$(action)元运行/$章节的图案配合，则会提供强大的操纵能力。$(br2)“恰如本能总是无序，唯有抑制与否定才是通向崇高的基石。”这两章的图案晦涩难表，但是自然的启示却仅仅满足于做出一番功能上的概述，这背后还有多少秘密，或许只有自然永恒的保守着真正的答案。"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "书签-continuation",
+      "anchor": "hexcasting:continuation",
+      "text": "$(thing)书签 iota/$显示为$(thing)[Jump]/$，存有当前咒术的延续，具体来讲，包含待执行的咒术和当前执行的位置。而当$(thing)书签/$被执行时，则会将当前咒术的$(thing)延续/$替换成$(thing)书签/$中所保存的$(thing)延续/$。$(br2)自然的描述既残缺又难懂，就测试来讲，书签是一种可执行 iota，执行时，会将当前将要运行的部分替换为保存的部分，这可以简单地用做跳出多层嵌套，或是构建更复杂的循环。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "根据残卷看来，还有六种 iota，分别名为注释，字典，矩阵，物元，门径，质性。前四种我记录于对应的页面，最后两种则尚且没有信息。$(br2)在描述图案的作用前，我会先简单的记叙接受和返回的 iota。例如，“$(n)vec, num/$ → $(n)vec/$” 意味着该操作会移除一个数和向量，然后返回一个向量。“→ $(n)entity/$”意味着该操作仅仅返回一个实体。最后，左ctrl 可以显示从着重点起始的渐变过程。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "各类$(l:patterns/stack)$(action)栈操作/$以其将要移除和加入的 iota 个数命名：$(br)$(li)$(thing)纯化/$出栈一个，入栈一个。$(li)$(thing)馏化/$出栈两个，入栈一个。$(li)$(thing)提整/$出栈三个或更多，入栈一个。$(li)$(thing)精思/$不出栈，入栈一个 iota。$(li)$(thing)分解/$出栈一个，入栈两个。$(li)$(thing)拆解/$出栈一个，入栈三个或更多。$(li)$(thing)策略/$则对应其余操作。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:stack/size",
+      "anchor": "homo:stack/size",
+      "input": "",
+      "output": "num",
+      "text": "返回栈中元素的个数。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:stack/all_size",
+      "anchor": "homo:stack/all_size",
+      "input": "",
+      "output": "num",
+      "text": "返回栈中数据的个数。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:range",
+      "anchor": "homo:range",
+      "input": "vec | entity",
+      "output": "bool",
+      "text": "判断指定实体或坐标向量是否处于施法范围内。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:get_max_media",
+      "anchor": "homo:get_max_media",
+      "output": "num",
+      "text": "返回施法者可消耗的总媒质量。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:thanatos",
+      "anchor": "hexcasting:thanatos",
+      "output": "num",
+      "text": "返回$(hex)咒术/$尚能运行的$(thing)图案数/$，初始值为 100000。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:exhaustive",
+      "anchor": "homo:exhaustive",
+      "input": "pattern, num",
+      "output": "pattern",
+      "text": "返回一个形状与指定图案相同，具有特定笔画顺序的图案，数字模拟了不同世界的生成。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:depth",
+      "anchor": "homo:depth",
+      "text": "重置$(hex)咒术/$可运行的$(thing)图案数/$。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:otherworld",
+      "anchor": "homo:otherworld",
+      "input": "",
+      "output": "？",
+      "text": "压入一个混沌的空间，其所占据的大小为负值，任何对其的扰动均有可能使之失效，包括法杖每个操作运行完毕后的状态保存。"
+    },
+    {
+      "type": "patchouli:link",
+      "text": "说来此世中物品（尤其是透镜！）被命名为三份——本质，形体和凡人无法书写的真名，不妨看那美丽的质念法杖，在人们的注意之外会在四种外观中变换不停。他是如此的变化无常，据说是承蒙造物主的垂青。如果哪一天得知我连名字都是借来的你也不要太惊讶哟~",
+      "link_text": "那个透镜一看就不科学，快去对他使用魔法契约吧！",
+      "url": "质念透镜(っ﹏-) .｡~oƪ"
+    }
+  ]
+}

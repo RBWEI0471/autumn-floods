@@ -1,0 +1,13 @@
+{
+  "name": "hextweaks.entry.interop.cc",
+  "icon": "computercraft:turtle_advanced",
+  "category": "hexcasting:interop",
+  "advancement": "hexcasting:enlightenment",
+  "flag": "mod:computercraft",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "海龟和掌上电脑同样可以使用法杖，它们还有一些新事件可用。$(li)$(o)reveal$() 会像揭示那样通过图案返回字符串。$(li)$(o)mishap$() 则会包含事故的类名、图案的名称，以及字符串形式的咒术图案。$(br2)海龟的施法不具有施法者，掌上电脑施法的施法者则为手持它的玩家，施法范围均为六十四。"
+    }
+  ]
+}

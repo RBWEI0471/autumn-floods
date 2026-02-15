@@ -1,0 +1,115 @@
+{
+  "name": "召唤",
+  "category": "hexcasting:patterns/spells",
+  "icon": "hexcasting:quenched_allay",
+  "sortnum": 4,
+  "advancement": "hexcasting:opened_eyes",
+  "read_by_default": true,
+  "secret": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:creeper",
+      "anchor": "homo:creeper",
+      "input": "vec, num",
+      "output": "",
+      "text": "在指定坐标向量处产生一次强度为所给数值的爆炸，强度越大，则限制越大，消耗 10000 * num² 点媒质。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "当爆炸强度小于等于一时，将会立即在指定坐标处产生一次不产生火焰，不伤及自身的爆炸。$(br2)当爆炸强度大于一时，将会在爆炸前延迟 num 秒；当爆炸强度大于三时，爆炸会产生火焰；当爆炸强度大于十时，爆炸会伤及自身。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:sentinel/create",
+      "anchor": "hexcasting:sentinel/create",
+      "input": "vec",
+      "output": "",
+      "text": "在指定坐标向量处召唤一个$(l:patterns/spells/sentinels)$(thing)哨卫/$，$(thing)哨卫/$没有碰撞体积，拥有高亮的轮廓；一旦召唤，在被驱除前它都将留在原位，消耗 10,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:sentinel/create/great",
+      "anchor": "hexcasting:sentinel/create/great",
+      "input": "vec",
+      "output": "",
+      "text": "在指定坐标向量处召唤一个$(thing)卓越哨卫/$，消耗 20,000 点媒质。以$(thing)卓越哨卫/$为中心半径 32 格也会成为我的法术生效范围，同时只能存在一个$(thing)卓越哨卫/$。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:sentinel/destroy",
+      "anchor": "hexcasting:sentinel/destroy",
+      "input": "",
+      "output": "",
+      "text": "驱除我的$(l:patterns/spells/sentinels)$(thing)哨卫/$，消耗 1,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:sentinel/get_pos",
+      "anchor": "hexcasting:sentinel/get_pos",
+      "input": "",
+      "output": "vec",
+      "text": "返回我$(l:patterns/spells/sentinels)$(thing)哨卫/$的坐标向量，消耗 1,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:sentinel/wayfind",
+      "anchor": "hexcasting:sentinel/wayfind",
+      "input": "vec",
+      "output": "vec",
+      "text": "返回栈顶的向量指向$(l:patterns/spells/sentinels)$(thing)哨卫/$的单位向量，消耗 1,000 点媒质。"
+    },
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "hexthings:isgreatersent",
+			"anchor": "hexthings:isgreatersent",
+			"input": "",
+			"output": "bool | null",
+			"text": "判断当前$(thing)哨卫/$是否是$(thing)卓越哨卫/$"
+		},
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:particles",
+      "anchor": "hexal:particles",
+      "input": "vec | [vec]",
+      "output": "",
+      "text": "在指定坐标向量处生成粒子，或在列表各坐标向量间生成粒子连线，每个坐标向量消耗 1 点媒质。"
+    },
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "homo:arrow",
+			"anchor": "homo:arrow",
+			"input": "vec, num",
+			"output": "",
+			"text": "在指定坐标向量处召唤一只基础伤害等同于指定数值，无视重力的光灵箭，num 为 1 ~ 5 之间的整数，消耗 num² * 1,000 点媒质。"
+		},
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "homo:vex",
+			"anchor": "homo:vex",
+			"input": "vec, num",
+			"output": "",
+			"text": "在指定坐标向量处召唤一道空灵的标记，指定数值 tick 后消失。"
+		},
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:beep",
+      "anchor": "hexcasting:beep",
+      "input": "vec, num.1, num.2",
+      "output": "",
+      "text": "在指定坐标向量处弹奏一个 num.1 对应 0 ~ 15 种乐器，num.2 对应 0 ~ 24 种音高的音符，消耗 1,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:eye",
+      "anchor": "homo:eye",
+      "input": "list, str",
+      "output": "",
+      "text": "根据列表中的参数，在指定位置显示一行文字。列表依次包含六个参数，分别代表文本的X轴，Y轴，ID，存在时间，缩放大小和颜色，未写入的参数或 null 取默认值。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "默认情况下，X 为 $(thing)0/$，代表相对于屏幕中轴无偏移；Y 为 $(thing)80/$，代表相对于屏幕顶端下移 80；ID $(thing)随机/$；存在时间 $(thing)8/$ 秒；缩放比例 $(thing)1.5/$ 倍，颜色为$(thing)淡紫色/$。指定 ID 的类型是字符串，若存在对应此 ID 的显象尚未消失，则会将其覆盖；若要指定颜色，则应当输入一个数字，0 ~ 8 对应：黑 红 橙 黄 绿 青 蓝 紫 白。"
+    }
+  ]
+}

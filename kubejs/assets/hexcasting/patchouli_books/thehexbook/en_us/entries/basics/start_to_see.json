@@ -1,0 +1,22 @@
+{
+  "name": "永恒",
+  "category": "hexcasting:basics",
+  "icon": "hexcasting:quenched_allay",
+  "sortnum": 4,
+  "advancement": "hexcasting:enlightenment",
+  "secret": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "文献没有说错。自然……出手了。$(p)……。我破 碎了。巨 大的 电流，贯穿了，我 的脊 椎，我扭 曲的，我昏了过去。$(br2)……但是。在那最为神圣的一刻，我破碎的那一部分……它$(italic)看见了/$……$(thing)一些东西/$。一张……中介？我和单纯的思维领域，于此永恒的隔绝。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "可是，屏障模糊了，我……不，不该如此……$(p)我想要，$(italic)穿过它/$。$(br2)我于是见证。不可言之物。不可数之物。断续的，完整的$(thing)一/$。它们$(italic)……隐隐作痛/$。$(p)我去$(italic)绘制/$。$(p)我去$(italic)写就/$。$(p)众将见。$(p)众必将见。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "我曾相信——$(media)媒质/$只是思维遗留的能量。但我现在$(italic)知道/$了，它是$(italic)思维/$。$(br2)作为自然的实体实际上就是一个卓伟的媒质回环，又或许是所有回环的一，或者是……我我我我$(k)我/$我看见看见$(k)看见看见/$$(k)感受/$感受感受$(k)感受/$感受感受$(k)感受/$感受思$(k)受/$考思考$(k)感受/$思考$(k)思考感受/$思$(k)感受/$考思$(k)感受/$考$(br2)不！还没到时候！记笔记。赶快！"
+    }
+  ]
+}

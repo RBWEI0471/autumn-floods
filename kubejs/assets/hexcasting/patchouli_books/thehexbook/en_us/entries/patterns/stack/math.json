@@ -1,0 +1,195 @@
+{
+  "name": "数学",
+  "category": "hexcasting:patterns/stack",
+  "icon": "minecraft:oak_planks",
+  "sortnum": 4,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "secret": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:construct_vec",
+      "anchor": "hexcasting:construct_vec",
+      "input": "num, num, num",
+      "output": "vector",
+      "text": "从栈顶向下依次移除三个数Z，Y，X，返回一个向量(X，Y，Z)。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:deconstruct_vec",
+      "anchor": "hexcasting:deconstruct_vec",
+      "input": "vector",
+      "output": "num, num, num",
+      "text": "移除一个向量(X，Y，Z)，依次返回三个数X，Y，Z。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:add",
+      "anchor": "hexcasting:add",
+      "input": "num | vec, num | vec",
+      "output": "num | vec",
+      "text": "$(li)若栈顶为两个数，返回其和。$(li)若为两个向量，将对应分量相加。$(li)若为数和向量，将向量的每个分量与该数相加。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:sub",
+      "anchor": "hexcasting:sub",
+      "input": "num.1 | vec.1, num.2 | vec.2",
+      "output": "num | vec",
+      "text": "$(li)若栈顶为两个数，返回 num.1 - num.2。$(li)若为两个向量，返回向量 (vec.1 - vec.2)。$(li)若为数和向量，将向量的每个分量与该数相减。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:mul",
+      "anchor": "hexcasting:mul",
+      "input": "num | vec, num | vec",
+      "output": "num | vec",
+      "text": "$(li)若栈顶为两个数，返回其积。$(li)若为两个向量，返回其点积。$(li)若为数和向量，将向量的每个分量与该数相乘。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:div",
+      "anchor": "hexcasting:div",
+      "input": "num | vec, num | vec",
+      "output": "num | vec",
+      "text": "$(li)若栈顶为两个数，返回其商。$(li)若为两个向量，返回其叉积。$(li)若为数和向量，将向量的每个分量与该数相除。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:modulo",
+      "anchor": "hexcasting:modulo",
+      "input": "num | vec, num | vec",
+      "output": "num | vec",
+      "text": "栈顶元素为除数，第二元素为被除数。$(li)若栈顶为两个数，将两数相除返回其余数。$(li)若为数和向量，将向量的每个分量与该数相除返回其余数。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:factorial",
+      "anchor": "hexal:factorial",
+      "input": "num",
+      "output": "num",
+      "text": "移除栈顶的数，返回其阶乘。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:pow",
+      "anchor": "hexcasting:pow",
+      "input": "num.1 | vec.1, num.2 | vec.2",
+      "output": "num | vec",
+      "text": "$(li)若栈顶为两个数，返回 num.2 的 num.1 次方。$(li)若为数和向量，返回向量的每个分量与该数的乘方。$(li)若为两个向量，返回 vec.2 对 vec.1 的向量射影。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:logarithm",
+      "anchor": "hexcasting:logarithm",
+      "input": "num, num",
+      "output": "num",
+      "text": "栈顶元素为底数，第二元素为真数，返回两数的对数。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:abs",
+      "anchor": "hexcasting:abs",
+      "input": "num | vec",
+      "output": "number",
+      "text": "将一个数变为其绝对值，将一个向量变为其模长。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:coerce_axial",
+      "anchor": "hexcasting:coerce_axial",
+      "input": "num | vec",
+      "output": "num | vec",
+      "text": "若栈顶元素为向量，则返回与其夹角最小的轴向单位向量。若栈顶元素为数，则返回该数的符号；所给数为正则返回 1，为负则返回 -1。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:floor",
+      "anchor": "hexcasting:floor",
+      "input": "num | vec",
+      "output": "num | vec",
+      "text": "若栈顶元素为数，则去除小数部分向下取整。若栈顶元素为向量，则对每个分量去除小数部分向下取整。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:ceil",
+      "anchor": "hexcasting:ceil",
+      "input": "num | vec",
+      "output": "num | vec",
+      "text": "若栈顶元素为数，则去除小数部分向上取整。若栈顶元素为向量，则对每个分量去除小数部分向上取整。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:running/sum",
+      "anchor": "hexal:running/sum",
+      "input": "[num]",
+      "output": "[num]",
+      "text": "移除栈顶列表，返回其前缀和。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexal:running/mul",
+      "anchor": "hexal:running/mul",
+      "input": "[num]",
+      "output": "[num]",
+      "text": "移除栈顶列表，返回其前缀积。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:sin",
+      "anchor": "hexcasting:sin",
+      "input": "num",
+      "output": "num",
+      "text": "移除栈顶以弧度制为单位的数，返回其正弦。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:cos",
+      "anchor": "hexcasting:cos",
+      "input": "num",
+      "output": "num",
+      "text": "移除栈顶以弧度制为单位的数，返回其余弦。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:tan",
+      "anchor": "hexcasting:tan",
+      "input": "num",
+      "output": "num",
+      "text": "移除栈顶以弧度制为单位的数，返回其正切。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:arcsin",
+      "anchor": "hexcasting:arcsin",
+      "input": "num",
+      "output": "num",
+      "text": "移除栈顶的数，返回其反正弦。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:arccos",
+      "anchor": "hexcasting:arccos",
+      "input": "num",
+      "output": "num",
+      "text": "移除栈顶的数，返回其反余弦。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:arctan",
+      "anchor": "hexcasting:arctan",
+      "input": "num",
+      "output": "num",
+      "text": "移除栈顶的数，返回其反正切。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:arctan2",
+      "anchor": "hexcasting:arctan2",
+      "input": "num, num",
+      "output": "num",
+      "text": "以栈顶元素为横坐标，第二元素为纵坐标，在平面直角坐标系上取一标点，返回原点至该标点的射线与 X 轴正方向间的夹角。"
+    }
+  ]
+}

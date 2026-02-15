@@ -1,0 +1,8 @@
+{
+  "name": "法术",
+  "icon": "hexcasting:textures/item/lore_fragment.png",
+  "description": "法术会从栈，世界环境和施法者处获取信息，同时移除入栈的 iota 。它们不进行栈操作，而是借助可见或隐含的 iota 所指涉的路径改写现实。因此，正文只将按功能分类，并介绍这些法术经由路径之后作何影响。",
+  "parent": "hexcasting:patterns",
+  "sortnum": 1,
+  "secret": true
+}

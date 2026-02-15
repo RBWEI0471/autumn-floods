@@ -1,0 +1,131 @@
+{
+	"name": "制念台",
+	"category": "hexcasting:items",
+	"icon": "hexdebug:enlightened_splicing_table",
+	"sortnum": 5,
+	"advancement": "hexcasting:opened_eyes",
+	"secret": true,
+	"pages": [
+		{
+			"type": "patchouli:text",
+			"text": "核心和造物很好，但还不够好。完备的作品应当具有便捷而清晰的编辑与测试能力，于是，我构造了制念台。将核心置入制念台中央，界面会显示列表中的前 9 个 iota。显示栏两侧的箭头可更改显示的区域；也可按住 $(k:sneak) 以按页移动，或按住 $(k:sprint) 以移动到开头或结尾。点击 iota 及 iota 间的空位可以选中它们，按住 $(k:sneak) 再次点击则可选择一系列 iota。对于选定的 iota，你可以："
+		},
+		{
+			"type": "patchouli:crafting",
+			"recipe": "minecraft:kjs/hexdebug_enlightened_splicing_table",
+			"text": "$(li)$(thing)左移/$，$(thing)右移/$，$(thing)删除/$。$(li)$(thing)复制/$：创建所选 iota 的副本。$(li)$(thing)撤销/$：撤回最近一次操作。$(li)$(thing)重做/$：重做$(thing)撤销/$所撤回的操作。"
+		},
+		{
+			"type": "patchouli:text",
+			"text": "当核心左侧的槽位还有其他数据存储元件时，还能：$(br)$(li)$(thing)复制/$：将所选 iota 作为列表写入左侧物品。$(li)$(thing)剪切/$：将原本选择的 iota 删除，然后复制进左侧物品。$(li)$(thing)粘贴/$：将辅助物品中的 iota 覆盖选定部分——如果用于覆盖的 iota 是列表，则会粘贴其中内容；同时按住 $(k:sneak) 则会粘贴列表本身。"
+		},
+		{
+			"type": "patchouli:text",
+			"text": "在左下角的槽位放入法杖，则会显示咒术网格。其中绘制的图案会直接覆盖选中的部分。除此之外，还有一整套用于选定和编辑的图案，记于后文。更强大的是，它本身就像$(item)造物/$一样，还能写入并释放法术，使用$(action)融注制念台/$可以向其中写入图案列表，激活时消耗右下方的媒质即可运行，影响半径为 32 格。譬如，在其中运行$(l:patterns/stack/basics#hexcasting:get_caster)$(action)意识之精思/$则会返回按下按钮的施法者，对其坐标使用$(l:patterns/readwrite#hexcasting:write/entity)$(action)史家之纯化/$会读取中央槽位数据存储元件中包含的 iota。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexdebug:splicing/enlightened/hex/write",
+			"anchor": "hexdebug:splicing/enlightened/hex/write",
+			"input": "vec, list",
+			"output": "",
+			"text": "将图案列表写入指定位置处$(l:greatwork/enlightened_splicing_table)$(item)制念台/$中，消耗 500,000 点媒质。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexdebug:splicing/enlightened/hex/read",
+			"anchor": "hexdebug:splicing/enlightened/hex/read",
+			"input": "vec",
+			"output": "list | null",
+			"text": "读取指定位置处$(l:greatwork/enlightened_splicing_table)$(item)制念台/$中写入的图案。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexcasting:circle/impetus_pos",
+			"anchor": "hexcasting:circle/impetus_pos",
+			"input": "",
+			"output": "vector",
+			"text": "在制念台中运行时，返回制念台的位置。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexcasting:circle/impetus_dir",
+			"anchor": "hexcasting:circle/impetus_dir",
+			"input": "",
+			"output": "vector",
+			"text": "在制念台中运行时，返回制念台正面朝向的单位向量。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexdebug:splicing/view_index/read",
+			"anchor": "hexdebug:splicing/view_index/read",
+			"input": "vec",
+			"output": "num",
+			"text": "返回指定位置处$(l:items/splicing_table)$(item)制念台/$显示区域最左侧 iota 的索引下标。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexdebug:splicing/view_index/write",
+			"anchor": "hexdebug:splicing/view_index/write",
+			"input": "vec, num",
+			"output": "",
+			"text": "移动指定位置处$(l:items/splicing_table)$(item)制念台/$的显示区域，令下标等同于指定数字的元素在显示区域最左侧。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexdebug:splicing/clipboard/read",
+			"anchor": "hexdebug:splicing/clipboard/read",
+			"input": "vec",
+			"output": "any",
+			"text": "返回指定位置处$(l:items/splicing_table)$(item)制念台/$副槽位中物品的 iota。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexdebug:splicing/clipboard/write",
+			"anchor": "hexdebug:splicing/clipboard/write",
+			"input": "vec, any",
+			"output": "",
+			"text": "将 iota 写入指定位置处$(l:items/splicing_table)$(item)制念台/$副槽位中的物品。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexdebug:splicing/list/spellbook_index/read",
+			"anchor": "hexdebug:splicing/list/spellbook_index/read",
+			"input": "vec",
+			"output": "num",
+			"text": "返回指定位置处$(l:items/splicing_table)$(item)制念台/$主槽位中$(item)法术书/$当前的页码。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexdebug:splicing/list/spellbook_index/write",
+			"anchor": "hexdebug:splicing/list/spellbook_index/write",
+			"input": "vec, num",
+			"output": "",
+			"text": "将指定位置处$(l:items/splicing_table)$(item)制念台/$主槽位中的$(item)法术书/$翻到对应页码。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexdebug:splicing/clipboard/spellbook_index/read",
+			"anchor": "hexdebug:splicing/clipboard/spellbook_index/read",
+			"input": "vec",
+			"output": "num",
+			"text": "返回指定位置处$(l:items/splicing_table)$(item)制念台/$副槽位中$(item)法术书/$当前的页码。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexdebug:splicing/clipboard/spellbook_index/write",
+			"anchor": "hexdebug:splicing/clipboard/spellbook_index/write",
+			"input": "vec, num",
+			"output": "",
+			"text": "将指定位置处$(l:items/splicing_table)$(item)制念台/$副槽位中的$(item)法术书/$翻到对应页码。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexdebug:splicing/selection/read",
+			"anchor": "hexdebug:splicing/selection/read",
+			"input": "vec",
+			"output": "num, num",
+			"text": "返回指定位置处$(l:items/splicing_table)$(item)制念台/$的选中区域。若选中一定范围的 iota，则返回起始位置下标与结束位置前一下标；若选中两 iota 之间，则返回其右侧下标。"
+		}
+	]
+}

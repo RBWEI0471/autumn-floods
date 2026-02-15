@@ -1,0 +1,100 @@
+{
+  "name": "工具",
+  "icon": "minecraft:spyglass",
+  "category": "hexcasting:items",
+  "sortnum": 1,
+  "advancement": "hexcasting:opened_eyes",
+  "secret": true,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "text": "使用木斧可以合成小木斧，或者他的真名——无尽手杖。处于各种模式下它都有详细的指导。",
+      "item": "constructionwand:infinity_wand",
+      "link_recipe": true
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "观察者可以被合成，也可在战利品箱中出现，右击进入界面后可以配置周围数个区块的加载。",
+      "item": "chunkloaders:basic_chunk_loader",
+      "link_recipe": true
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "经验手册罕见的作为战利品出现，可以存取经验，释放时以经验球形式放出，因此和经验修补有良好的配合。",
+      "item": "xpbook:xp_tome",
+      "link_recipe": true
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "传送石碑可以随时传送至其他被放置命名的石碑处，也可通过传送石有冷却的传送，可以跨维度，没有任何消耗。",
+      "item": "waystones:deepslate_waystone",
+      "link_recipe": true
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "对着小型史莱姆使用铁桶即可获得史莱姆桶，在到达史莱姆区块时会蹦蹦跳跳。将它放到熔炉里，可以烧成一桶岩浆",
+      "item": "quark:slime_in_a_bucket",
+      "link_recipe": true
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "板条箱是一种存储方块，最多可容纳 1023 件物品。一组物品与 64 件不同的物品同样占用 64 件，使得板条箱适合收集无法堆叠的物品。",
+      "item": "quark:crate",
+      "link_recipe": true
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "界炎镖是一把不可破坏的回旋镖，兼具攻击与挖掘效果。它极高的挖掘等级会破坏命中的方块，并带着掉落物回到你身上，回归过程中，掉落物不会烧毁。",
+      "item": "quark:flamerang",
+      "link_recipe": true
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "玩家使用望远镜后的5秒内，潜行且快捷栏有末影珍珠时，则会向视线方向发射一颗直线运行的珍珠。你可以在望远镜瞄准过程中按住shift以精确传送到指定位置。",
+      "item": "minecraft:spyglass",
+      "link_recipe": true
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "玻璃展示框相较于皮革制品更加清晰优质：它可以更好地展示旗帜与盾牌，可以和告示牌结合告示物品，可以直接打开它后面的物品栏，放入物品时展示框本身将很好的隐藏。",
+      "item": "quark:glass_item_frame",
+      "link_recipe": true
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "火把花植株在成熟时不会变成花卉而仍保持作物形态，尝试催熟会生成烈焰人。成熟时可以收获烈焰粉。瓶子草植株在成熟时可以使用空桶提取内容物，包括史莱姆和各种鱼类。此外，战利品中新增了水晶花种子，也可以在破坏紫水晶母岩时罕见的掉落，种植于板岩块上。",
+      "item": "minecraft:pitcher_pod",
+      "link_recipe": true
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "打包带共 8 点耐久，手持打包带右键需要打包的机器和存储类方块会消耗一点耐久，将方块打包带走。封装方块被破坏后，会以物品形式掉落且保存内部的物品（类似于潜影盒）。再次右键封装方块即可取消该方块的打包状态，打包状态下，方块的朝向不会改变，也不能交互。",
+      "item": "packingtape:tape",
+      "link_recipe": true
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "在云层（128格以上）使用玻璃瓶，可以获得一份瓶中云。使用瓶中云可以产生云朵方块，悬浮在你面前的半空中，再次使用玻璃瓶右击即可将其装回。云朵方块会在几秒后消失，手持方块右击会将其替换成该方块。右击云朵方块会获得漂浮效果，手持瓶中云会获得缓降效果，这十分适合短途旅行。",
+      "item": "quark:bottled_cloud",
+      "link_recipe": true
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "制图师和流浪商人现在会出售寻路羽毛笔，它可以用来生成寻路地图用以寻找某些群系。每个制图师都会存有随机品种的寻路羽毛，专家级的羽毛将包含积雪的平原、风袭丘陵、黑森林、沙漠、热带草原、丛林、竹林、恶地；大师级的羽毛则还有沼泽、原始松木针叶林、繁花森林、蘑菇岛与冰刺平原。",
+      "item": "quark:pathfinders_quill",
+      "link_recipe": true
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "饲料槽中可以放置食物，附近的动物会走向饲料槽进食，就像玩家喂养一样。但通过饲料槽繁殖动物不会产生经验，动物从饲料槽中取食的冷却时间为 360 tick；饲料槽只有 0.6 的几率来让动物进入求爱模式，如果 16 格半径内动物数量超过 32 个，动物虽然依旧会进食，但不会求爱。这个方块对动物来说有 1.5 格高。",
+      "item": "quark:feeding_trough",
+      "link_recipe": true
+    },
+    {
+      "type": "patchouli:spotlight",
+      "text": "最后还有一些改动：$(li)烟花火箭可以直接启动鞘翅的滑翔。$(li)指南针位于其他维度会指向传送门。$(li)附魔金苹果将提供 8 秒抗性提升 V。$(li)海绵的吸水范围更大，且可以直接放置在水方块上。$(li)金质工具自带时运效果，并提升挖掘等级。",
+      "item": "minecraft:raiser_armor_trim_smithing_template",
+      "title": "杂项"
+    }
+  ]
+}

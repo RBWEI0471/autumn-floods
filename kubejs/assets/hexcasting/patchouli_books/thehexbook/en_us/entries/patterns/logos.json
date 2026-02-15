@@ -1,0 +1,34 @@
+{
+  "name": "洪范",
+  "category": "hexcasting:patterns",
+  "icon": "hexcasting:abacus",
+  "advancement": "hexcasting:root",
+  "sortnum": 0,
+  "secret": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "简而言之，施法是将$(l)咒术/$语言$(l)运行/$的过程。使用法杖绘制图案，将图案依照一定的逻辑便可连缀成$(l)咒术/$，此时可以将之$(l)运行/$或者存储，保存的咒术可以在$(thing)法杖/$或$(thing)$(l:patterns/hexcasting)其他元件/$中$(l)运行/$。$(br2)具体来讲，手持$(item)法杖/$并使用，便会浮现一面六边形网格排列的点阵，并自动创建一个新的$(thing)施法栈/$。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "栈可以类比于收纳袋：将$(thing)铜锭/$，$(thing)铁锭/$，$(thing)金锭/$依次放入，若想拿出$(thing)铜锭/$，则必须先依次拿出$(thing)金锭/$和$(thing)铁锭/$。$(br2)这最后放入的$(thing)金锭/$便是$(thing)栈顶元素/$。栈操作便是在有序的线性资料集合的一端，即栈顶，进行：加入数据，即入栈；移除数据，即出栈；校验或修改数据，即检视的运算。绘制时，栈中元素会显示于左上角，绘制图案时会将元素依次压入栈中，故最顶部的元素即为栈顶元素，也即最后放入的元素。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "在点阵上单击并在网格间拖动线条，依照一定的笔顺便可连接成有意义的图案，绘制出的图案会立即对$(l:patterns/stack)$(action)栈/$或$(l:patterns/spells)$(action)世界/$执行相应的操作并消耗可能的$(media)媒质/$。若操作完成后$(thing)栈/$内为空，则退出施法并清空网格。$(br2)按住$(k:sneak)时使用$(item)法杖/$亦可清空施法栈，esc 退出施法则不会。手持质念法杖左击方块可以清空画布，但保留栈中的iota。一个$(thing)施法栈/$中同一时间最多容纳 1024 条数据，列表中的数据也将计入。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "这些，数据，或是名与影，我暂且称之为 iota，元素。iota 具有不同的形式，我所知的有 9 种，其中细节甚多，稍后$(l:patterns/iota)专门整理/$。$(br2)这些 iota 本身的操作并不同样遵循先入后出的法则，譬如在列表中，元素依照先后放入的顺序会被赋予从零递增的下标，操作时可以直接修改指定下标的元素。大多$(l:patterns/spells)$(action)法术/$依据栈顶的参数对世界施加影响，而所有的$(l:patterns/stack)$(action)栈操作/$，都通过 iota 的入栈，出栈和检视来完成。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l:patterns/stack/basics#hexcasting:print)$(action)揭示/$会检视栈顶的一个 iota，然后告知于施法者；$(br2)$(l:patterns/stack/basics#hexcasting:get_caster)$(action)意识之精思/$会入栈一个代表施法者的实体 iota；$(br2)$(l:patterns/stack/stackmanip#hexcasting:swap)$(action)弄臣之策略/$交换栈顶两个元素的顺序，则是通过出栈两个 iota 并以相反顺序依次返回完成的；$(br2)$(l:patterns/stack/basics#hexcasting:entity_pos/foot)$(action)司南之纯化/$会检视栈顶的 iota，若类型为实体，则令该 iota 出栈，然后入栈一个代表实体足部位置的向量 iota。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "大多$(l:patterns/spells)$(action)法术/$最多影响距我半径 64 格的范围，否则便会发生事故。例外的，$(l:patterns/stack/basics#hexcasting:get_caster)$(action)施法者/$的 iota 不限制影响范围。古代文献提及自然会将施法者的意识用作$(media)媒质/$，据说那种感觉很糟糕但又奇怪地让人兴奋，就像“……热烈地溶解入光与能量中……”。$(br2)呃，我好像终于知道了那些化身为光的人们去了哪里。但是，当我意外的在施法时未有准备足够的$(media)媒质/$时，却只是感觉一道屏障拒绝了我。或许，我得先尝试依照逻辑汇出基础的咒术……"
+    }
+  ]
+}

@@ -1,0 +1,281 @@
+{
+  "name": "列表",
+  "category": "hexcasting:patterns/stack",
+  "icon": "minecraft:dried_kelp_block",
+  "sortnum": 5,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "secret": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:index",
+      "anchor": "hexcasting:index",
+      "input": "list, num",
+      "output": "any",
+      "text": "返回列表中下标为指定数的元素。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:all_index",
+      "anchor": "homo:all_index",
+      "input": "list, any",
+      "output": "list",
+      "text": "返回列表中指定元素对应下标组成的列表，没有则返回空列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:append",
+      "anchor": "hexcasting:append",
+      "input": "list, any",
+      "output": "list",
+      "text": "将栈顶元素移至列表的末位。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:construct",
+      "anchor": "hexcasting:construct",
+      "input": "list, any",
+      "output": "list",
+      "text": "将栈顶元素移至列表的开端。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:unappend",
+      "anchor": "hexcasting:unappend",
+      "input": "list",
+      "output": "list, any",
+      "text": "选择列表末位的元素，将\"移除末位元素后的列表\"与\"被移除的元素\"依次压入栈顶。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:deconstruct",
+      "anchor": "hexcasting:deconstruct",
+      "input": "list",
+      "output": "list, any",
+      "text": "选择列表开端的元素，将\"移除开端元素后的列表\"与\"被移除的元素\"依次压入栈顶。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:last_n_list",
+      "anchor": "hexcasting:last_n_list",
+      "input": "many, num",
+      "output": "list",
+      "text": "将指定数量的元素组成列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:splat",
+      "anchor": "hexcasting:splat",
+      "input": "list",
+      "output": "many",
+      "text": "移除栈顶列表，将其中的元素依次压入栈顶。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:range_list",
+      "anchor": "homo:range_list",
+      "input": "num",
+      "output": "[num]",
+      "text": "返回一个从 0 开始，以 1 为步长，向 num 靠近，直到下一步会越过 num 为止的等差数列组成的列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:sequence_list",
+      "anchor": "homo:sequence_list",
+      "input": "num.1, num.2, num.3",
+      "output": "[num]",
+      "text": "返回一个从 num.1 开始，以 num.3 为步长，向 num.2 靠近，直到下一步会越过 num.2 为止的等差数列组成的列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:replace",
+      "anchor": "hexcasting:replace",
+      "input": "list, num, any",
+      "output": "list",
+      "text": "将列表中下标为指定数的元素替换为栈顶元素。"
+    },
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "hexthings:insert",
+			"anchor": "hexthings:insert",
+			"input": "list.1, num, list.2",
+			"output": "list",
+			"text": "将 list.1 中下标为指定数的元素替换为 list.2 中所有元素。"
+		},
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:index_of",
+      "anchor": "hexcasting:index_of",
+      "input": "list, any",
+      "output": "num",
+      "text": "返回列表中指定元素对应下标的最小值，没有则返回 -1 。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:all_index_of",
+      "anchor": "homo:all_index_of",
+      "input": "list.1, list.2",
+      "output": "list",
+      "text": "若 list.2 中各元素为 list.1 有效索引范围内的数字 iota，则返回一个列表，其中包含 list.1 中下标为\"list.2 中每个元素\"对应的元素。"
+    },
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "hexthings:uiua_take",
+			"anchor": "hexthings:uiua_take",
+			"input": "list, num | [num]",
+			"output": "list",
+			"text": "若第二参数为正数，则保留列表开头 num 个元素；若为负数，则保留末尾 num 个，若为指定列表有效索引范围内的数字 iota 组成的列表，则保留对应下标的元素。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexthings:uiua_drop",
+			"anchor": "hexthings:uiua_drop",
+			"input": "list, num | [num]",
+			"output": "list",
+			"text": "若第二参数为正数，则移除列表开头 num 个元素；若为负数，则移除末尾 num 个，若为指定列表有效索引范围内的数字 iota 组成的列表，则移除对应下标的元素。"
+		},
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:remove_from",
+      "anchor": "hexcasting:remove_from",
+      "input": "list, num",
+      "output": "list",
+      "text": "移除列表中下标为指定数的元素。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:slice",
+      "anchor": "hexcasting:slice",
+      "input": "list, num, num",
+      "output": "list",
+      "text": "返回一个列表，其中包含原列表下标在两数之间的元素，包含较小下标对应的元素，不含较大下标对应的元素。"
+    },
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "hexthings:uiua_rotate",
+			"anchor": "hexthings:uiua_rotate",
+			"input": "list, num",
+			"output": "list",
+			"text": "将列表末端指定数量的元素移至列表开头，若指定数量超出列表长度，则取余。"
+		},
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "hexflow:build_nested",
+			"anchor": "hexflow:build_nested",
+			"input": "list, num",
+			"output": "list",
+			"text": "将列表中下标为指定数的元素替换为原列表。"
+		},
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:singleton",
+      "anchor": "hexcasting:singleton",
+      "input": "any",
+      "output": "list",
+      "text": "返回一个仅由栈顶元素组成的列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "header": "hexcasting.action.hexcasting:abs",
+      "op_id": "hexcasting:abs",
+      "anchor": "hexcasting:abs",
+      "input": "list",
+      "output": "num",
+      "text": "返回列表中元素的数量。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:unique",
+      "anchor": "hexcasting:unique",
+      "input": "list",
+      "output": "list",
+      "text": "移除列表中重复的元素。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:reverse",
+      "anchor": "hexcasting:reverse",
+      "input": "list",
+      "output": "list",
+      "text": "倒置栈顶列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "header": "hexcasting.action.hexcasting:add",
+      "op_id": "hexcasting:add",
+      "anchor": "hexcasting:add",
+      "input": "list, list",
+      "output": "list",
+      "text": "将第二个列表中的所有元素依次加入第一个列表的末位。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:xor",
+      "anchor": "hexcasting:xor",
+      "input": "list, list",
+      "output": "list",
+      "text": "返回在\"两个列表中仅出现过一次的元素\"组成的列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:or",
+      "anchor": "hexcasting:or",
+      "input": "list, list",
+      "output": "list",
+      "text": "返回由\"第一个列表中所有元素和第二个列表中独有的元素\"组成的列表。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:and",
+      "anchor": "hexcasting:and",
+      "input": "list, list",
+      "output": "list",
+      "text": "返回由\"两个列表中共有的元素\"组成的列表。"
+    },
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "hexcasting:div",
+			"anchor": "hexcasting:div",
+			"input": "list, list",
+			"output": "list",
+			"text": "从两列表中各取一个元素组合成长度为 2 的列表，返回所有可能的组合列表组成的列表。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexcasting:mul",
+			"anchor": "hexcasting:mul",
+			"input": "list, list",
+			"output": "list",
+			"text": "从两列表中各取一个下标相同的元素组合成长度为 2 的列表，返回所有组合列表组成的列表。"
+		},
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "hexthings:uiua_where",
+			"anchor": "hexthings:uiua_where",
+			"input": "list",
+			"output": "list",
+			"text": "检视列表中的每个元素，若占卜之纯化将返回 true，则记录其下标，返回下标组成的列表。"
+		},
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "homo:transposed_list",
+			"anchor": "homo:transposed_list",
+			"input": "[list]",
+			"output": "[list]",
+			"text": "将一个由两个及以上长度相等的子列表组成的列表重组为一个由子列表中下标相同的元素依次组成的新列表依次组成的新列表。"
+		},
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "hexflow:nested_modify",
+			"anchor": "hexflow:nested_modify",
+			"input": "[list], [num], any",
+			"output": "list",
+			"text": "依照索引列表中的下标顺序，在嵌套列表中逐层深入，将最终定位到的元素替换为栈顶元素，并返回修改后的嵌套列表。"
+		},
+    {
+      "type": "patchouli:text",
+      "text": "移除一个\"包含着列表的嵌套列表\"和一个\"数字列表\"，依次以数字列表中的每个元素作为下标，检视嵌套列表中对应下标的元素。若其仍为列表，则取数字列表中下一个元素作为下标，检视此列表中对应下标的元素，直至所有数字均被处理，将最后选中的元素替换为栈顶元素。"
+    }
+  ]
+}

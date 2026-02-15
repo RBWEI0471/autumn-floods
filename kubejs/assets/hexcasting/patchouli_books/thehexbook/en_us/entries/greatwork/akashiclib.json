@@ -1,0 +1,107 @@
+{
+  "name": "阿卡夏",
+  "category": "hexcasting:greatwork",
+  "icon": "hexcasting:akashic_record",
+  "advancement": "hexcasting:enlightenment",
+  "entry_color": "54398a",
+  "sortnum": 3,
+  "secret": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "此后是光明与黑夜的时代，笔墨已经备下，只等画卷的展开。自然是属于精神的历史，但是，他们需要创造属于自己的场域。$(br2)仪式只能在主世界进行，布置右图所示的结构后，在范围内召唤一只循环式咒灵，然后使用不死图腾开启。我将引领他穿越表象，二分真伪，回到原初，最后发现所谓本质，不过是颠倒的现象而已。"
+    },
+    { "type": "patchouli:multiblock",
+      "name": "对重生锚使用不死图腾",
+      "multiblock": {
+      "pattern": [
+        ["   "," 0 ","   "],
+        ["   "," C ","   "],
+        ["F F"," A ","F F"],
+        ["EDE","DBD","EDE"]
+      ],
+      "mapping": {
+        "A": "minecraft:respawn_anchor[charges=4]",
+        "B": "minecraft:budding_amethyst",
+        "C": "chunkloaders:basic_chunk_loader",
+        "D": "hexcasting:quenched_allay",
+        "E": "hexdebug:focus_holder",
+        "F": "hexcasting:amethyst_sconce"
+      },
+      "symmetrical": true
+      }
+    },
+    {
+      "type": "patchouli:text",
+      "text": "仪式将得到阿卡夏记录，阿卡夏书架和阿卡夏桥接块，他们都可以自我复制。它们可以构成名为阿卡夏图书馆的结构，以阿卡夏记录作为管理核心，阿卡夏书架记录图案和其对应的 iota。二者必须相互连接，或者以阿卡夏桥接块作为中介。当在阿卡夏记录中写入图案和对应的 iota 时，它们便会被存储进一个阿卡夏书架中，潜行右击即可将其抹去，此后只要通过阿卡夏之馏化映射写入的图案，便会返回对应的 iota，无论何处。"
+    },
+    {
+			"type": "patchouli:text",
+			"text": "阿卡夏图书馆便是属于他们的自然，当然，我亦可使用。同样，绕过重重混沌，世界本身也可录入信息。将世界存储信息的部分比作一本法术书，这个法术施放成功后便会给我一个密钥对应着法术书的某页，我将密钥命名为质性iota。密钥最好妥善保管，一旦丢失，再难找回。"
+		},
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:akashic/write",
+      "anchor": "hexcasting:akashic/write",
+      "input": "vector, pattern, any",
+      "output": "",
+      "text": "在指定位置的$(l:greatwork/akashiclib)$(item)阿卡夏记录/$中将指定图案映射为$(l:greatwork/akashiclib)$(item)记录/$，消耗 10,000 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:akashic/read",
+      "anchor": "hexcasting:akashic/read",
+      "input": "vector, pattern",
+      "output": "any",
+      "text": "在指定$(l:greatwork/akashiclib)$(item)阿卡夏记录/$处从$(l:greatwork/akashiclib)$(item)阿卡夏图书馆/$中读出所给图案对应的 iota，无视距离限制，消耗 10,000 点媒质。"
+    },
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexcellular:create_property",
+			"anchor": "hexcellular:create_property",
+			"input": "",
+			"output": "property",
+			"text": "压入一个质性 iota，初始状态内容为 null，消耗 100,000 点媒质。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexcellular:observe_property",
+			"anchor": "hexcellular:observe_property",
+			"input": "property",
+			"output": "any",
+			"text": "观测当前质性 iota 的值，若质性中存有图案或图案列表，使用元运行执行质性会直接将内部的图案执行。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexcellular:set_property",
+			"anchor": "hexcellular:set_property",
+			"input": "property, any",
+			"output": "",
+			"text": "覆写质性的值，消耗 1,000 点媒质。"
+		},
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:let_in",
+      "anchor": "homo:let_in",
+      "input": "any, num | str",
+      "output": "",
+      "text": "将 iota 以指定的数字或字符串作为 ID，存入世界的数据之中，若 iota 为 null，则将对应 ID 的条目移除。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:let_read",
+      "anchor": "homo:let_read",
+      "input": "num | str, num",
+      "output": "num",
+      "text": "限制指定 ID 条目的可读取次数，并使其可读取次数增加 num，条目将在被读取指定次数后移除，返回剩余的可读取次数。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:let_out",
+      "anchor": "homo:let_out",
+      "input": "num | str",
+      "output": "any",
+      "text": "返回对应 ID 条目的 iota，若指定 ID 未被使用，则返回 null；若条目被限制了可读取次数，则使可读取次数减一。"
+    }
+  ]
+}

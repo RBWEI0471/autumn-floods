@@ -1,0 +1,176 @@
+{
+  "name": "元素",
+  "category": "hexcasting:patterns/stack",
+  "icon": "minecraft:piston",
+  "sortnum": 3,
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "secret": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:duplicate_n",
+      "anchor": "hexcasting:duplicate_n",
+      "input": "any, num",
+      "output": "many",
+      "text": "将指定元素复制至 num 个。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:fisherman",
+      "anchor": "hexcasting:fisherman",
+      "input": "num",
+      "output": "any",
+      "text": "将栈顶以下第 num 个元素移至栈顶。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:fisherman/copy",
+      "anchor": "hexcasting:fisherman/copy",
+      "input": "num",
+      "output": "any",
+      "text": "将栈顶以下第 num 个元素复制至栈顶。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:stack_len",
+      "anchor": "hexcasting:stack_len",
+      "input": "",
+      "output": "num",
+      "text": "返回栈中元素的个数。"
+    },
+    {
+			"type": "hexcasting:pattern",
+			"op_id": "hexflow:mass_rotate",
+			"anchor": "hexflow:mass_rotate",
+			"input": "many, num, [num]",
+			"output": "many",
+			"text": "将 num 个元素按照由 0 ~ (num-1) 的正整数组成的列表重排，例如，A, B, C, D, 3, [1,2,0,2]，将会返回C, D, B, D。"
+		},
+    {
+      "type": "patchouli:text",
+      "text": "对于一个由[ 0 ~ (num-1) 的正整数]组成的列表，将[ num 个元素]从左至右与[ 0 ~ (num-1) 的正整数]对应，得到一个元素列表，最后将[列表中的元素]依照下标由小到大的顺序依次返回。$(br2)以下七个图案为其简化变体："
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:swap",
+      "anchor": "hexcasting:swap",
+      "input": "any1, any2",
+      "output": "any2, any1",
+      "text": "将栈顶以下两个元素重排，对应骗徒之策略的 A, B, 2, [1,0]，下文从略。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:rotate",
+      "anchor": "hexcasting:rotate",
+      "input": "any1, any2, any3",
+      "output": "any2, any3, any1"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:rotate_reverse",
+      "anchor": "hexcasting:rotate_reverse",
+      "input": "any1, any2, any3",
+      "output": "any3, any1, any2"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:duplicate",
+      "anchor": "hexcasting:duplicate",
+      "input": "any",
+      "output": "any, any"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:over",
+      "anchor": "hexcasting:over",
+      "input": "any1, any2",
+      "output": "any1, any2, any1"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:tuck",
+      "anchor": "hexcasting:tuck",
+      "input": "any1, any2",
+      "output": "any2, any1, any2"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:2dup",
+      "anchor": "hexcasting:2dup",
+      "input": "any1, any2",
+      "output": "any1, any2, any1, any2"
+    },
+    {
+      "type": "hexcasting:manual_pattern",
+      "header": "簿记之策略-初始",
+      "anchor": "hexcasting:pseudo-novice",
+      "input": "any",
+      "output": "",
+      "text": "移除栈顶 iota 。",
+      "patterns": [
+        {
+          "startdir": "EAST",
+          "signature": "a",
+          "q": 0,
+          "r": 0
+        }
+      ]
+    },
+    {
+      "type": "hexcasting:manual_pattern",
+      "op_id": "hexcasting:mask",
+      "anchor": "hexcasting:mask",
+      "input": "many",
+      "output": "many",
+      "text": "移除特定下标的栈中元素。",
+      "patterns": [
+        {
+          "startdir": "SOUTH_EAST",
+          "signature": "aeea"
+        },
+        {
+          "startdir": "EAST",
+          "signature": "eada"
+        },
+        {
+          "startdir": "SOUTH_EAST",
+          "signature": "a"
+        },
+        {
+          "startdir": "EAST",
+          "signature": "wea"
+        }
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "text": "簿记之策略是一组从左到右横向排布凹槽或横线的图案，可以绘制任意长度。长度为 num 的簿记之策略从左置于右第 n 格对应栈中下标为 num - n 的iota，凹槽代表移除，而横线代表保留。$(br2)例如，一个从栈顶到栈底依次为[2，1，0]的栈，对其分别绘制图一，图二，图三，图四的簿记之策略，则会分别保留[1]，[0]，[1，0]，[2，1]。"
+    },
+    {
+			"type": "hexcasting:manual_pattern",
+			"op_id": "hexflow:copy_mask",
+			"anchor": "hexflow:copy_mask",
+			"input": "",
+			"output": "many",
+			"text": "提纲之策略是一组以特定笔顺起始，而后从左到右横向排布凹槽或横线的图案，采用与簿记之策略相同的匹配方式，只是凹槽代表保留，而横线代表移除。",
+			"patterns": [
+				{
+					"startdir": "EAST",
+					"signature": "aadaqqqdq"
+				}, {
+					"startdir": "EAST",
+					"signature": "aadaqadqqd"
+				}
+			]
+		},
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexcasting:swizzle",
+      "anchor": "hexcasting:swizzle",
+      "input": "many, num",
+      "output": "many",
+      "text": "根据所给的数值代码重排栈顶若干数量的 iota，指令 \"/hexParse lehmer ...以一定顺序排布的，从零起始的数个数字\"，数字之间以空格分隔，可用于计算给定排列对应的数值代码。"
+    }
+  ]
+}

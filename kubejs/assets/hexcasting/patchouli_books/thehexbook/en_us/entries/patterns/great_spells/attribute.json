@@ -1,0 +1,23 @@
+{
+  "name": "轮盘",
+  "category": "hexcasting:patterns/great_spells",
+  "icon": "minecraft:music_disc_11",
+  "sortnum": 6,
+  "advancement": "hexcasting:enlightenment",
+  "read_by_default": true,
+  "secret": true,
+  "pages": [
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:roulette",
+      "anchor": "homo:roulette",
+      "input": "",
+      "output": "",
+      "text": "媒质消耗是自然的红线，我绝无可能直接令其减少。但就像自然乐于见到我的失败一样，我也同样可以利用它的贪婪——在他开设的这场致命的赌局之中。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "初始媒质消耗倍率为 1。运行此图案时，有 1/6 的概率增加，5/6 的概率减少。每一次设定的媒质消耗倍率属性将维持 6 秒，此时无法重新设定，6 秒后将恢复为 1。$(br2)如果随机至减少，那么我的媒质消耗倍率将会在 0.16 ~ 1 之间选中。自然会记录倍率减少的值。譬如选中为 0.2，便记录减少值 0.8。如果随机至增加，那么就会将累计的减少值全部相加然后平方作为媒质消耗倍率，并清空记录，消耗 60,000 点媒质。"
+    }
+  ]
+}

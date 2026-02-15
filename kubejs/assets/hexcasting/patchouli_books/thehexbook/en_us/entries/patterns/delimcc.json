@@ -1,0 +1,82 @@
+{
+	"name": "定界跳转",
+	"icon": "minecraft:respawn_anchor",
+	"category": "hexcasting:patterns",
+	"advancement": "hexcasting:opened_eyes",
+  	"secret": true,
+	"sortnum": 7,
+	"pages": [
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "homo:isis",
+			"anchor": "homo:isis",
+			"input": "",
+			"output": "jump",
+			"text": "返回一个$(l:patterns/iota#hexcasting:continuation)$(action)书签 iota/$。"
+		},
+    	{
+			"type": "hexcasting:pattern",
+			"op_id": "hexcasting:eval/cc",
+			"anchor": "hexcasting:eval/cc",
+			"input": "[pattern]",
+			"output": "jump, many",
+			"text": "移除栈顶的图案列表，然后向栈中压入一个$(l:patterns/iota#hexcasting:continuation)$(action)书签 iota/$，最后，将移除的图案列表运行，并返回运行结果。"
+		},
+    	{
+			"type": "hexcasting:pattern",
+			"op_id": "caduceus:eval/prompt",
+			"anchor": "caduceus:eval/prompt",
+			"input": "[pattern] | pattern",
+			"output": "many",
+			"text": "运行栈中的图案或图案列表，在其内部的阿尔刻之策略无法获取其外部的 iota。阿尔刻之策略获取的调用 iota 运行方式等同于跳转 iota，但不能使用后续的跳转操作。"
+		},
+    	{
+			"type": "hexcasting:pattern",
+			"op_id": "caduceus:eval/control",
+			"anchor": "caduceus:eval/control",
+			"input": "[pattern] | pattern",
+			"output": "call, many",
+			"text": "移除栈顶的图案列表，然后返回一个调用 iota，包含此处至忒提斯闭合之间的图案，最后，将移除的图案列表运行，并返回运行结果。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexcasting:add",
+			"anchor": "hexcasting:add",
+			"input": "jump, jump",
+			"output": "jump",
+			"text": "移除栈顶跳转 iota，再将其中所有帧加到此时栈顶跳转 iota 的底部。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexcasting:abs",
+			"anchor": "hexcasting:abs",
+			"input": "jump",
+			"output": "num",
+			"text": "移除栈顶跳转 iota，再返回其中栈帧数。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexcasting:splat",
+			"anchor": "hexcasting:splat",
+			"input": "jump",
+			"output": "many",
+			"text": "移除栈顶跳转 iota，再为其中各栈帧返回一个仅包含该栈帧本身的跳转 iota。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexcasting:construct",
+			"anchor": "hexcasting:construct",
+			"input": "jump, jump",
+			"output": "jump",
+			"text": "移除栈顶跳转 iota，再将其顶部帧加到此时栈顶跳转 iota 的顶部。"
+		},
+		{
+			"type": "hexcasting:pattern",
+			"op_id": "hexcasting:deconstruct",
+			"anchor": "hexcasting:deconstruct",
+			"input": "jump",
+			"output": "jump, jump",
+			"text": "移除栈顶跳转 iota 的顶部帧，再返回一个仅包含该栈帧本身的跳转 iota。"
+		}
+	]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "故事",
+  "icon": "hexcasting:textures/item/cad/7_spellbook_filled.png",
+  "description": "标题：快穿之我是创世神$(br2)简介：快穿于精神与逻辑的世界，创立由存在到绝对的我思。$(br2)卷一：天问$(br2)卷零：我思",
+  "sortnum": 5,
+  "secret": true
+}

@@ -1,0 +1,20 @@
+{
+	"hexcasting.action.hexthings:noop": "占位",
+	"hexcasting.action.hexthings:unquote": "内化",
+	"hexcasting.action.hexthings:requote": "反观",
+	"hexcasting.action.hexthings:isgreatersent": "推演哨卫",
+	"hexcasting.action.hexthings:insert": "移植之提整",
+	"hexcasting.action.hexthings:uiua_rotate": "轮转之馏化",
+	"hexcasting.action.hexthings:uiua_where": "演绎之纯化",
+	"hexcasting.action.hexthings:uiua_take": "选拔之馏化",
+	"hexcasting.action.hexthings:uiua_drop": "清洗之馏化",
+	
+	"hexcasting.action.hexthings:empty_dict": "空值之精思",
+	"hexcasting.action.hexthings:dict_keys": "键表之纯化",
+	"hexcasting.action.hexthings:dict_vals": "值表之纯化",
+	"hexcasting.action.hexthings:dict_ents": "键值之纯化",
+
+	"hexcasting.mishap.invalid_unquote": "未先绘制内化。",
+	"hexcasting.mishap.invalid_key_type": "%s类型的iota不可用作键。",
+	"hexcasting.mishap.invalid_value.class.int_list": "一个数字列表"
+}

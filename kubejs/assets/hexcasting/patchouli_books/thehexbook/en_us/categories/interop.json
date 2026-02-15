@@ -1,0 +1,7 @@
+{
+  "name": "联动",
+  "icon": "minecraft:end_crystal",
+  "description": "世界之外的力量？你最好把握好，自然不会在这上面费多少心思。",
+  "sortnum": 6,
+  "flag": "hexcasting:any_interop"
+}
