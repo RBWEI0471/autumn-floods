@@ -4,6 +4,8 @@
 !.README.md
 !manifest.json
 !modlist.html
+!.mods/
+!.mods/**
 !.github/
 !.github/**
 !.resourcepacks/
