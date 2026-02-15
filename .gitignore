@@ -5,6 +5,8 @@
 !modlist.html
 !.github/
 !.github/**
+!.resourcepacks/
+!.resourcepacks/**
 
 ## Config
 !config/
@@ -45,7 +47,3 @@
 !kubejs/server_scripts/**
 !kubejs/startup_scripts
 !kubejs/startup_scripts/**
-
-## resourcepacks
-!resourcepacks/autumn floods/
-!resourcepacks/autumn floods/**
