@@ -1,0 +1,51 @@
+**
+!.gitignore
+!.README.md
+!manifest.json
+!modlist.html
+!.github/
+!.github/**
+
+## Config
+!config/
+!config/hexdebug/server.toml
+!config/jade/plugins.json
+!config/jei/blacklist.cfg
+!config/chunkloaders-common.toml
+!config/fml.toml
+!config/hexcasting-client.toml
+!config/hexcasting-common.toml
+!config/hexoverpowered-common.toml
+!config/hexparse-common.toml
+!config/hextweaks.json
+!config/quark-common.toml
+!config/quickstack-client.toml
+!config/waystones-common.toml
+
+## Defaultconfigs
+!defaultconfigs/
+!defaultconfigs/constructionwand-server.toml
+!defaultconfigs/hexal-server.toml
+!defaultconfigs/hexcasting-server.toml
+!defaultconfigs/moreiotas-server.toml
+!defaultconfigs/packingtape-server.toml
+!defaultconfigs/xptome-server.toml
+
+## journeymap
+!journeymap/config/5.10
+
+## KubeJS
+!kubejs/assets
+!kubejs/assets/**
+!kubejs/client_scripts
+!kubejs/client_scripts/**
+!kubejs/data
+!kubejs/data/**
+!kubejs/server_scripts
+!kubejs/server_scripts/**
+!kubejs/startup_scripts
+!kubejs/startup_scripts/**
+
+## resourcepacks
+!resourcepacks/autumn floods/
+!resourcepacks/autumn floods/**
