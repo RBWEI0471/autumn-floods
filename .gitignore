@@ -1,5 +1,6 @@
 **
 !.gitignore
+!.gitattributes
 !.README.md
 !manifest.json
 !modlist.html
