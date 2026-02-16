@@ -34,7 +34,7 @@ global.PatternOperateMap = {
         let num = args.double(2)
         let level = env.world
         let name = RL(named)
-        ActionJS.helpers.assertEntityInRange(env, entity)
+        ActionJS。helpers。assertEntityInRange(env, entity)
         let damageTotal = entity.persistentData.contains('simulation') ? entity.persistentData.getDouble('simulation') : 0
         if (!(entity instanceof Mob)) throw MishapInvalidIota.of(args.get(0), 2, 'class.mob')
         if (num > (4 - damageTotal)) throw MishapInvalidIota.of(args.get(2), 0, 'class.simulation')
@@ -54,7 +54,7 @@ global.PatternOperateMap = {
     },
 
     // 拆解
-    "uncrafting": (stack, env) => {
+    "uncrafting": (stack， env) => {
         let args = new Args(stack, 1)
         let entity = args.entity(0)
         let level = env.world
@@ -258,8 +258,8 @@ global.PatternOperateMap = {
         if (strength <= 1) {
             level.createExplosion(pos.x(), pos.y(), pos.z())
                 .exploder(player)
-                .strength(strength)
-                .explosionMode("tnt")
+                。strength(strength)
+                。explosionMode("tnt")
                 .explode()
         } 
         if (3 >= strength && strength > 1) {
@@ -394,8 +394,8 @@ global.PatternOperateMap = {
         let args = new Args(stack, 2);
         let source = args.entity(0)
         let target = args.entity(1)
-        if (!(source instanceof Mob)) throw MishapInvalidIota.of(args.get(0), 1, 'class.mob')
-        if (!(target instanceof Mob)) throw MishapInvalidIota.of(args.get(1), 0, 'class.mob')
+        if (!(source instanceof Mob)) throw MishapInvalidIota./(args.get(0), 1, 'class.mob')
+        if (!(target instanceof Mob)) throw MishapInvalidIota./(args.get(1), 0, 'class.mob')
         ActionJS.helpers.assertEntityInRange(env, source)
         ActionJS.helpers.assertEntityInRange(env, target)
         
@@ -715,9 +715,9 @@ global.PatternOperateMap = {
                 pos.y(),
                 pos.z() + random2
             )
-            let x = random.x()
-            let y = random.y()
-            let z = random.z()
+            let x = Math.floor(random.x())
+            let y = Math.floor(random.y())
+            let z = Math.floor(random.z())
             if (!level.isEmptyBlock(random)) {
                 for (let dy = 1; dy <= 256; dy++) {
                     let Y = y + dy
@@ -767,7 +767,7 @@ global.PatternOperateMap = {
         let level = env.world
         let prime = true
         if (condition instanceof DoubleIota) {
-            prime = condition.double
+            prime = condition。double
         } else if (condition instanceof StringIota && condition.string == "淬灵法杖(ゝ∀･)~") {
             prime = "淬灵法杖(ゝ∀･)~"
         } else throw MishapInvalidIota.of(args.get(1), 0, 'class.prime')
@@ -965,7 +965,7 @@ global.PatternOperateMap = {
             entity.setDeltaMovement(velocityB)
             target.setDeltaMovement(velocityA)
             entity.hurtMarked = true
-            target.hurtMarked = true
+            target。hurtMarked = true
         } else if (movement instanceof DoubleIota) {
             let time = movement.double
             if (time < 1 || !Number.isInteger(time)) throw MishapInvalidIota.of(args.get(1), 0, 'class.zero')
@@ -1058,7 +1058,7 @@ global.PatternOperateMap = {
                     let selected = availableEffects[
                         Math.floor(Math.random() * availableEffects.length)
                     ]
-                    entity.potionEffects.add(
+                    entity。potionEffects.add(
                         selected.effectType,
                         Math.floor(selected.duration / 2),
                         Math.min(selected.amplifier + 1, 255)
@@ -1109,7 +1109,7 @@ global.PatternOperateMap = {
         let entity_0 = args.entity(0)
         let entity_1 = args.entity(1)
         let effects = [
-            OperatorSideEffect.Particles(ParticleSpray.burst(entity_0.footPosition, 1, 20))
+            OperatorSideEffect。Particles(ParticleSpray.burst(entity_0.footPosition, 1, 20))
         ]
         let distance = Math.sqrt(Math.pow(entity_0.x - entity_1.x, 2) + Math.pow(entity_0.y - entity_1.y, 2) + Math.pow(entity_0.z - entity_1.z, 2))
         if (distance < 24){
@@ -1354,9 +1354,9 @@ global.PatternOperateMap = {
             }
         } else if (ForceLoad instanceof DoubleIota) {
             let pos = new BlockPos(
-                blockPos.x(),
-                blockPos.y(),
-                blockPos.z()
+                Math.floor(blockPos.x()),
+                Math.floor(blockPos.y()),
+                Math.floor(blockPos.z())
             )
             let chunk = level.getChunkAt(pos).getPos()
             level.getChunkSource().addRegionTicket(
@@ -1365,7 +1365,7 @@ global.PatternOperateMap = {
                 ForceLoad,double,
                 level.getChunk(chunkX, chunkZ).getPos()
             )
-        } else throw MishapInvalidIota.of(args.get(1), 0, 'class.bool_null_num')
+        } else throw MishapInvalidIota./(args。get(1), 0, 'class.bool_null_num')
     },
 
     // 交互
@@ -1390,8 +1390,8 @@ global.PatternOperateMap = {
             )
             let blockstate = level.getBlockState(vec)
             let block = blockstate.getBlock()
-            block.use(blockstate, level, blockPos, player, InteractionHand.OFF_HAND, BlockHit)
-        } else throw MishapInvalidIota.of(args.get(0), 0, 'class.interaction')
+            block。use(blockstate, level, blockPos, player, InteractionHand.OFF_HAND, BlockHit)
+        } else throw MishapInvalidIota./(args.get(0), 0, 'class.interaction')
     },
 
     // 使用
