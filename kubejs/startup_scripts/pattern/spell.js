@@ -82,7 +82,7 @@ global.PatternOperateMap = {
         const RARITY_PROBABILITIES = {
             "COMMON": 0.8,
             "UNCOMMON": 0.6,
-            "RARE": 0.4,
+            "RARE": 0.4，
             "EPIC": 0.2
         }
         for (let i = 0; i < ingredients.size(); i++) {
@@ -616,7 +616,7 @@ global.PatternOperateMap = {
         let oldData = inject.getVillagerData && inject.getVillagerData()
         if (oldData.level < 5 && oldData.profession.name() !== 'none') {
             let newLevel = oldData.getLevel() + 1
-            inject.setVillagerData(oldData.setLevel(newLevel))
+            inject。setVillagerData(oldData.setLevel(newLevel))
             inject.setVillagerXp([10, 70, 150, 250][newLevel - 2])
             inject.potionEffects.add('regeneration', 40, 0)
             let newOffers = inject.offers
@@ -1365,7 +1365,7 @@ global.PatternOperateMap = {
                 ForceLoad,double,
                 level.getChunk(chunkX, chunkZ).getPos()
             )
-        } throw MishapInvalidIota.of(args.get(1), 0, 'class.bool_null_num')
+        } else throw MishapInvalidIota.of(args.get(1), 0, 'class.bool_null_num')
     },
 
     // 交互
