@@ -159,43 +159,51 @@
 事件中涉及原版 KubeJS 与 JavaScript 的部分使用 AI 生成表现较好，但若未提供对应接口，则往往需要提供大量对应的源代码并进行 loadClass，从 KubeJS 的实际运用来看，这算作较为高阶的技巧，萌新可能需要时间掌握。
 
 面向没有魔改基础的萌新来说，一个训练有素的 AI 可以帮你解决 80% 的问题。对于常规的事件书写，你的资料库里应该包含：
-    1. 咒术笔记的第二章：咒术
-    2. 咒术笔记的第三章：书写
-    3. kubejs\startup_scripts\pattern\spell.js 文件，用于寻找可用方法与此文件中未包含的特例
-    4. kubejs\startup_scripts\pattern.js 文件，若事件中有函数则需选择（可选）
-    5. kubejs\startup_scripts\Imports.js 文件，若事件中有引包则需选择（可选）
-    6. kubejs\server_scripts\patterns.js 文件，若事件需要服务端协同运行则需选择（可选）
-    7. 咒法学仓库 Common/src/main/java/at/petrak/hexcasting/api/casting/eval 文件夹中 README.md 文件提及的几个文件，若事件为元运行则需选择（可选）
 
-1. 书写规则：
-    1. 不可使用 const，一律使用 let。
-    2. 遍历复合标签时可选择 iterator()。
-    3. 提示生成法术时，默认只生成事件部分，不生成注册部分和手册部分。
-    4. 每次生成法术时不可更改图案 ID，若用户未提供图案 ID，则默认为"test"。
-    5. 当用户提示输出日志时，仅打印事件中获取的部分关键值，避免使用新方法导致报错。
-    6. 部分 ES6 语法在 KubeJS 中报错，如展开运算符[...list]，使用 ES5 语法即可。
-    7. 当用户所需的事件中存在未提供的刚需方法且未检索到方法原文时，在回答开头说明缺失的方法并提出可能的解决方案，直至用户确认解决方案后再给出完整代码。
-    8. 联网搜索网址 https://kubejs.com/wiki，自动查找不确定的方法，版本为 1.20.1，加载器为 forge，不考虑 KubeJS 扩展，不可搜索其他网址，wiki 上未找到的方法于开头警告。
-    9.  非可变参数的情况下，一律使用 args.type(n) （type = bool/entity/vec3/list.list/double/string）获取参数，不可使用args.get(n)，因为后者需要额外的判断与转化，相较于封装好的前者没有任何优势。
-    10. 当用户所需的事件中包含 let args = new Args(stack, m)， args.get(n) 的可变参数时，对于报错 throw MishapInvalidIota.of(args.get(n), m - n - 1, 'class.test')，在开头提示用户自行补全即可，无需写出报错具体内容。
-    11. 当且仅当：
-        1. 需要获取玩家绑定物元数据
-        2. 需要返回的 iota 为图案 iota
-        3. 事件内需要获取生物状态效果字符串 ID
-        4. 需要进行 iota 的序列化存储与反序列化
-        5. 在可变参数的同时要求针对栈顶数个 iota 类型改变入栈参数的数量，
-    则在通用模板之外，参考特殊情况
+1. 咒术笔记的第二章：咒术
+2. 咒术笔记的第三章：书写
+3. kubejs\startup_scripts\pattern\spell.js 文件，用于寻找可用方法与此文件中未包含的特例
+4. kubejs\startup_scripts\pattern.js 文件，若事件中有函数则需选择（可选）
+5. kubejs\startup_scripts\Imports.js 文件，若事件中有引包则需选择（可选）
+6. kubejs\server_scripts\patterns.js 文件，若事件需要服务端协同运行则需选择（可选）
+7. 咒法学仓库 Common/src/main/java/at/petrak/hexcasting/api/casting/eval 文件夹中 README.md 文件提及的几个文件，若事件为元运行则需选择（可选）
 
-2. 对应法术：
+**1. 书写规则：**
+
+1. 不可使用 const，一律使用 let。
+2. 遍历复合标签时可选择 iterator()。
+3. 提示生成法术时，默认只生成事件部分，不生成注册部分和手册部分。
+4. 每次生成法术时不可更改图案 ID，若用户未提供图案 ID，则默认为"test"。
+5. 当用户提示输出日志时，仅打印事件中获取的部分关键值，避免使用新方法导致报错。
+6. 部分 ES6 语法在 KubeJS 中报错，如展开运算符[...list]，使用 ES5 语法即可。
+7. 当用户所需的事件中存在未提供的刚需方法且未检索到方法原文时，在回答开头说明缺失的方法并提出可能的解决方案，直至用户确认解决方案后再给出完整代码。
+8. 联网搜索网址 https://kubejs.com/wiki，自动查找不确定的方法，版本为 1.20.1，加载器为 forge，不考虑 KubeJS 扩展，不可搜索其他网址，wiki 上未找到的方法于开头警告。
+9. 非可变参数的情况下，一律使用 args.type(n) （type = bool/entity/vec3/list.list/double/string）获取参数，不可使用args.get(n)，因为后者需要额外的判断与转化，相较于封装好的前者没有任何优势。
+10. 当用户所需的事件中包含 let args = new Args(stack, m)， args.get(n) 的可变参数时，对于报错 throw MishapInvalidIota.of(args.get(n), m - n - 1, 'class.test')，在开头提示用户自行补全即可，无需写出报错具体内容。
+11. 当且仅当：
+   - 需要获取玩家绑定物元数据
+   - 需要返回的 iota 为图案 iota
+   - 事件内需要获取生物状态效果字符串 ID
+   - 需要进行 iota 的序列化存储与反序列化
+   - 在可变参数的同时要求针对栈顶数个 iota 类型改变入栈参数的数量，
+
+   则在通用模板之外，参考特殊情况
+
+**2. 对应法术：**
+
 打开 kubejs\startup_scripts\pattern\spell.js，创建：
 
+```javascript
     // 萌新之策略
     "test": (stack, env, img, cont) => {},
+```
 
-    这其中的操作便对应于图案："homo:test"，此后每当绘制笔顺dew，便将执行其中操作。
+这其中的操作便对应于图案："homo:test"，此后每当绘制笔顺dew，便将执行其中操作。
 
-3. 通用模板：
+**3. 通用模板：**
 stack, env, img, cont 四个参数分别对应执行栈，施法环境，咒法映像和延续，通常情况下，仅用前两个参数。于是，我们有：
+
+```javascript
     // 萌新之策略
     "test": (stack, env, img, cont) => {
         // 打印四个参数
@@ -265,80 +273,94 @@ stack, env, img, cont 四个参数分别对应执行栈，施法环境，咒法�
         return sideEffects
         // 若非元运行法术，即直接压入帧或延续的法术，则无需额外返回，常规返回已在函数中封装完毕。
     }
+```
 
-4. 特殊情况
-    1. 生成图案 iota：
-        let escape = PatternIota(HexPattern.fromAnglesUnchecked("qqqaww", HexDir.WEST))
+**4. 特殊情况**
 
-    2. 序列化与存储：
-        let iota = args.get(0)
-        let serializeIota = new CompoundTag()
-        serializeIota.put('iota', IotaType.serialize(iota))
-        let persistentIota = server.persistentData.getCompound('hexTags')
-        persistentIota.put('test', serializeIota)
-        server.persistentData.put('hexTags', persistentIota)
+**1. 生成图案 iota：**
+```javascript
+let escape = PatternIota(HexPattern.fromAnglesUnchecked("qqqaww", HexDir.WEST))
+```
 
-    3. 反序列化与读取
-        if (server.persistentData.contains('hexTags')) {
-            let hexTags = server.persistentData.getCompound('hexTags')
-            let test = hexTags.getCompound('test')
-            let serializeIota = test.getCompound('spell')
-            let iota = IotaType.deserialize(serializeIota, level)
-        }
+**2. 序列化与存储：**
+```javascript
+let iota = args.get(0)
+let serializeIota = new CompoundTag()
+serializeIota.put('iota', IotaType.serialize(iota))
+let persistentIota = server.persistentData.getCompound('hexTags')
+persistentIota.put('test', serializeIota)
+server.persistentData.put('hexTags', persistentIota)
+```
 
-    4. 获取玩家绑定物元：
-        let player = env.caster
-        if (player == null) throw MishapBadCaster()
-        if (!player.isPlayer()) throw MishapBadCaster()
-        let userData = img.userData
-        let boundStorage
-        if (userData && userData.contains(MoteIota.TAG_TEMP_STORAGE)) {
-            boundStorage = userData.getUUID(MoteIota.TAG_TEMP_STORAGE)
-        } else {
-            boundStorage = MediafiedItemManager.getBoundStorage(player)
-            if (!boundStorage) throw MishapNoBoundStorage()
-        }
-        if (MediafiedItemManager.isStorageFull(boundStorage) != false) throw MishapStorageFull(boundStorage)
+**3. 反序列化与读取：**
+```javascript
+if (server.persistentData.contains('hexTags')) {
+    let hexTags = server.persistentData.getCompound('hexTags')
+    let test = hexTags.getCompound('test')
+    let serializeIota = test.getCompound('spell')
+    let iota = IotaType.deserialize(serializeIota, level)
+}
+```
 
-    5. 获取状态效果 ID
-        let potions = entity.getActiveEffects().toArray()
-        let size = potions.length
-        let effectId = []
-        for (let i = 0; i < size; i++) {
-            let result = String(potions[i]).substring(7)
-            let xIndex = result.indexOf(' x ')
-            if (xIndex !== -1) {
-                result = result.substring(0, xIndex)
-            }
-            let commaIndex = result.indexOf(',')
-            if (commaIndex !== -1) {
-                result = result.substring(0, commaIndex)
-            }
-            let dotIndex = result.indexOf('.')
-            if (dotIndex !== -1) {
-                result = result.substring(dotIndex + 1)
-            }
-            effectId.push(result)
-        }
+**4. 获取玩家绑定物元：**
+```javascript
+let player = env.caster
+if (player == null) throw MishapBadCaster()
+if (!player.isPlayer()) throw MishapBadCaster()
+let userData = img.userData
+let boundStorage
+if (userData && userData.contains(MoteIota.TAG_TEMP_STORAGE)) {
+    boundStorage = userData.getUUID(MoteIota.TAG_TEMP_STORAGE)
+} else {
+    boundStorage = MediafiedItemManager.getBoundStorage(player)
+    if (!boundStorage) throw MishapNoBoundStorage()
+}
+if (MediafiedItemManager.isStorageFull(boundStorage) != false) throw MishapStorageFull(boundStorage)
+```
 
-    6. 可变参数 - 进阶版
-        let size = img.getStack().size()
-        if (size < 1) throw MishapNotEnoughArgs(1, size)
-        let pre_first = img.getStack().get(size - 1)
-        let result
-        if (pre_first instanceof DoubleIota) {
-            // 若使用 new Args(stack, 1) 则移除栈顶参数
-            let args = new Args(stack, 1)
-            let double = args.double(0)
-            result = double
-        } else if (pre_first instanceof StringIota) {
-            // 否则不移除栈顶参数
-            result = pre_first.string
-        } else if (pre_first instanceof BooleanIota) {
-            // 不引用时亦可移除
-            let args = new Args(stack, 1)
-            result = pre_first.string
-        } else throw MishapInvalidIota.of(img.getStack().get(size - 1), 0, 'class.test')
+**5. 获取状态效果 ID：**
+```javascript
+let potions = entity.getActiveEffects().toArray()
+let size = potions.length
+let effectId = []
+for (let i = 0; i < size; i++) {
+    let result = String(potions[i]).substring(7)
+    let xIndex = result.indexOf(' x ')
+    if (xIndex !== -1) {
+        result = result.substring(0, xIndex)
+    }
+    let commaIndex = result.indexOf(',')
+    if (commaIndex !== -1) {
+        result = result.substring(0, commaIndex)
+    }
+    let dotIndex = result.indexOf('.')
+    if (dotIndex !== -1) {
+        result = result.substring(dotIndex + 1)
+    }
+    effectId.push(result)
+}
+```
+
+**6. 可变参数 - 进阶版：**
+```javascript
+let size = img.getStack().size()
+if (size < 1) throw MishapNotEnoughArgs(1, size)
+let pre_first = img.getStack().get(size - 1)
+let result
+if (pre_first instanceof DoubleIota) {
+    // 若使用 new Args(stack, 1) 则移除栈顶参数
+    let args = new Args(stack, 1)
+    let double = args.double(0)
+    result = double
+} else if (pre_first instanceof StringIota) {
+    // 否则不移除栈顶参数
+    result = pre_first.string
+} else if (pre_first instanceof BooleanIota) {
+    // 不引用时亦可移除
+    let args = new Args(stack, 1)
+    result = pre_first.string
+} else throw MishapInvalidIota.of(img.getStack().get(size - 1), 0, 'class.test')
+```
 
 ### part.3，调试部分
 
@@ -516,7 +538,7 @@ AI 在调试时往往尝试获取更详细的信息，并对已有的信息进�
 
 好像那层屏障会因我施法时用的魔力而被缓慢地削弱。我发疯一般将所有的媒质全部集中于上，我能感觉到我的体内发出低沉的嗡鸣，牙齿咯咯打颤；巨量的媒质从我身上流过又喷薄而出，我用尽全力踩在地上，但触感似乎又很柔软。我的口鼻涌出了大股大股的血液，我听到了我听到了我听到了他的呼唤
 
-……我听到图案在我耳边温柔的低语。他说，你是媒质，你是媒质，你是媒质，你是媒质你是媒质，你是媒质，你是媒质你是媒质你是媒质，你是媒你是媒质你是媒质你是媒质你是媒质你是媒质你是媒质，你是媒质
+……我听到图案在我耳边温柔的低语。他说，你是媒质，~~你是媒~~质，你~~是媒质~~，~~你是媒~~质，~~你是媒质~~，~~你是~~媒~~质~~，~~你~~是~~媒质~~，你~~是媒质~~，~~你是媒质~~，~~你是媒质~~，~~你~~是~~媒质~~，~~你是媒~~质，~~你是~~媒~~质~~，~~你是媒~~质，~~你是媒~~质，~~你是~~媒~~质~~，你~~是媒质~~，~~你是媒质~~，你是媒质
 
 好在，我确实是媒质。我常态下全部的生命可以算作一百份紫水晶粉。我只需要将最后一丝生命，那不足万分之一的部分留于此世，仅凭一次施法，将其余部分熔铸于至高之永恒。
 
