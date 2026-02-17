@@ -130,7 +130,7 @@
 
 ### part.1，注册部分
 
-1. 打开网页 https://master-bw3.github.io/Hex-Studio/，设计你的图案，并记住起始笔顺的方向。以测试图案为例，起始笔顺沿东北方向，设计完成后，选择复制界面 Export Patterns 选项即可导出，复制其中格式如 "dew" 的笔顺。
+1. 打开网页 https://master-bw3.github.io/Hex-Studio/ ，设计你的图案，并记住起始笔顺的方向。以测试图案为例，起始笔顺沿东北方向，设计完成后，选择复制界面 Export Patterns 选项即可导出，复制其中格式如 "dew" 的笔顺。
 
 2. 打开文件 kubejs\startup_scripts\pattern\name.js，写入：
 
@@ -177,7 +177,7 @@
 5. 当用户提示输出日志时，仅打印事件中获取的部分关键值，避免使用新方法导致报错。
 6. 部分 ES6 语法在 KubeJS 中报错，如展开运算符[...list]，使用 ES5 语法即可。
 7. 当用户所需的事件中存在未提供的刚需方法且未检索到方法原文时，在回答开头说明缺失的方法并提出可能的解决方案，直至用户确认解决方案后再给出完整代码。
-8. 联网搜索网址 https://kubejs.com/wiki，自动查找不确定的方法，版本为 1.20.1，加载器为 forge，不考虑 KubeJS 扩展，不可搜索其他网址，wiki 上未找到的方法于开头警告。
+8. 联网搜索网址 https://kubejs.com/wiki ，自动查找不确定的方法，版本为 1.20.1，加载器为 forge，不考虑 KubeJS 扩展，不可搜索其他网址，wiki 上未找到的方法于开头警告。
 9. 非可变参数的情况下，一律使用 args.type(n) （type = bool/entity/vec3/list.list/double/string）获取参数，不可使用args.get(n)，因为后者需要额外的判断与转化，相较于封装好的前者没有任何优势。
 10. 当用户所需的事件中包含 let args = new Args(stack, m)， args.get(n) 的可变参数时，对于报错 throw MishapInvalidIota.of(args.get(n), m - n - 1, 'class.test')，在开头提示用户自行补全即可，无需写出报错具体内容。
 11. 当且仅当：
