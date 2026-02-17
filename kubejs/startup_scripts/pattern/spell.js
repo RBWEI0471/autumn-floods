@@ -3,10 +3,25 @@ global.ZERO = new Map()
 global.PatternOperateMap = {
 
     // ？？？
-    "media": (stack, env) => {
+    "media": (stack, env, img, cont) => {
+        let player = env.caster
+        if (player && player.isPlayer()) {
+            if (!player.stages.has('everBook')) {
+                let url = 'https://www.mcmod.cn/post/4857.html'
+                player.tell(
+                    Text./('真 · 永恒之书')
+                    。gold()
+                    .underlined()
+                    .clickOpenUrl(url)
+                    .hover('咒术机理的书写艺术')
+                )
+                player.stages.add('everBook')
+            }
+        }
         let args = new Args(stack, 1)
         let bool = args.bool(0)
         let year, month, day, hour
+
         if (bool) {
             let now = new Date(Utils.getSystemTime())
             year = now.getFullYear()
@@ -14,7 +29,7 @@ global.PatternOperateMap = {
             day = now.getDate()
             hour = now.getHours()
         } else {
-            let random = Math.random()
+            let random = Math.random();
             year = Math.floor(2024 * random) + 1
             month = Math.floor(11 * random) + 1
             day = Math.floor(27 * random) + 1
@@ -36,9 +51,9 @@ global.PatternOperateMap = {
         let name = RL(named)
         ActionJS。helpers。assertEntityInRange(env, entity)
         let damageTotal = entity.persistentData.contains('simulation') ? entity.persistentData.getDouble('simulation') : 0
-        if (!(entity instanceof Mob)) throw MishapInvalidIota.of(args.get(0), 2, 'class.mob')
-        if (num > (4 - damageTotal)) throw MishapInvalidIota.of(args.get(2), 0, 'class.simulation')
-        if (num < 1 || !Number.isInteger(num)) throw MishapInvalidIota.of(args.get(2), 0, 'class.simulation')
+        if (!(entity instanceof Mob)) throw MishapInvalidIota./(args.get(0), 2, 'class.mob')
+        if (num > (4 - damageTotal)) throw MishapInvalidIota./(args.get(2), 0, 'class.simulation')
+        if (num < 1 || !Number.isInteger(num)) throw MishapInvalidIota./(args.get(2), 0, 'class.simulation')
         entity.persistentData.putDouble('simulation', damageTotal + num)
         let overcast = ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("hexcasting:overcast"))
         let dmgTypeRegistry = level.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE)
@@ -58,7 +73,7 @@ global.PatternOperateMap = {
         let args = new Args(stack, 1)
         let entity = args.entity(0)
         let level = env.world
-        if (entity.getType() !== "minecraft:item") throw MishapInvalidIota.of(args.get(0), 0, 'class.uncrafting')
+        if (entity.getType() !== "minecraft:item") throw MishapInvalidIota./(args.get(0), 0, 'class.uncrafting')
         ActionJS.helpers.assertEntityInRange(env, entity)
         let itemStack = entity.getItem()
         let itemStackCount = itemStack.count
