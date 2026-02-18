@@ -686,6 +686,7 @@ global.PatternOperateMap = {
         })
         arrow.setPos(pos)
         arrow.spawn()
+        stack.push(EntityIota(arrow))
         return effects
     },
 
