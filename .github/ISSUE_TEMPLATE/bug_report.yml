@@ -1,0 +1,35 @@
+name: 错误报告
+description: 如果你找到了一个错误，且通读手册后认为这并非作者本意，则可于此报告
+title: "[Bug]: "
+labels: [ Bug ]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **报告错误前，请先确认如下几点：**
+        - 整合包为最新版本
+        - 在原版秋水环境下测试
+        - 之前的错误报告中没有类似的问题
+        - 你已知晓作者很可能不会管错误报告，如果你给出通过测试的修改方案，他修正的可能性会稍高一点点
+  - type: textarea
+    id: description
+    attributes:
+      label: 详细的错误报告
+      description: 概括错误的现象，并描述你认为应当的现象，给出至少一种可能的复现方式，可以附上图片或文件
+    validations:
+      required: true
+  - type: input
+    id: logs
+    attributes:
+      label: latest.log
+      description: 将你的 'latest.log' 文件提交至  https://gist.github.com/ ，然后在此处填入链接
+    validations:
+      required: false
+  - type: textarea
+    id: proposed_fix
+    attributes:
+      label: 修正代码
+      description: 如果你已经找到了问题所在，请在此提供修正后的代码
+      render: js
+    validations:
+      required: false
