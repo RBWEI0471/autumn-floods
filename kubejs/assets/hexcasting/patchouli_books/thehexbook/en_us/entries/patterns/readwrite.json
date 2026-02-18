@@ -12,6 +12,10 @@
       "text": "诸如$(item)核心/$，$(item)法术书/$，$(item)卷轴/$等具有存储功能的咒法物品中，可以写入或读取iota。$(br2)此外，我也可以将其存到$(hex)咒术/$自身里，残卷称为$(l:patterns/readwrite#hexcasting:local)$(thing)渡鸦之思/$。它能存储一个 iota，默认为 $(thing)Null/$，一旦施法结束，其值就会被清除。"
     },
     {
+      "type": "patchouli:text",
+      "text": "读写是从指定的媒介中映射出对应的结果。如果希望将这些结果用列表去记录，查找时则需记住每一个结果对应的下标，这对思维来说实在是……舍近求远。$(br2)既然如此，不妨直接关联结果与语义：就如同在构造列表之时，将用作索引的下标替换为任意 iota 代表的键那般，此后每当查找用做索引的键，便可映射出对应的结果。这就是某种新的 iota 类型，字典。"
+    },
+    {
       "type": "hexcasting:pattern",
       "op_id": "hexcasting:write/local",
       "anchor": "hexcasting:write/local",
@@ -139,10 +143,6 @@
 			"output": "",
 			"text": "移除栈顶 iota，覆写从实体或方块中读取一个列表中指定下标的元素。"
 		},
-    {
-      "type": "patchouli:text",
-      "text": "读写是从指定的媒介中映射出对应的结果。如果希望将这些结果用列表去记录，查找时则需记住每一个结果对应的下标，这对思维来说实在是……舍近求远。$(br2)既然如此，不妨直接关联结果与语义：就如同在构造列表之时，将用作索引的下标替换为任意 iota 代表的键那般，此后每当查找用做索引的键，便可映射出对应的结果。这就是某种新的 iota 类型，字典。"
-    },
 		{
 			"type": "hexcasting:pattern",
 			"op_id": "hexthings:empty_dict",
