@@ -13,7 +13,7 @@
       "anchor": "homo:creeper",
       "input": "vec, num",
       "output": "",
-      "text": "在指定坐标向量处产生一次强度为所给数值的爆炸，强度越大，则限制越大，消耗 10,000 * num² 点媒质，超过 360,000 点的部分不计。"
+      "text": "在指定坐标向量处产生一次强度为所给数值的爆炸，强度越大，则限制越大，消耗 10000 * num² 点媒质。"
     },
     {
       "type": "patchouli:text",
@@ -60,9 +60,9 @@
       "text": "返回栈顶的向量指向$(l:patterns/spells/sentinels)$(thing)哨卫/$的单位向量，消耗 1,000 点媒质。"
     },
     {
-			"type": "hexcasting:pattern"，
+			"type": "hexcasting:pattern",
 			"op_id": "hexthings:isgreatersent",
-			"anchor": "hexthings:isgreatersent"，
+			"anchor": "hexthings:isgreatersent",
 			"input": "",
 			"output": "bool | null",
 			"text": "判断当前$(thing)哨卫/$是否是$(thing)卓越哨卫/$"
@@ -80,13 +80,13 @@
 			"op_id": "homo:arrow",
 			"anchor": "homo:arrow",
 			"input": "vec, num",
-			"output": "",
-			"text": "在指定坐标向量处召唤一只基础伤害等同于指定数值，无视重力的光灵箭，num 为 1 ~ 5 之间的整数，消耗 num² * 1,000 点媒质。"
+			"output": "entity",
+			"text": "在指定坐标向量处召唤一只基础伤害等同于指定数值，无视重力的光灵箭，num 为 1 ~ 5 之间的整数，并向栈中压入代表箭矢的实体 iota，消耗 num² * 1,000 点媒质。"
 		},
     {
 			"type": "hexcasting:pattern",
 			"op_id": "homo:vex",
-			"anchor": "homo:vex"，
+			"anchor": "homo:vex",
 			"input": "vec, num",
 			"output": "",
 			"text": "在指定坐标向量处召唤一道空灵的标记，指定数值 tick 后消失。"
