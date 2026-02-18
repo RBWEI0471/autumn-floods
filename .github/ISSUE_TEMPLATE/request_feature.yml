@@ -1,0 +1,31 @@
+name: 功能建议
+description: 想要新的内容理应在此提议，理论上，这会使整合包的提议页面更加丰富多彩
+title: "[功能]: "
+labels: ["功能建议"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **提交建议前，请确认如下几点：**
+        - 整合包为最新版本
+        - 已搜索现有 Issue，没有相似提议
+        - 整合包内没有类似功能，或类似功能的实现不符合整合包理念
+        - 给出设计的代码实现可能性会略高，不符合整合包理念的代码则一定不会实现
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 你的提议
+      description: 概括你想新增的功能，并说明理由
+      placeholder: 例如：增加一个模拟发射器发射物品的图案
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_fix
+    attributes:
+      label: 实现代码
+      description: 如果你已经有了实现方法并且通过了验证，那么请在此提供代码
+      render: js
+    validations:
+      required: false
