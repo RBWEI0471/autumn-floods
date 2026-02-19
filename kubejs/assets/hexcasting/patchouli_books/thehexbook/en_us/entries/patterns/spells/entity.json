@@ -21,7 +21,7 @@
       "anchor": "homo:ride",
       "input": "entity.1, entity.2",
       "output": "",
-      "text": "若 entity.1 与 entity.2 相近，则令 entity.1 骑乘 entity.2。"
+      "text": "令 entity.1 骑乘 entity.2，若二者已经处于相互骑乘的状态，则将其解除。当骑乘的作用目标为一些特殊实体时，可能出现危险的结果。"
     },
     {
       "type": "hexcasting:pattern",
