@@ -33,7 +33,7 @@
       "anchor": "homo:page_num",
       "input": "",
       "output": "num",
-      "text": "返回法术书当前页码。"
+      "text": "返回副手中法术书当前页码。"
     },
     {
       "type": "hexcasting:pattern",
@@ -41,7 +41,7 @@
       "anchor": "homo:page_highest",
       "input": "",
       "output": "num",
-      "text": "返回法术书最大页码。"
+      "text": "返回副手中法术书最大页码。"
     },
     {
       "type": "hexcasting:pattern",
@@ -49,7 +49,7 @@
       "anchor": "homo:page_name",
       "input": "num",
       "output": "str",
-      "text": "返回法术书指定页码的名称。"
+      "text": "返回副手中法术书指定页码的名称。"
     },
     {
       "type": "hexcasting:pattern",
@@ -57,7 +57,7 @@
       "anchor": "homo:page_to",
       "input": "num",
       "output": "",
-      "text": "将法术书翻至指定页码。"
+      "text": "将副手中法术书翻至指定页码。"
     }
   ]
 }
