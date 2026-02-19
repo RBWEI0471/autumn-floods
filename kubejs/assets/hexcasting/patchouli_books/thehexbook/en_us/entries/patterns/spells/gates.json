@@ -1,8 +1,8 @@
 {
   "name": "门径",
   "category": "hexcasting:patterns/spells",
-  "icon": "minecraft:end_portal_frame",
-  "sortnum": 11,
+  "icon": "minecraft:beacon",
+  "sortnum": 7,
   "advancement": "hexcasting:opened_eyes",
   "read_by_default": true,
   "secret": true,
