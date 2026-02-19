@@ -2016,6 +2016,18 @@ global.PatternOperateMap = {
         IXplatAbstractions.INSTANCE.setStaffcastImage(player, img)
     },
 
+    // 出栈之策略
+    'stack/pop': (stack, ctx) => {
+        let player = env.caster
+        if (player == null) throw MishapBadCaster()
+        if (!player.isPlayer()) throw MishapBadCaster()
+        let img = IXplatAbstractions.INSTANCE.getStaffcastVM(player, ctx.castingHand).image
+        let removeIdx = img.stack.length - 1
+        if (removeIdx < 0) throw MishapNotEnoughArgs(1, 0)
+        stack.push(img.stack.remove(img.stack.length - 1))
+        IXplatAbstractions.INSTANCE.setStaffcastImage(player, img)
+    },
+
     // 信笔之精思
     "read_str": (stack, env) => {
         let player = env.caster
@@ -2374,143 +2386,140 @@ global.PatternOperateMap = {
         let startPos = args.vec3(0)
         let secondVec = args.vec3(1)
         let isDirection = args.bool(2)
-        
-        let directionVec
+
+        let dirVec
         if (isDirection) {
-            directionVec = secondVec
+            dirVec = secondVec
         } else {
-            directionVec = new Vec3d(
+            dirVec = new Vec3d(
                 secondVec.x() - startPos.x(),
                 secondVec.y() - startPos.y(),
                 secondVec.z() - startPos.z()
             )
         }
-        
-        let dirMagnitude = Math.sqrt(
-            directionVec.x() * directionVec.x() +
-            directionVec.y() * directionVec.y() +
-            directionVec.z() * directionVec.z()
-        )
-        
+
+        let dirMagnitude = Math.sqrt(dirVec.x() * dirVec.x() + dirVec.y() * dirVec.y() + dirVec.z() * dirVec.z())
+
         if (isDirection && dirMagnitude < 0.0001) throw MishapInvalidIota.of(args.get(1), 1, 'class.zero_vec')
-        
-        let unitDir = new Vec3d(
-            directionVec.x() / dirMagnitude,
-            directionVec.y() / dirMagnitude,
-            directionVec.z() / dirMagnitude
-        )
-        
-        let actualMaxLength
-        if (isDirection) {
-            actualMaxLength = dirMagnitude
-        } else {
-            actualMaxLength = Math.min(dirMagnitude, 1024)
+
+        if (!isDirection && dirMagnitude < 1e-10) {
+            let startBlock = new BlockPos(
+                Math.floor(startPos.x() + 1e-10),
+                Math.floor(startPos.y() + 1e-10),
+                Math.floor(startPos.z() + 1e-10)
+            )
+            stack.push(ListIota([Vec3Iota(startBlock)]))
+            return
         }
-        
+
+        let unitDir = new Vec3d(
+            dirVec.x() / dirMagnitude,
+            dirVec.y() / dirMagnitude,
+            dirVec.z() / dirMagnitude
+        )
+
+        let startBlock = new BlockPos(
+            Math.floor(startPos.x() + 1e-10),
+            Math.floor(startPos.y() + 1e-10),
+            Math.floor(startPos.z() + 1e-10)
+        )
+
+        let blocks = []
+        blocks.push(Vec3Iota(startBlock))
+        let currentBlock = startBlock
+        let count = 1
+
+        let targetCount = null
         let targetBlockPos = null
-        if (!isDirection) {
+        if (isDirection) {
+            targetCount = Math.round(dirMagnitude)
+            if (targetCount <= 0) {
+                stack.push(ListIota([]))
+                return
+            }
+            if (targetCount === 1) {
+                stack.push(ListIota(blocks))
+                return
+            }
+        } else {
             targetBlockPos = new BlockPos(
                 Math.floor(secondVec.x() + 1e-10),
                 Math.floor(secondVec.y() + 1e-10),
                 Math.floor(secondVec.z() + 1e-10)
             )
         }
-        
-        let blockPositions = []
-        let currentPos = startPos
-        let lastBlockPos = null
-        let blockCount = 0
-        
-        let stepX = Math.sign(unitDir.x())
-        let stepY = Math.sign(unitDir.y())
-        let stepZ = Math.sign(unitDir.z())
-        
-        const tolerance = 1e-10
-        if (Math.abs(unitDir.x()) < tolerance) stepX = 0
-        if (Math.abs(unitDir.y()) < tolerance) stepY = 0
-        if (Math.abs(unitDir.z()) < tolerance) stepZ = 0
-        
-        let tMaxX = (stepX > 0) ? 
-            Math.floor(startPos.x() + 1) - startPos.x() : 
-            startPos.x() - Math.floor(startPos.x())
-        let tMaxY = (stepY > 0) ? 
-            Math.floor(startPos.y() + 1) - startPos.y() : 
-            startPos.y() - Math.floor(startPos.y())
-        let tMaxZ = (stepZ > 0) ? 
-            Math.floor(startPos.z() + 1) - startPos.z() : 
-            startPos.z() - Math.floor(startPos.z())
-        
-        let tDeltaX = Math.abs(1 / (unitDir.x() || tolerance))
-        let tDeltaY = Math.abs(1 / (unitDir.y() || tolerance))
-        let tDeltaZ = Math.abs(1 / (unitDir.z() || tolerance))
-        
-        let count = 0
-        let totalDistance = 0
-        let reachedTarget = false
-        
-        while (count < 1024 && totalDistance <= actualMaxLength && !reachedTarget) {
-            let blockPos = new BlockPos(
-                Math.floor(currentPos.x() + 1e-10),
-                Math.floor(currentPos.y() + 1e-10),
-                Math.floor(currentPos.z() + 1e-10)
-            )
-            
-            if (!isDirection && blockPos.equals(targetBlockPos)) {
-                reachedTarget = true
-            }
-            
-            if (!lastBlockPos || !blockPos.equals(lastBlockPos)) {
-                blockCount++
-                blockPositions.push(Vec3Iota(blockPos))
-                lastBlockPos = blockPos
-                if (blockCount >= Math.round(dirMagnitude)) {
-                    break
-                }
+
+        let stepX = unitDir.x() > 0 ? 1 : (unitDir.x() < 0 ? -1 : 0)
+        let stepY = unitDir.y() > 0 ? 1 : (unitDir.y() < 0 ? -1 : 0)
+        let stepZ = unitDir.z() > 0 ? 1 : (unitDir.z() < 0 ? -1 : 0)
+
+        let tMaxX, tMaxY, tMaxZ
+        if (stepX !== 0) {
+            let nextBoundary = stepX > 0 ? Math.floor(startPos.x()) + 1 : Math.floor(startPos.x())
+            tMaxX = (nextBoundary - startPos.x()) / unitDir.x()
+        } else {
+            tMaxX = Infinity
+        }
+        if (stepY !== 0) {
+            let nextBoundary = stepY > 0 ? Math.floor(startPos.y()) + 1 : Math.floor(startPos.y())
+            tMaxY = (nextBoundary - startPos.y()) / unitDir.y()
+        } else {
+            tMaxY = Infinity
+        }
+        if (stepZ !== 0) {
+            let nextBoundary = stepZ > 0 ? Math.floor(startPos.z()) + 1 : Math.floor(startPos.z())
+            tMaxZ = (nextBoundary - startPos.z()) / unitDir.z()
+        } else {
+            tMaxZ = Infinity
+        }
+
+        let tDeltaX = stepX !== 0 ? Math.abs(1 / unitDir.x()) : Infinity
+        let tDeltaY = stepY !== 0 ? Math.abs(1 / unitDir.y()) : Infinity
+        let tDeltaZ = stepZ !== 0 ? Math.abs(1 / unitDir.z()) : Infinity
+
+        let t = 0
+        let iter = 0
+        const maxIter = 1024
+
+        while (iter < maxIter) {
+            iter++
+
+            let axis
+            if (tMaxX <= tMaxY && tMaxX <= tMaxZ) {
+                axis = 'x'
+                t = tMaxX
+                tMaxX += tDeltaX
+            } else if (tMaxY <= tMaxX && tMaxY <= tMaxZ) {
+                axis = 'y'
+                t = tMaxY
+                tMaxY += tDeltaY
+            } else {
+                axis = 'z'
+                t = tMaxZ
+                tMaxZ += tDeltaZ
             }
 
+            if (t > dirMagnitude + 1e-10) break
+
+            if (axis === 'x') {
+                currentBlock = new BlockPos(currentBlock.getX() + stepX, currentBlock.getY(), currentBlock.getZ())
+            } else if (axis === 'y') {
+                currentBlock = new BlockPos(currentBlock.getX(), currentBlock.getY() + stepY, currentBlock.getZ())
+            } else {
+                currentBlock = new BlockPos(currentBlock.getX(), currentBlock.getY(), currentBlock.getZ() + stepZ)
+            }
+
+            blocks.push(Vec3Iota(currentBlock))
             count++
 
-            if (tMaxX < tMaxY) {
-                if (tMaxX < tMaxZ) {
-                    currentPos = new Vec3d(
-                        currentPos.x() + stepX,
-                        currentPos.y(),
-                        currentPos.z()
-                    )
-                    tMaxX += tDeltaX
-                } else {
-                    currentPos = new Vec3d(
-                        currentPos.x(),
-                        currentPos.y(),
-                        currentPos.z() + stepZ
-                    )
-                    tMaxZ += tDeltaZ
-                }
-            } else {
-                if (tMaxY < tMaxZ) {
-                    currentPos = new Vec3d(
-                        currentPos.x(),
-                        currentPos.y() + stepY,
-                        currentPos.z()
-                    )
-                    tMaxY += tDeltaY
-                } else {
-                    currentPos = new Vec3d(
-                        currentPos.x(),
-                        currentPos.y(),
-                        currentPos.z() + stepZ
-                    )
-                    tMaxZ += tDeltaZ
-                }
-            }
-            
-            totalDistance = currentPos.distanceTo(startPos)
-            if (reachedTarget) {
+            if (isDirection && count >= targetCount) break
+            if (!isDirection && currentBlock.equals(targetBlockPos)) {
+                reachedTarget = true
                 break
             }
         }
-        
-        stack.push(ListIota(blockPositions))
+
+        stack.push(ListIota(blocks))
     },
 
     // 光圈之提整

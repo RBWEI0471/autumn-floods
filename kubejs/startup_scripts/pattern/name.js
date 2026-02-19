@@ -145,6 +145,8 @@ StartupEvents.registry('hexcasting:action', e => {
     registerPatternWrap('qwed', HexDir.NORTH_WEST, 'transposed_list')
     // 入栈之策略
     registerPatternWrap('wdwddwe', HexDir.EAST, 'stack/push')
+    // 出栈之策略
+    registerPatternWrap('wawaawq', HexDir.WEST, 'stack/pop')
     // 单引之精思
     registerPatternWrap('waawaqwe', HexDir.EAST, 'mark_a')
     // 双引之精思
