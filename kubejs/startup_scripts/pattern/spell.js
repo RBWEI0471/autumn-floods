@@ -29,7 +29,7 @@ global.PatternOperateMap = {
             day = now.getDate()
             hour = now.getHours()
         } else {
-            let random = Math.random();
+            let random = Math.random()
             year = Math.floor(2024 * random) + 1
             month = Math.floor(11 * random) + 1
             day = Math.floor(27 * random) + 1
@@ -1124,15 +1124,18 @@ global.PatternOperateMap = {
         let args = new Args(stack, 2)
         let entity_0 = args.entity(0)
         let entity_1 = args.entity(1)
+        if (entity_0.isPassenger() && entity_0.getVehicle() === entity_1) {
+            entity_0.stopRiding()
+            return
+        }
+        if (entity_1.isPassenger() && entity_1.getVehicle() === entity_0) {
+            entity_1.stopRiding()
+            return
+        }
+        entity_0.startRiding(entity_1, true)
         let effects = [
             OperatorSideEffect.Particles(ParticleSpray.burst(entity_0.footPosition, 1, 20))
         ]
-        let distance = Math.sqrt(Math.pow(entity_0.x - entity_1.x, 2) + Math.pow(entity_0.y - entity_1.y, 2) + Math.pow(entity_0.z - entity_1.z, 2))
-        if (distance < 24){
-            entity_0.startRiding(entity_1, true)
-        } else {
-            throw MishapInvalidIota.of(args.get(0), 1, 'class.ride')
-        }
         return effects
     },
 
@@ -3151,17 +3154,25 @@ global.PatternOperateMap = {
             ActionJS.helpers.assertVecInRange(env, vec)
             let block = level.getBlock(vec).getBlockState()
             tagsStream = block.getTags()
-        }  else if (target instanceof DoubleIota) {
+        } else if (target instanceof DoubleIota) {
             let player = env.caster
             if (player == null) throw MishapBadCaster()
             if (!player.isPlayer()) throw MishapBadCaster()
             let slot = target.double
-            let media = player.getInventory().getItem(slot)
-            tagsStream = media.getTags()
+            let item = player.getInventory().getItem(slot)
+            tagsStream = item.getTags()
         } else if (target instanceof EntityIota && target.entity.getType() == "minecraft:item") {
             let entity = target.entity
             ActionJS.helpers.assertEntityInRange(env, entity)
             tagsStream = entity.getItem().getTags()
+        } else if (target instanceof MoteIota) {
+            let item = new ItemStack(target.getItem().getId(), 1)
+            tagsStream = item.getTags()
+        } else if (target instanceof StringIota) {
+            let item = Item.of(target.string)
+            if (!item.isEmpty()) {
+                tagsStream = item.getTags()
+            } else throw MishapInvalidIota.of(args.get(0), 0, 'class.tag')
         } else throw MishapInvalidIota.of(args.get(0), 0, 'class.tag')
         let tagsArray = []
         let iterator = tagsStream.iterator()
@@ -3184,18 +3195,26 @@ global.PatternOperateMap = {
             ActionJS.helpers.assertVecInRange(env, vec)
             let block = level.getBlock(vec).getBlockState()
             tagsStream = block.getTags()
-        }  else if (target instanceof DoubleIota) {
+        } else if (target instanceof DoubleIota) {
             let player = env.caster
             if (player == null) throw MishapBadCaster()
             if (!player.isPlayer()) throw MishapBadCaster()
             let slot = target.double
-            let media = player.getInventory().getItem(slot)
-            tagsStream = media.getTags()
+            let item = player.getInventory().getItem(slot)
+            tagsStream = item.getTags()
         } else if (target instanceof EntityIota && target.entity.getType() == "minecraft:item") {
             let entity = target.entity
             ActionJS.helpers.assertEntityInRange(env, entity)
             tagsStream = entity.getItem().getTags()
-        } else throw MishapInvalidIota.of(args.get(0), 0, 'class.tag')
+        } else if (target instanceof MoteIota) {
+            let item = new ItemStack(target.getItem().getId(), 1)
+            tagsStream = item.getTags()
+        } else if (target instanceof StringIota) {
+            let item = Item.of(target.string)
+            if (!item.isEmpty()) {
+                tagsStream = item.getTags()
+            } else throw MishapInvalidIota.of(args.get(0), 1, 'class.tag')
+        } else throw MishapInvalidIota.of(args.get(0), 1, 'class.tag')
         let iterator = tagsStream.iterator()
         while (iterator.hasNext()) {
             let tag = iterator.next()
@@ -3205,11 +3224,6 @@ global.PatternOperateMap = {
             }
         }
         stack.push(BooleanIota(false))
-    },
-
-    // 俯仰之纯化
-    "mark_a": (stack, env) => {
-        stack.push(StringIota.makeUnchecked("\'"));
     },
 
     // 法相之纯化
@@ -3260,8 +3274,13 @@ global.PatternOperateMap = {
         if (player == null) throw MishapBadCaster()
         if (!player.isPlayer()) throw MishapBadCaster()
         let args = new Args(stack, 1)
-        let num = args.double(0)
-        let item = player.getInventory().getItem(num)
+        let target = args.get(0)
+        let item
+        if (target instanceof DoubleIota) {
+            item = player.getInventory().getItem(target.double)
+        } else if (target instanceof MoteIota) {
+            item = new ItemStack(target.getItem().getId(), 1)
+        } else throw MishapInvalidIota.of(args.get(0), 0, 'class.mote_num')
         if (item.isEmpty()) {
             stack.push(NullIota())
             return
@@ -3275,8 +3294,13 @@ global.PatternOperateMap = {
         if (player == null) throw MishapBadCaster()
         if (!player.isPlayer()) throw MishapBadCaster()
         let args = new Args(stack, 1)
-        let num = args.double(0)
-        let item = player.getInventory().getItem(num)
+        let target = args.get(0)
+        let item
+        if (target instanceof DoubleIota) {
+            item = player.getInventory().getItem(target.double)
+        } else if (target instanceof MoteIota) {
+            item = new ItemStack(target.getItem().getId(), 1)
+        } else throw MishapInvalidIota.of(args.get(0), 0, 'class.mote_num')
         if (item.isEmpty()) {
             stack.push(NullIota())
             return
