@@ -48,8 +48,7 @@ const addList = [
     "hexcellular:set_property",
     "homo:let_in",
     "homo:let_read",
-    "homo:let_out",
-    "hexal:gate/make"
+    "homo:let_out"
 ]
 
 const enlightenList = [
