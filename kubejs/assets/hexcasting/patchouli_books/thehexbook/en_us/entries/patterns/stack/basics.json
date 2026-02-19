@@ -137,17 +137,17 @@
       "type": "hexcasting:pattern",
       "op_id": "homo:get_tag",
       "anchor": "homo:get_tag",
-      "input": "entity | num | vec",
+      "input": "entity | num | vec | str | mote",
       "output": "[str]",
-      "text": "返回指定物品实体，或指定槽位的物品，或指定坐标向量处的方块所有标签组成的列表。"
+      "text": "$(br)返回指定物品实体，或指定槽位的物品，或指定坐标向量处的方块，或指定名称的物品，或指定物元的所有标签组成的列表。"
     },
     {
       "type": "hexcasting:pattern",
       "op_id": "homo:has_tag",
       "anchor": "homo:has_tag",
-      "input": "entity | num | vec, str",
+      "input": "entity | num | vec | str | mote, str",
       "output": "bool",
-      "text": "判断指定物品实体，或指定槽位的物品，或指定坐标向量处的方块是否包含指定标签。"
+      "text": "$(br)判断指定物品实体，或指定槽位的物品，或指定坐标向量处的方块，或指定名称的物品，或指定物元是否包含指定标签。"
     },
     {
       "type": "hexcasting:pattern",
