@@ -25,7 +25,7 @@
 	"hexcasting.mishap.invalid_value.class.pre_idoub": "一个字符串",
 	"hexcasting.mishap.invalid_value.class.pre_event": "一种合法的组合",
 	"hexcasting.mishap.invalid_value.class.level": "某个维度的命名空间",
-	"hexcasting.mishap.invalid_value.class.tag": "一个物品实体，位置向量或数字",
+	"hexcasting.mishap.invalid_value.class.tag": "一个物品实体，位置向量，数字，物品名称或物元",
 	"hexcasting.mishap.invalid_value.class.uncrafting": "一个可被拆解的物品实体",
 	"hexcasting.mishap.invalid_value.class.simulation": "一个不大于剩余可伤害值的正整数",
 	"hexcasting.mishap.invalid_value.class.zero_vec": "一个模长大于等于 1 的向量",
