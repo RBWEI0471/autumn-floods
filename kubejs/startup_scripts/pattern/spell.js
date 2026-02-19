@@ -699,7 +699,7 @@ global.PatternOperateMap = {
             entity.persistentData.putBoolean('fall', true)
             let add = entity.getDeltaMovement()
             let g = add.length()
-            entity.fallDistance(entity.fallDistance() + g)
+            entity.fallDistance = entity.fallDistance + g
         }
         let effects = [
             OperatorSideEffect.ConsumeMedia(Math.ceil(10000)),
@@ -1302,12 +1302,12 @@ global.PatternOperateMap = {
             hexmedia = nbt["hexcasting:media"]
         }
 
-        if (media != null && mana[media.id]) {
+        if (!media.isEmpty() && mana[media.id]) {
             let omega = mana[media.id].value * media.count + hexmedia
             hexHolder.writeHex(patterns, env.pigment, omega)
             player.getInventory().setItem(slot, 'minecraft:air')
         } else {
-            throw MishapInvalidIota.of(args.get(0), 1, 'class.media')
+            hexHolder.writeHex(patterns, env.pigment, hexmedia)
         }
     },
 
@@ -1326,7 +1326,7 @@ global.PatternOperateMap = {
             'hexcasting:charged_amethyst': { value: 100000 }
         }
 
-        if (media != null && mana[media.id]) {
+        if (!media.isEmpty() && mana[media.id]) {
             let omega = mana[media.id].value * media.count
             let battery = Item.of('hexcasting:battery', {
                     "hexcasting:media": omega,
@@ -1381,7 +1381,7 @@ global.PatternOperateMap = {
             level.getChunkSource().addRegionTicket(
                 TicketType.FORCED,
                 chunk,
-                ForceLoad,double,
+                ForceLoad.double,
                 level.getChunk(chunkX, chunkZ).getPos()
             )
         } else throw MishapInvalidIota.of(args.get(1), 0, 'class.bool_null_num')
@@ -2017,11 +2017,11 @@ global.PatternOperateMap = {
     },
 
     // 出栈之策略
-    'stack/pop': (stack, ctx) => {
+    'stack/pop': (stack, env) => {
         let player = env.caster
         if (player == null) throw MishapBadCaster()
         if (!player.isPlayer()) throw MishapBadCaster()
-        let img = IXplatAbstractions.INSTANCE.getStaffcastVM(player, ctx.castingHand).image
+        let img = IXplatAbstractions.INSTANCE.getStaffcastVM(player, env.castingHand).image
         let removeIdx = img.stack.length - 1
         if (removeIdx < 0) throw MishapNotEnoughArgs(1, 0)
         stack.push(img.stack.remove(img.stack.length - 1))
@@ -2164,16 +2164,18 @@ global.PatternOperateMap = {
         } else if (id instanceof StringIota) {
             idStr = id.getString()
         } else throw MishapInvalidIota.of(args.get(1), 0, 'class.num_str')
+        
+        let bindings = server.persistentData.getCompound('hex_let')
         if (iota instanceof NullIota) {
-            let bindings = server.persistentData.getCompound('hex_let')
             bindings.remove(idStr)
+            server.persistentData.put('hex_let', bindings)
             return
         }
+        
         let serializedTag = IotaType.serialize(iota)
         let bindingData = new CompoundTag()
         bindingData.put('iota', serializedTag)
-        bindingData.putString('count', 'infinite')
-        let bindings = server.persistentData.getCompound('hex_let')
+        bindingData.putDouble('count', -1)
         bindings.put(idStr, bindingData)
         server.persistentData.put('hex_let', bindings)
     },
@@ -2184,33 +2186,36 @@ global.PatternOperateMap = {
         let id = args.get(0)
         let num = args.double(1)
         let server = env.caster?.server??Utils.server
-        if (num < 1 || !Number.isInteger(num)) throw MishapInvalidIota.of(args.get(1), 0, 'class.zero')
+        if (!Number.isInteger(num)) throw MishapInvalidIota.of(args.get(1), 0, 'class.integer')
+        
         let idStr
         if (id instanceof DoubleIota) {
             idStr = id.double.toString()
         } else if (id instanceof StringIota) {
             idStr = id.getString()
         } else throw MishapInvalidIota.of(args.get(0), 1, 'class.num_str')
+        
         let bindings = server.persistentData.getCompound('hex_let')
         if (!bindings.contains(idStr)) {
             stack.push(NullIota())
             return
         }
+        
         let bindingData = bindings.getCompound(idStr)
-        let countType = bindingData.getString('count')
-        if (countType === 'infinite') {
+        let currentCount = bindingData.getDouble('count')
+        
+        if (currentCount === -1) {
             bindingData.putDouble('count', num)
             bindings.put(idStr, bindingData)
             server.persistentData.put('hex_let', bindings)
             stack.push(DoubleIota(num))
-            return
+        } else {
+            let newCount = currentCount + num
+            bindingData.putDouble('count', newCount)
+            bindings.put(idStr, bindingData)
+            server.persistentData.put('hex_let', bindings)
+            stack.push(DoubleIota(newCount))
         }
-        let currentCount = bindingData.getDouble('count')
-        let newCount = currentCount + num
-        bindingData.putDouble('count', newCount)
-        bindings.put(idStr, bindingData)
-        server.persistentData.put('hex_let', bindings)
-        stack.push(DoubleIota(newCount))
     },
 
     // 阿特洛波斯之纯化
@@ -2219,6 +2224,7 @@ global.PatternOperateMap = {
         let id = args.get(0)
         let server = env.caster?.server??Utils.server
         let level = env.world
+        
         let idStr
         if (id instanceof DoubleIota) {
             idStr = id.double.toString()
@@ -2227,20 +2233,23 @@ global.PatternOperateMap = {
         } else {
             throw MishapInvalidIota.of(args.get(0), 0, 'class.num_str')
         }
+        
         let bindings = server.persistentData.getCompound('hex_let')
         if (!bindings.contains(idStr)) {
             stack.push(NullIota())
             return
         }
+        
         let bindingData = bindings.getCompound(idStr)
-        let countType = bindingData.getString('count')
-        if (countType === 'infinite') {
-            let iotaTag = bindingData.getCompound('iota')
-            let iota = IotaType.deserialize(iotaTag, level)
+        let currentCount = bindingData.getDouble('count')
+        let iotaTag = bindingData.getCompound('iota')
+        let iota = IotaType.deserialize(iotaTag, level)
+        
+        if (currentCount === -1) {
             stack.push(iota)
             return
         }
-        let currentCount = bindingData.getDouble('count')
+        
         let newCount = currentCount - 1
         if (newCount <= 0) {
             bindings.remove(idStr)
@@ -2249,8 +2258,6 @@ global.PatternOperateMap = {
             bindings.put(idStr, bindingData)
         }
         server.persistentData.put('hex_let', bindings)
-        let iotaTag = bindingData.getCompound('iota')
-        let iota = IotaType.deserialize(iotaTag, level)
         stack.push(iota)
     },
 
@@ -2597,9 +2604,9 @@ global.PatternOperateMap = {
                 for (let z = minBlockZ; z <= maxBlockZ; z++) {
                     let blockCenter = new Vec3d(x + 0.5, y + 0.5, z + 0.5)
                     
-                    if (mode) {
+                    if (mode === true) {
                         blockPositions.push(Vec3Iota(blockCenter))
-                    } else if (mode) {
+                    } else if (mode === false) {
                         let onSurface = 
                             Math.abs(blockCenter.x() - minX) < 0.5 || 
                             Math.abs(blockCenter.x() - maxX) < 0.5 ||
@@ -2673,13 +2680,13 @@ global.PatternOperateMap = {
         for (let x = minX; x <= maxX; x++) {
             for (let y = minY; y <= maxY; y++) {
                 for (let z = minZ; z <= maxZ; z++) {
-                    if (mode) {
+                    if (mode === true) {
                         let centerX = x + 0.5
                         let centerY = y + 0.5
                         let centerZ = z + 0.5
                         let blockPos = new BlockPos(centerX, centerY, centerZ)
                         coords.push(Vec3Iota(blockPos))
-                    } else if (mode) {
+                    } else if (mode === false) {
                         if (x === minX || x === maxX || 
                             y === minY || y === maxY || 
                             z === minZ || z === maxZ) {
@@ -3467,20 +3474,13 @@ global.PatternOperateMap = {
     "range_list": (stack, env) => {
         let args = new Args(stack, 1)
         let start = args.double(0)
+        if (start <= 0) throw MishapInvalidIota.of(args.get(0), 0, 'class.zero_')
         let n = Math.floor(start)
-        if (n >= 0) {
-            let resultList = []
-            for (let i = 0; i <= n; i++) {
-                resultList.push(DoubleIota(i))
-            }
-            stack.push(ListIota(resultList))
-        } else {
-            let resultList = []
-            for (let i = 0; i >= n; i--) {
-                resultList.push(DoubleIota(i))
-            }
-            stack.push(ListIota(resultList))
+        let resultList = []
+        for (let i = 0; i <= n; i++) {
+            resultList.push(DoubleIota(i))
         }
+        stack.push(ListIota(resultList))
     },
 
     // 等差之提整
