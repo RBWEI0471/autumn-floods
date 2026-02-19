@@ -60,14 +60,6 @@
       "text": "副手$(item)数据存储元件/$时，可以使用此法术更改它们的外表，消耗 10,000 点媒质。"
     },
     {
-      "type": "hexcasting:pattern",
-      "op_id": "homo:stack/push",
-      "anchor": "homo:stack/push",
-      "input": "any",
-      "output": "",
-      "text": "将栈顶的元素压入当前法杖的施法栈中。"
-    },
-    {
       "type": "patchouli:crafting",
       "recipe": "minecraft:kjs/hexcasting_focus",
       "text": "当副手持有存有图案列表的核心时，将另一个核心作为输入进行合成，便会将图案列表连接至输入的核心。而当核心与缀品或造物相合成，则会将图案列表复制于其中，获得的施法物品媒质量为零。"

@@ -17,6 +17,22 @@
     },
     {
       "type": "hexcasting:pattern",
+      "op_id": "homo:stack/push",
+      "anchor": "homo:stack/push",
+      "input": "any",
+      "output": "",
+      "text": "将栈顶的元素压入当前法杖的施法栈中。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:stack/pop",
+      "anchor": "homo:stack/pop",
+      "input": "",
+      "output": "any",
+      "text": "将当前法杖施法栈的栈顶元素压入当前栈中。"
+    },
+    {
+      "type": "hexcasting:pattern",
       "op_id": "hexcasting:write/local",
       "anchor": "hexcasting:write/local",
       "input": "any",
