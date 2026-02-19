@@ -268,8 +268,8 @@ global.PatternOperateMap = {
         let player = env.caster
         let server = env.caster?.server??Utils.server
         let level = env.world
+        let delayTicks = Math.min(Math.floor(strength * 20), 200)
         if (strength < 0) throw MishapInvalidIota.of(args.get(1), 0, 'class.zero_')
-
         if (strength <= 1) {
             level.createExplosion(pos.x(), pos.y(), pos.z())
                 .exploder(player)
@@ -278,7 +278,6 @@ global.PatternOperateMap = {
                 .explode()
         } 
         if (3 >= strength && strength > 1) {
-            let delayTicks = Math.floor(strength * 20)
             server.scheduleInTicks(delayTicks, () => {
                 level.createExplosion(pos.x(), pos.y(), pos.z())
                     .exploder(player)
@@ -288,7 +287,6 @@ global.PatternOperateMap = {
             })
         }
         if (10 >= strength && strength > 3) {
-            let delayTicks = Math.floor(strength * 20)
             server.scheduleInTicks(delayTicks, () => {
                 level.createExplosion(pos.x(), pos.y(), pos.z())
                     .exploder(player)
@@ -299,7 +297,6 @@ global.PatternOperateMap = {
             })
         } 
         if (strength > 10) {
-            let delayTicks = Math.floor(strength * 20)
             server.scheduleInTicks(delayTicks, () => {
                 level.createExplosion(pos.x(), pos.y(), pos.z())
                     .causesFire(true)
