@@ -18,6 +18,14 @@
     },
     {
       "type": "hexcasting:pattern",
+      "op_id": "hexal:mote/storage/bind",
+      "anchor": "hexal:mote/storage/bind",
+      "input": "vec",
+      "output": "",
+      "text": "将施法者与指定的物元枢纽绑定，同时只能绑定一个最新的物元枢纽，消耗 10 点媒质。"
+    },
+    {
+      "type": "hexcasting:pattern",
       "op_id": "hexal:mote/storage/bind/temp",
       "anchor": "hexal:mote/storage/bind/temp",
       "input": "vec",
@@ -34,20 +42,28 @@
     },
     {
       "type": "hexcasting:pattern",
-      "op_id": "hexal:mote/storage/bind",
-      "anchor": "hexal:mote/storage/bind",
-      "input": "vec",
-      "output": "",
-      "text": "将施法者与指定的物元枢纽绑定，同时只能绑定一个最新的物元枢纽，消耗 10 点媒质。"
-    },
-    {
-      "type": "hexcasting:pattern",
       "header": "hexcasting.action.hexal:mote/count/get",
       "op_id": "hexcasting:abs",
       "anchor": "hexal:mote/count/get",
       "input": "mote",
       "output": "num",
       "text": "返回指定物元中的物品数量。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:slot_name",
+      "anchor": "homo:slot_name",
+      "input": "mote",
+      "output": "str",
+      "text": "返回指定物元中的物品名称。"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "homo:slot_nbt",
+      "anchor": "homo:slot_nbt",
+      "input": "mote",
+      "output": "[str]",
+      "text": "返回指定物元中的物品数据。"
     },
     {
       "type": "hexcasting:pattern",
