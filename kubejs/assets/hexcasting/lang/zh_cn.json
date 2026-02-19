@@ -6,6 +6,7 @@
 	"hexcasting.mishap.invalid_value.class.bool_null_list": "一个图案列表，布尔值或 Null",
 	"hexcasting.mishap.invalid_value.class.bool_null_num": "一个数，布尔值或 Null",
 	"hexcasting.mishap.invalid_value.class.motes": "一个物元或一个字符串",
+	"hexcasting.mishap.invalid_value.class.mote_num": "一个物元或一个数",
 	"hexcasting.mishap.invalid_value.class.num_null": "一个数或 Null",
 	"hexcasting.mishap.invalid_value.class.num_str": "一个数或字符串",
 	"hexcasting.mishap.invalid_value.class.zero": "一个大于 0 的整数",
