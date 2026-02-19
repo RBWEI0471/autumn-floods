@@ -106,6 +106,7 @@
 	"hexcasting.action.homo:page_highest": "落笔之精思",
 	"hexcasting.action.homo:page_name": "书签之纯化",
 	"hexcasting.action.homo:page_to": "书签之策略",
+	"hexcasting.action.homo:stack/pop": "出栈之策略",
 	"hexcasting.action.homo:stack/push": "入栈之策略",
 	"hexcasting.action.homo:mind": "遥感之纯化",
 	"hexcasting.action.homo:stack/size": "限有之精思",
