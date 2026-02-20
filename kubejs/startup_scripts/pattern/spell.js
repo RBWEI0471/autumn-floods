@@ -2678,24 +2678,15 @@ global.PatternOperateMap = {
             for (let y = minY; y <= maxY; y++) {
                 for (let z = minZ; z <= maxZ; z++) {
                     if (mode === true) {
-                        let centerX = x + 0.5
-                        let centerY = y + 0.5
-                        let centerZ = z + 0.5
-                        let blockPos = new BlockPos(centerX, centerY, centerZ)
-                        coords.push(Vec3Iota(blockPos))
+                        coords.push(Vec3Iota(new Vec3d(x, y, z)))
                     } else if (mode === false) {
                         if (x === minX || x === maxX || 
                             y === minY || y === maxY || 
                             z === minZ || z === maxZ) {
-                            let centerX = x + 0.5
-                            let centerY = y + 0.5
-                            let centerZ = z + 0.5
-                            let blockPos = new BlockPos(centerX, centerY, centerZ)
-                            coords.push(Vec3Iota(blockPos))
+                            coords.push(Vec3Iota(new Vec3d(x, y, z)))
                         }
                     } else if (mode === null) {
                         let onEdge = false
-                        
                         if (x === minX || x === maxX) {
                             if (y === minY || y === maxY) {
                                 onEdge = true
@@ -2709,13 +2700,8 @@ global.PatternOperateMap = {
                                 onEdge = true
                             }
                         }
-                        
                         if (onEdge) {
-                            let centerX = x + 0.5
-                            let centerY = y + 0.5
-                            let centerZ = z + 0.5
-                            let blockPos = new BlockPos(centerX, centerY, centerZ)
-                            coords.push(Vec3Iota(blockPos))
+                            coords.push(Vec3Iota(new Vec3d(x, y, z)))
                         }
                     }
                 }
