@@ -60,7 +60,7 @@ ItemEvents.tooltip((event) => {
     event.addAdvanced("patchouli:guide_book", (item,advanced,text) => {
         if (event.shift && event.alt && event.ctrl) {
             text.remove(0)
-            text。add(0, Text.darkPurple("《 ☀ ☾ 🙵 ≋ △ 》"))
+            text.add(0, Text.darkPurple("《 ☀ ☾ 🙵 ≋ △ 》"))
             text.add(1, Text.gold("只有那些拥有力量将自己从自身中撕裂开来的人，才能为自己创造一个过去……"))
             text.add(2, {
                 text: '\u0074',
@@ -74,8 +74,8 @@ ItemEvents.tooltip((event) => {
                 font: 'kubejs:texture_font'
             })
         } else if(event.shift&& event.ctrl) {
-            text。remove(0)
-            text。add(0, Text.blue("知道的事物被讲述"))
+            text.remove(0)
+            text.add(0, Text.blue("知道的事物被讲述"))
             text.add(1, {
                 text: '\u0073',
                 font: 'kubejs:texture_font'
@@ -113,7 +113,7 @@ ItemEvents.tooltip((event) => {
 })
 
 //质念透镜
-ItemEvents。tooltip((event) => {
+ItemEvents.tooltip((event) => {
     event.addAdvanced("hexcasting:lens", (item,advanced,text) => {
         if (event.shift && event.alt && event.ctrl){
             text.remove(0)
@@ -126,7 +126,7 @@ ItemEvents。tooltip((event) => {
         } else if(event.shift && event.alt) {
             text.remove(0)
             text.add(0, Text.blue("水反辅太一，是以成天"))
-            text。add(1, {
+            text.add(1, {
                 text: '\u0076',
                 font: 'kubejs:texture_font'
             })
