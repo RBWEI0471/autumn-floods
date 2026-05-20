@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 2,
+  "type": "square-textured",
+  "properties": {
+    "fade": {
+      "startFadeIn": 22667,
+      "endFadeIn": 23000,
+      "startFadeOut": 23500,
+      "endFadeOut": 23833
+    },
+    "transitionOutDuration": 333,
+    "rotation": {
+      "rotationSpeedX": 0.0,
+      "rotationSpeedY": 1.0,
+      "rotationSpeedZ": 0.0
+    }
+  },
+  "conditions": {
+    "worlds": ["minecraft:overworld"]
+  },
+  "decorations": {
+    "showSun": true,
+    "showMoon": true,
+    "showStars": false,
+    "blend": {
+      "type": "alpha"
+    }
+  },
+  "blend": {
+    "type": "add"
+  },
+  "textures": {
+    "north": "fabricskyboxes:sky/sky_sunflare_north.png",
+    "south": "fabricskyboxes:sky/sky_sunflare_south.png",
+    "east": "fabricskyboxes:sky/sky_sunflare_east.png",
+    "west": "fabricskyboxes:sky/sky_sunflare_west.png",
+    "top": "fabricskyboxes:sky/sky_sunflare_top.png",
+    "bottom": "fabricskyboxes:sky/sky_sunflare_bottom.png"
+  }
+}

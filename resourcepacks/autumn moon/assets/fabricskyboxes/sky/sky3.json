@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 2,
+  "type": "square-textured",
+  "properties": {
+    "maxAlpha": 0.3,
+    "fade": {
+      "startFadeIn": 11500,
+      "endFadeIn": 14000,
+      "startFadeOut": 23500,
+      "endFadeOut": 167
+    },
+    "transitionOutDuration": 667,
+    "rotation": {
+      "rotationSpeedX": 0.0,
+      "rotationSpeedY": -2.5,
+      "rotationSpeedZ": 0.0
+    }
+  },
+  "conditions": {
+    "worlds": ["minecraft:overworld"]
+  },
+  "decorations": {
+    "showSun": true,
+    "showMoon": true,
+    "showStars": false,
+    "blend": {
+      "type": "alpha"
+    }
+  },
+  "blend": {
+    "type": "add"
+  },
+  "textures": {
+    "north": "fabricskyboxes:sky/starfield01_north.png",
+    "south": "fabricskyboxes:sky/starfield01_south.png",
+    "east": "fabricskyboxes:sky/starfield01_east.png",
+    "west": "fabricskyboxes:sky/starfield01_west.png",
+    "top": "fabricskyboxes:sky/starfield01_top.png",
+    "bottom": "fabricskyboxes:sky/starfield01_bottom.png"
+  }
+}

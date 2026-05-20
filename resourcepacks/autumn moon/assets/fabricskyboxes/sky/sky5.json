@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 2,
+  "type": "square-textured",
+  "properties": {
+    "fade": {
+      "startFadeIn": 22750,
+      "endFadeIn": 23167,
+      "startFadeOut": 23333,
+      "endFadeOut": 83
+    },
+    "transitionOutDuration": 750,
+    "rotation": {
+      "rotationSpeedX": 0.0,
+      "rotationSpeedY": -1.3334,
+      "rotationSpeedZ": 0.0
+    }
+  },
+  "conditions": {
+    "worlds": ["minecraft:overworld"]
+  },
+  "decorations": {
+    "showSun": true,
+    "showMoon": true,
+    "showStars": false,
+    "blend": {
+      "type": "alpha"
+    }
+  },
+  "blend": {
+    "type": "add"
+  },
+  "textures": {
+    "north": "fabricskyboxes:sky/sky2_north.png",
+    "south": "fabricskyboxes:sky/sky2_south.png",
+    "east": "fabricskyboxes:sky/sky2_east.png",
+    "west": "fabricskyboxes:sky/sky2_west.png",
+    "top": "fabricskyboxes:sky/sky2_top.png",
+    "bottom": "fabricskyboxes:sky/sky2_bottom.png"
+  }
+}
