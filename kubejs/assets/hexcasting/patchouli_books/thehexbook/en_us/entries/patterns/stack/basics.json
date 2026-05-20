@@ -45,7 +45,7 @@
       "anchor": "homo:raye",
       "input": "",
       "output": "entity",
-      "text": "返回施法者视线触及的生物实体。"
+      "text": "返回施法者视线触及的实体。"
     },
     {
       "type": "hexcasting:pattern",
