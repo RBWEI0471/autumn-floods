@@ -12,12 +12,18 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "autumn floods",
-  "version": "1.7,10",
-  "author": "",
+  "version": "1.7.10",
+  "author": "爰何云",
   "files": [
     {
       "projectID": 961802,
       "fileID": 7124702,
+      "required": true,
+      "isLocked": false
+    },
+    {
+      "projectID": 918052,
+      "fileID": 4775791,
       "required": true,
       "isLocked": false
     },
