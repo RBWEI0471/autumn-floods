@@ -188,9 +188,6 @@ EntityEvents.hurt(event => {
 EntityEvents.death(event => {
     let player = event.entity
     if (!player.isPlayer()) return
-    if (player.persistentData.contains('from_spirit')) {
-        event.cancel()
-    }
     if (player.persistentData.contains('the_spirit')) {
         let stateTag = player.persistentData.getCompound('the_spirit')
         let type = player.persistentData.getList('type', 8)
@@ -213,7 +210,6 @@ EntityEvents.death(event => {
         player.removeAllEffects()
         player.hurtMarked = true
         player.extinguish()
-        
         for (let i = 0; i < type.size(); i++) {
             let effectId = type.getString(i)
             let duration = long.getInt(i)
@@ -226,12 +222,6 @@ EntityEvents.death(event => {
         player.persistentData.remove('long')
         player.persistentData.remove('deep')
         player.persistentData.remove('the_spirit')
-        player.persistentData.putBoolean('from_spirit', true)
-        server.scheduleInTicks(120 , () => {
-            if (player.persistentData.contains('from_spirit')) {
-                player.persistentData.remove('from_spirit')
-            }
-        })
         event.cancel()
     }
 })
@@ -247,17 +237,23 @@ PlayerEvents.loggedIn(event => {
         player.persistentData.remove('from_spirit')
     }
     player.getAttribute('hexcasting:media_consumption').setBaseValue(1)
+    player.getAttribute('hexcasting:ambit_radius').setBaseValue(64)
+    player.getAttribute('hexcasting:sentinel_radius').setBaseValue(32)
     let hasStage = player.stages.has("oneInGame")
     if (!hasStage) {
         player.stages.add("oneInGame")
         player.give('8x hexcasting:sub_sandwich')
-        player.getAttribute('hexcasting:ambit_radius').setBaseValue(64)
-        player.getAttribute('hexcasting:sentinel_radius').setBaseValue(32)
         player.give(Item.of("hexcasting:lens").enchant('minecraft:protection', 10))
         server.runCommandSilent(`gamerule commandModificationBlockLimit 2147483647`)
         player.give(Item.of("hexcasting:staff/quenched").enchant('minecraft:looting', 10))
         player.give(Item.of('hexcasting:scroll', '{pattern:{angles:[B;1B,2B,1B,0B,0B,5B,5B,5B,4B,0B,0B,0B,4B,5B,4B,0B,5B,0B,4B,0B,5B,1B,0B,0B,4B,5B,5B,5B,0B,0B,1B,2B,1B,0B,0B,1B,0B,4B,5B,4B,0B,5B,0B,4B,0B,5B,1B,0B,0B,4B,5B,5B,5B,0B,0B,1B,2B,1B,0B,0B,1B,0B,4B,5B,4B,0B,5B,0B,4B,0B,5B,1B,1B,0B],start_dir:5b}}'))
     }
+})
+
+PlayerEvents.respawned(event => {
+    let player = event.player
+    player.getAttribute('hexcasting:ambit_radius').setBaseValue(64)
+    player.getAttribute('hexcasting:sentinel_radius').setBaseValue(32)
 })
 
 //心灵感应
@@ -536,7 +532,7 @@ ItemEvents.entityInteracted(event => {
     let player = event.player
     if (!player) return
     if (event.hand == "OFF_HAND") return
-    let entity = event.entity.type
+    let entity = event.target
     let item = event.item.id
     let level = player.getLevel()
     let env = new StaffCastEnv(player, InteractionHand.MAIN_HAND)
@@ -551,9 +547,9 @@ ItemEvents.entityInteracted(event => {
             let cond0 = subCompound.getString('condition_0')
             let cond1 = subCompound.getString('condition_1')
             let iota = subCompound.getCompound('spell')
-            if ((cond0 == entity || cond0 == "null") && (cond1 == item || cond1 == "null")) {
+            if ((cond0 == entity.type || cond0 == "null") && (cond1 == item || cond1 == "null")) {
                 let spell = IotaType.deserialize(iota, level)
-                let str0 = StringIota.makeUnchecked(entity)
+                let str0 = EntityIota(entity)
                 let str1 = StringIota.makeUnchecked(item)
                 let conditionList = ListIota([str0, str1])
                 let escape = PatternIota(HexPattern.fromAnglesUnchecked("qqqaww", HexDir.WEST))
