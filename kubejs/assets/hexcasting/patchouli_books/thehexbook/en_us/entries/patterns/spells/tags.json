@@ -11,9 +11,9 @@
       "type": "hexcasting:pattern",
       "op_id": "homo:name",
       "anchor": "homo:name",
-      "input": "entity, str",
+      "input": "entity | num, str",
       "output": "",
-      "text": "更改指定实体的名称。"
+      "text": "若第一个参数为实体，则更改指定实体的名称；若为数，则更改对应槽位物品的名称。"
     },
     {
       "type": "hexcasting:pattern",
@@ -21,7 +21,7 @@
       "anchor": "homo:tags",
       "input": "entity, str, bool | null",
       "output": "any",
-      "text": "若布尔值为True或False，则添加或移除以 T_ 起始的字符串标签，为null，则判断实体是否持有指定标签；若字符串为空，则使用发光效果代替字符串标签。"
+      "text": "若布尔值为 True 或 False，则添加或移除以 T_ 起始的字符串标签，为 null，则判断实体是否持有指定标签；若字符串为空，则使用发光效果代替字符串标签。"
     },
     {
       "type": "patchouli:text",
