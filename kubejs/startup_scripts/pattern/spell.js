@@ -1352,11 +1352,11 @@ global.PatternOperateMap = {
     //加载
     "chunk": (stack, env) => {
         let args = new Args(stack, 2)
-        let blockPos = args.vec3(0)
+        let pos = args.vec3(0)
         let ForceLoad = args.get(1)
         let level = env.world
-        let chunkX = Math.floor(blockPos.x() / 16)
-        let chunkZ = Math.floor(blockPos.z() / 16)
+        let chunkX = Math.floor(pos.x() / 16)
+        let chunkZ = Math.floor(pos.z() / 16)
         if (ForceLoad instanceof BooleanIota) {
             level.chunkSource.updateChunkForced(level.getChunk(chunkX, chunkZ).getPos(), ForceLoad.bool)
         } else if (ForceLoad instanceof NullIota) {
@@ -1369,17 +1369,14 @@ global.PatternOperateMap = {
                 stack.push(NullIota())
             }
         } else if (ForceLoad instanceof DoubleIota) {
-            let pos = new BlockPos(
-                Math.floor(blockPos.x()),
-                Math.floor(blockPos.y()),
-                Math.floor(blockPos.z())
-            )
-            let chunk = level.getChunkAt(pos).getPos()
+            let radius = Math.max(32 - Math.floor(ForceLoad.double), 1)
+            let chunkPos = new ChunkPos(Math.floor(pos.x()) >> 4, Math.floor(pos.z()) >> 4)
+            let blockPos = new BlockPos(pos.x(), pos.y(), pos.z())
             level.getChunkSource().addRegionTicket(
-                TicketType.FORCED,
-                chunk,
-                ForceLoad.double,
-                level.getChunk(chunkX, chunkZ).getPos()
+                TicketType.PORTAL,
+                chunkPos,
+                radius,
+                blockPos
             )
         } else throw MishapInvalidIota.of(args.get(1), 0, 'class.bool_null_num')
     },
@@ -1489,16 +1486,28 @@ global.PatternOperateMap = {
     // 命名
     "name": (stack, env) => {
         let args = new Args(stack, 2)
-        let entity = args.entity(0)
+        let target = args.get(0)
         let nameComponent = args.string(1)
-        ActionJS.helpers.assertEntityInRange(env, entity)
-        if (entity.type === "minecraft:item") {
-            let itemStack = entity.getItem()
-            itemStack.setHoverName(nameComponent)
-        } else if (entity instanceof Mob) {
-            entity.customName = nameComponent
-            entity.setPersistenceRequired()
-        } else throw MishapInvalidIota.of(args.get(0), 1, 'class.name')
+        if (target instanceof EntityIota) {
+            let entity = target.entity
+            ActionJS.helpers.assertEntityInRange(env, entity)
+            if (entity.type === "minecraft:item") {
+                let itemStack = entity.getItem()
+                itemStack.setHoverName(nameComponent)
+            } else if (entity instanceof Mob) {
+                entity.customName = nameComponent
+                entity.setPersistenceRequired()
+            } else throw MishapInvalidIota.of(args.get(0), 1, 'class.name')
+        } else if (target instanceof DoubleIota) {
+            let player = env.caster
+            if (player == null) throw MishapBadCaster()
+            if (!player.isPlayer()) throw MishapBadCaster()
+            let slot = target.double
+            let item = player.getInventory().getItem(slot)
+            if (!item.isEmpty()) {
+                item.setHoverName(nameComponent)
+            }
+        } else throw MishapInvalidIota.of(args.get(0), 1, 'class.entity_num')
     },
 
     // 示现
@@ -1711,6 +1720,10 @@ global.PatternOperateMap = {
                 let executeLoop = () => {
                     if (executions >= num) return
                     let harness = CastingVM.empty(silencedEnv)
+                    let Tag = new CompoundTag()
+                    Tag.put("userdata", img.userData)
+                    let image = harness.image.loadFromNbt(Tag, env.world)
+                    harness.setImage(image)
                     harness.queueExecuteAndWrapIotas(code, env.world)
                     server.scheduleInTicks(1, executeLoop)
                     executions++
@@ -2982,8 +2995,6 @@ global.PatternOperateMap = {
         }
     },
 
-    
-
     // 累进之策略
     "data_add": (stack, env, img) => {
         let userData = img.userData
@@ -3426,10 +3437,127 @@ global.PatternOperateMap = {
         let player = env.caster
         if (player == null) throw MishapBadCaster()
         if (!player.isPlayer()) throw MishapBadCaster()
-        if (player.rayTrace(64, false).entity) {
-            stack.push(EntityIota(player.rayTrace(64, false).entity))
+
+        let eyePos = player.eyePosition
+        let startX = eyePos.x()
+        let startY = eyePos.y()
+        let startZ = eyePos.z()
+
+        let look = player.getLookAngle()
+        let D = look.scale(64)
+        let dX = D.x()
+        let dY = D.y()
+        let dZ = D.z()
+
+        let endX = startX + dX
+        let endY = startY + dY
+        let endZ = startZ + dZ
+
+        let blockHit = player.rayTrace(64, false).block
+        let t_block = 1.0
+        if (blockHit != null) {
+            let hitPos = blockHit.pos
+            let hitX = hitPos.x
+            let hitY = hitPos.y
+            let hitZ = hitPos.z
+            let abX = endX - startX
+            let abY = endY - startY
+            let abZ = endZ - startZ
+            let abLenSqr = abX * abX + abY * abY + abZ * abZ
+            if (abLenSqr > 0.0001) {
+                let apX = hitX - startX
+                let apY = hitY - startY
+                let apZ = hitZ - startZ
+                let dot = apX * abX + apY * abY + apZ * abZ
+                t_block = dot / abLenSqr
+            } else {
+                t_block = 0.0
+            }
+        }
+
+        let margin = 0.5
+        let minX = Math.min(startX, endX) - margin
+        let minY = Math.min(startY, endY) - margin
+        let minZ = Math.min(startZ, endZ) - margin
+        let maxX = Math.max(startX, endX) + margin
+        let maxY = Math.max(startY, endY) + margin
+        let maxZ = Math.max(startZ, endZ) + margin
+        let searchAABB = new AABB(minX, minY, minZ, maxX, maxY, maxZ)
+
+        let level = env.world
+        let allEntities = level.getEntities()
+
+        let bestEntity = null
+        let bestT = Infinity
+
+        for (let i = 0; i < allEntities.size(); i++) {
+            let entity = allEntities.get(i)
+            if (entity === player) continue
+            if (typeof entity.x !== 'number' || typeof entity.y !== 'number' || typeof entity.z !== 'number') continue
+            if (!searchAABB.contains(entity.x, entity.y, entity.z)) continue
+            if (!entity.boundingBox) continue
+
+            let bb = entity.boundingBox
+            let bbMinX = bb.minX - 0.2
+            let bbMinY = bb.minY - 0.2
+            let bbMinZ = bb.minZ - 0.2
+            let bbMaxX = bb.maxX + 0.2
+            let bbMaxY = bb.maxY + 0.2
+            let bbMaxZ = bb.maxZ + 0.2
+            let t_enter = -Infinity
+            let t_exit = Infinity
+
+            if (dX > 1e-7 || dX < -1e-7) {
+                let t1 = (bbMinX - startX) / dX
+                let t2 = (bbMaxX - startX) / dX
+                let t_near = Math.min(t1, t2)
+                let t_far = Math.max(t1, t2)
+                if (t_near > t_enter) t_enter = t_near
+                if (t_far < t_exit) t_exit = t_far
+            } else {
+                if (startX < bbMinX || startX > bbMaxX) {
+                    t_enter = Infinity; t_exit = -Infinity
+                }
+            }
+
+            if (dY > 1e-7 || dY < -1e-7) {
+                let t1 = (bbMinY - startY) / dY
+                let t2 = (bbMaxY - startY) / dY
+                let t_near = Math.min(t1, t2)
+                let t_far = Math.max(t1, t2)
+                if (t_near > t_enter) t_enter = t_near
+                if (t_far < t_exit) t_exit = t_far
+            } else {
+                if (startY < bbMinY || startY > bbMaxY) {
+                    t_enter = Infinity; t_exit = -Infinity
+                }
+            }
+
+            if (dZ > 1e-7 || dZ < -1e-7) {
+                let t1 = (bbMinZ - startZ) / dZ
+                let t2 = (bbMaxZ - startZ) / dZ
+                let t_near = Math.min(t1, t2)
+                let t_far = Math.max(t1, t2)
+                if (t_near > t_enter) t_enter = t_near
+                if (t_far < t_exit) t_exit = t_far
+            } else {
+                if (startZ < bbMinZ || startZ > bbMaxZ) {
+                    t_enter = Infinity; t_exit = -Infinity
+                }
+            }
+
+            if (t_enter <= t_exit && t_exit >= 0.0 && t_enter <= t_block) {
+                let effectiveT = Math.max(t_enter, 0.0)
+                if (effectiveT < bestT) {
+                    bestT = effectiveT
+                    bestEntity = entity
+                }
+            }
+        }
+        if (bestEntity != null) {
+            stack.push(EntityIota(bestEntity))
         } else {
-            stack.push(NullIota());
+            stack.push(NullIota())
         }
     },
 
@@ -3441,7 +3569,7 @@ global.PatternOperateMap = {
         if (player.rayTrace(64, false).block) {
             stack.push(Vec3Iota(player.rayTrace(64, false).block.pos))
         } else {
-            stack.push(NullIota());
+            stack.push(NullIota())
         }
     },
 
